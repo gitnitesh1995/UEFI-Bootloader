@@ -1,6 +1,16 @@
-mount | grep efi
-
+![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/e537e972-911a-4737-86c8-b3b9e6e13a82)
+```
 sudo apt install tree
+```
+Sudo :
+
+It stands for "superuser do" and permits user to execute a command as the superuser
+
+```
+mount | grep efi
+```
+
+
     
 tree /boot/efi/
     
