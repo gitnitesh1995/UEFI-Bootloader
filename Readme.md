@@ -18,14 +18,42 @@ This is the APT command used to install software packages.
 
 This is the name of the package that you want to install. In this case, it refers to a command-line utility called "tree" that displays the contents of a directory in a tree-like structure.
 
+![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/aade4cc9-f6c1-4e0e-b86a-597cea7f5815)
+
 ```
 mount | grep efi
 ```
+**mount:**
+
+This command is used to display information about mounted filesystems on the system. It shows details such as the device, mount point, filesystem type, and other relevant information.
+
+**|:** 
+
+This symbol is called a pipe. It is used to pass the output of one command as the input to another command. In this case, it takes the output of the mount command and passes it to the next command.
+
+**grep:**
+
+This command is used to search for patterns within text. It filters lines that match a specified pattern. In this case, it filters lines containing the term "efi."
+
+**efi:**
+
+This is the pattern being searched for. The grep command will only display lines that contain the term "efi."
+
+![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/7e9b4ab5-e8d7-44c2-af8a-c4daf7ba2604)
 
 
-    
+```  
 tree /boot/efi/
-    
+```
+**tree:**
+
+This is the command-line utility used to display the directory structure in a tree-like format. It recursively lists the contents of directories and subdirectories, showing the hierarchical relationship of files and directories.
+
+**/boot/efi/:**
+
+This is the path to the directory for which you want to display the tree structure. In this case, it refers to the EFI (Extensible Firmware Interface) partition's "/boot/efi/" directory. On many Linux systems, this directory is used for storing boot-related files, especially on systems that use UEFI (Unified Extensible Firmware Interface) for booting.
+
+
 apt install build-essential uuid-dev iasl git  nasm  python-is-python3
     
 cd /home/boot/Downloads/
