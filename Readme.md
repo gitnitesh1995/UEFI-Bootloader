@@ -2,9 +2,21 @@
 ```
 sudo apt install tree
 ```
-Sudo :
+**sudo :**
 
 It stands for "superuser do" and permits user to execute a command as the superuser
+
+**apt:**
+
+This is the package management tool used on Debian-based Linux distributions, including Ubuntu. It is used to handle the installation, removal, and management of software packages.
+
+**install:**
+
+This is the APT command used to install software packages.
+
+**tree:**
+
+This is the name of the package that you want to install. In this case, it refers to a command-line utility called "tree" that displays the contents of a directory in a tree-like structure.
 
 ```
 mount | grep efi
