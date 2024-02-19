@@ -41,7 +41,6 @@ This is the pattern being searched for. The grep command will only display lines
 
 ![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/7e9b4ab5-e8d7-44c2-af8a-c4daf7ba2604)
 
-
 ```  
 tree /boot/efi/
 ```
@@ -53,19 +52,96 @@ This is the command-line utility used to display the directory structure in a tr
 
 This is the path to the directory for which you want to display the tree structure. In this case, it refers to the EFI (Extensible Firmware Interface) partition's "/boot/efi/" directory. On many Linux systems, this directory is used for storing boot-related files, especially on systems that use UEFI (Unified Extensible Firmware Interface) for booting.
 
+![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/3c883ecc-f97a-4169-8567-d0b0930c4b05)
 
+```
 apt install build-essential uuid-dev iasl git  nasm  python-is-python3
-    
+```
+**apt:**
+
+This is the package management tool used on Debian-based Linux distributions, including Ubuntu. It is used to handle the installation, removal, and management of software packages.
+
+**install:**
+
+This is the APT command used to install software packages.
+
+**build-essential:**
+
+This is a meta-package that includes a collection of essential tools and libraries needed for building and compiling software. It typically includes essential development tools such as compilers, libraries, and build utilities.
+
+**uuid-dev:**
+
+This package provides development files and headers for working with UUIDs (Universally Unique Identifiers) in C programs.
+
+**iasl:**
+
+This is the Intel ACPI (Advanced Configuration and Power Interface) compiler and decompiler. It is used for working with ACPI tables.
+
+**git:**
+
+This is a version control system used for tracking changes in source code during software development.
+
+**nasm:**
+
+This is the Netwide Assembler, an assembler and disassembler for the x86 architecture.
+
+**python-is-python3:**
+
+On some systems, there is a distinction between the default Python 2 and Python 3 versions. This package is likely used to ensure that references to the python command point to Python 3, as Python 2 is deprecated.
+
+![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/cca64869-cbed-4d90-bec4-8b2135952252)
+
+```
 cd /home/boot/Downloads/
-    
+```
+**cd:** 
+
+This stands for "change directory." It is a command used to change the current working directory in the command line.
+
+**/home/boot/Downloads/:**
+
+This is the path to the directory you want to change into. In this case, it specifies the absolute path to the "Downloads" directory located within the "boot" user's home directory.
+
+ ```
 wget -c http://security.ubuntu.com/ubuntu/pool/universe/n/nasm/nasm_2.15.05-1_amd64.deb
+```
+**wget:**
+
+This is a command-line utility for downloading files from the web. It is often used to retrieve files and content from web servers.
+
+**-c:**
+
+This option stands for "continue." If the download is interrupted or if the file already exists locally, this option allows wget to resume the download from where it left off.
+
+**http://security.ubuntu.com/ubuntu/pool/universe/n/nasm/nasm_2.15.05-1_amd64.deb:**
+
+This is the URL of the Debian package file you want to download. In this case, it is the NASM (Netwide Assembler) package with version 2.15.05-1 for the AMD64 architecture.
     
-apt install /home/vbg/Downloads/nasm_2.15.05-1_amd64.deb
-    
+```
 apt install /home/boot/Downloads/nasm_2.15.05-1_amd64.deb
-    
+```
+**apt:**
+
+This is the package management tool used on Debian-based Linux distributions, including Ubuntu. It is used to handle the installation, removal, and management of software packages.
+
+**install:**
+
+This is the APT command used to install software packages.
+
+**/home/boot/Downloads/nasm_2.15.05-1_amd64.deb:**
+
+This is the path to the Debian package file you want to install. In this case, it specifies the absolute path to the NASM (Netwide Assembler) package with version 2.15.05-1 for the AMD64 architecture.
+```
 nasm --version
-    
+```
+**nasm:**
+
+This is the command for the NASM assembler. NASM is a popular assembler used for x86 and x86-64 architectures.
+
+**--version:**
+
+It is used to display version information. 
+
 mkdir ~/src
    
 cd ~/
