@@ -141,47 +141,90 @@ This is the command for the NASM assembler. NASM is a popular assembler used for
 **--version:**
 
 It is used to display version information. 
-
+```
 mkdir ~/src
-   
-cd ~/
-   
+```
+**mkdir:**
+
+This stands for "make directory." It is a command in Unix-like operating systems used to create a new directory or folder.
+
+**~/src:**
+
+This specifies the path where the new directory should be created. The tilde (~) is a shorthand notation for the user's home directory. So, ~/src refers to a directory named "src" within the user's home directory.   
+```   
 cd ~/src/
-   
+```
+**cd:** 
+
+This stands for "change directory." It is a command used to change the current working directory in the command line.
+
+**~/src:**
+
+This specifies the path where the new directory should be created. The tilde (~) is a shorthand notation for the user's home directory. So, ~/src refers to a directory named "src" within the user's home directory. 
+```   
 git clone https://github.com/tianocore/edk2
-   
+```
+**git:** 
+
+This is the command-line interface for the Git version control system. Git is used for tracking changes in source code during software development.
+
+**clone:**
+
+This is a Git command used to create a copy or clone of a remote Git repository.
+
+**https://github.com/tianocore/edk2:** 
+
+This is the URL of the Git repository you want to clone. In this case, it's the EDK II (Extensible Firmware Interface Development Kit) repository hosted on GitHub. EDK II is an open-source project that provides a set of development tools and firmware libraries for UEFI (Unified Extensible Firmware Interface) development.
+
+
+ ``` 
 cd edk2/
-   
+ ```
+```
 git checkout tags/edk2-stable202208
-   
+```
+```
 git switch -c niteshboot
-   
+```
+```   
 git branch
-   
+```
+```   
 git submodule update --init
-   
+```
+```   
 make -C BaseTools
-   
+```
+```  
 . edksetup.sh
-   
+```
+```
 make -C BaseTools
-   
+```
+```   
 export EDK_TOOLS_PATH=$HOME/src/edk2/BaseTools
-   
+```
+```   
 echo $EDK_TOOLS_PATH
-   
+```
+```   
 . edksetup.sh BaseTools
-   
+```
+```   
 cp Conf/target.txt Conf/target.org
-   
+```
+```   
 nano Conf/target.txt
-   
+```
+```   
 diff Conf/target.txt Conf/target.org
-   
+```
+```   
 ls MdeModulePkg/Application/HelloWorld/
-   
+```
+```   
  cd MdeModulePkg/Application/HelloWorld/
-   
+  ``` 
 ls
    
 cat HelloWorld.c
