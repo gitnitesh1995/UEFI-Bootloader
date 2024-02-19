@@ -341,23 +341,40 @@ UefiMain (
 }
 
 ```
-   
-cd ..
-   
+![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/6364dfc9-925b-42b8-95fc-e698c2fed01e)
+```   
 cd ~/src/edk2/
-   
+```
+
+![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/a6902140-4369-4b5f-94ec-817cc5940948)
+
+```   
 build
-   
+```
+![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/d63af7f7-e6d8-40aa-9c1d-ca5ed4e81c99)
+
+```
 ls Build/MdeModule/DEBUG_GCC5/X64/HelloWorld.*
-   
+```
+![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/f3441473-a8ea-4555-9bca-977bcacc34f9)
+```
 mkdir /boot/efi/EFI/nitesh_booting
-   
+```
+
+![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/5b2ebccf-589e-4e4c-8f22-0fbfa9e4fc3b)
+```
 cp Build/MdeModule/DEBUG_GCC5/X64/HelloWorld.efi /boot/efi/EFI/nitesh_booting
-   
+```
+![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/a3e7cd58-2137-420e-a46a-72883bbc55ea)
+```
 tree /boot/efi/
+```
+![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/b57f99f8-9721-4bc6-9c3f-04c2146e05b9)
    
 sudo efibootmgr -c -d /dev/vda1 -p 1 -L HelloWorldLoader -l \\EFI\\helloloader\\HelloWorld.efi
-   
+```
 efibootmgr -c -d /dev/vda1 -p 1 -L HelloWorldLoader -l \\EFI\\nitesh_booting\\HelloWorld.efi
+```
+![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/6288ddd7-e150-4a9b-ae2d-9c203a37fc58)
 
 `exit`
