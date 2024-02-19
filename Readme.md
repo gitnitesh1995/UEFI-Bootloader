@@ -176,13 +176,32 @@ This is a Git command used to create a copy or clone of a remote Git repository.
 
 This is the URL of the Git repository you want to clone. In this case, it's the EDK II (Extensible Firmware Interface Development Kit) repository hosted on GitHub. EDK II is an open-source project that provides a set of development tools and firmware libraries for UEFI (Unified Extensible Firmware Interface) development.
 
+![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/9334c207-a48e-4b2a-93a8-1357eaf69a13)
 
  ``` 
 cd edk2/
  ```
+**cd:** 
+
+This stands for "change directory." It is a command used to change the current working directory in the command line.
+
+**edk2/:** 
+
+This specifies the directory you want to change into. In this case, it's the "edk2" directory.
+
 ```
 git checkout tags/edk2-stable202208
 ```
+**git:** 
+
+This is the command-line interface for the Git version control system. Git is used for tracking changes in source code during software development.
+
+**checkout:** This is a Git command used for switching branches or tags. In this case, it is used to switch to a specific tag.
+
+tags/edk2-stable202208: This specifies the tag you want to check out. Tags in Git are used to label specific points in the commit history, often denoting releases or important milestones.
+
+![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/de2e6d3f-501e-412f-ba76-2c607478e6ff)
+
 ```
 git switch -c niteshboot
 ```
