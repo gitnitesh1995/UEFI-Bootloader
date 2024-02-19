@@ -205,42 +205,65 @@ tags/edk2-stable202208: This specifies the tag you want to check out. Tags in Gi
 ```
 git switch -c niteshboot
 ```
+![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/9e878014-bbe3-4457-b200-143f1ea58082)
+
 ```   
 git branch
 ```
+![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/8c8c7fde-b98f-4bbb-a1d6-112edc98bda3)
+
+
 ```   
 git submodule update --init
 ```
+![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/8c68c54c-5abb-4898-beca-16acc115896d)
+
 ```   
 make -C BaseTools
 ```
+![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/1ef1a0b4-afb8-443e-9c6e-c66417a40659)
+
 ```  
 . edksetup.sh
 ```
+![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/48e8fc4d-920c-4cda-abb5-27a9ef391901)
+
 ```
 make -C BaseTools
 ```
 ```   
 export EDK_TOOLS_PATH=$HOME/src/edk2/BaseTools
 ```
+![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/7432f6ea-0933-44c2-abbd-c83892938f17)
+
 ```   
 echo $EDK_TOOLS_PATH
 ```
+![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/ccff8c29-9a5b-4eca-9774-43ec0eb679bd)
+
 ```   
 . edksetup.sh BaseTools
 ```
+![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/aa819c39-06f0-46fd-8955-7f948a34f116)
+
 ```   
 cp Conf/target.txt Conf/target.org
 ```
+![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/d8566788-6f60-49d3-834d-288887ade855)
+
 ```   
 nano Conf/target.txt
 ```
 ```   
 diff Conf/target.txt Conf/target.org
 ```
+![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/dca618b7-2463-4785-9445-a69bebe0527a)
+
 ```   
 ls MdeModulePkg/Application/HelloWorld/
 ```
+![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/a2168eb2-ea1d-4103-83e9-b498690fb89e)
+
 ```   
  cd MdeModulePkg/Application/HelloWorld/
   ``` 
