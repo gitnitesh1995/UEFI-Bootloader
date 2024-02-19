@@ -266,12 +266,81 @@ ls MdeModulePkg/Application/HelloWorld/
 
 ```   
  cd MdeModulePkg/Application/HelloWorld/
-  ``` 
+```
+![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/ba3706a7-1e9b-4369-bff2-21757df11c47)
+```
 ls
+```
+![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/d72a0cdd-4d0e-4e19-af7b-c0d29e41cb1c)
+
    
 cat HelloWorld.c
-   
+```   
 nano HelloWorld.c
+```
+```
+/** @file
+  This sample application bases on HelloWorld PCD setting
+  to print "UEFI Hello World!" to the UEFI Console.
+
+  Copyright (c) 2006 - 2018, Intel Corporation. All rights reserved.<BR>
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+
+**/
+
+#include <Uefi.h>
+#include <Library/PcdLib.h>
+#include <Library/UefiLib.h>
+#include <Library/UefiBootServicesTableLib.h>  // Include for Stall function
+
+// Removed the unnecessary global variable for help message
+
+/**
+  The user Entry Point for Application. The user code starts with this function
+  as the real entry point for the application.
+
+  @param[in] ImageHandle    The firmware allocated handle for the EFI image.
+  @param[in] SystemTable    A pointer to the EFI System Table.
+
+  @retval EFI_SUCCESS       The entry point is executed successfully.
+  @retval other             Some error occurs when executing this entry point.
+
+**/
+EFI_STATUS
+EFIAPI
+UefiMain (
+  IN EFI_HANDLE        ImageHandle,
+  IN EFI_SYSTEM_TABLE  *SystemTable
+  )
+{
+  UINT32  Index;
+
+  Index = 0;
+
+  //
+  // Three PCD types (FeatureFlag, UINT32, and String) are used as the sample.
+  //
+  if (FeaturePcdGet (PcdHelloWorldPrintEnable)) {
+    for (Index = 0; Index < PcdGet32 (PcdHelloWorldPrintTimes); Index++) {
+      //
+      // Use UefiLib Print API to print string to UEFI console
+      //
+      // The following line was commented out, as it was causing an issue
+      // Print ((CHAR16 *)PcdGetPtr (PcdHelloWorldPrintString));
+
+      // The following lines were added to set text color and print a string
+      SystemTable->ConOut->SetAttribute(SystemTable->ConOut, EFI_YELLOW);
+      Print(L"my name is Nitesh");
+
+      // Stall for a while (15 seconds) to see the output on the console
+      SystemTable->BootServices->Stall(15 * 1000000);  // 15 seconds in microseconds
+    }
+  }
+
+  return EFI_SUCCESS;
+}
+
+```
    
 cd ..
    
