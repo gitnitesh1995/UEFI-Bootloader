@@ -8,15 +8,15 @@
 
 ![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/1f35d9e0-3300-4e64-aec4-ffcd39c3345b)
 
-**Select UEFI firmware.**
+**Select UEFI firmware in overview.**
 
 ![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/5444cae2-f9f7-4d4b-b1ca-2af592926e1d)
 
-**Enable Boot Menu.**
+**Enable Boot Menu from Boot Option.**
 
 ![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/e537e972-911a-4737-86c8-b3b9e6e13a82)
 
-**Disable Secure Boot from Boot Manager.**
+**Disable Secure Boot from Boot Manager by default its Enable.**
 
 ![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/fcb470d5-2609-47e8-b76c-e12da7fb8208)
 
