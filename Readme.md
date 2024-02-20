@@ -213,6 +213,12 @@ tags/edk2-stable202208: This specifies the tag you want to check out. Tags in Gi
 ```
 git switch -c niteshboot
 ```
+**git switch:** This is the main command for switching branches in Git.
+
+**-c:** This option is used to create a new branch.
+
+**niteshboot:** This is the name of the new branch that will be created. In this case, the branch will be named "niteshboot."
+
 ![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/9e878014-bbe3-4457-b200-143f1ea58082)
 
 ```   
