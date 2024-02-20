@@ -276,40 +276,107 @@ This is a shell script provided by the EDK II framework. It typically sets up th
 
 ![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/48e8fc4d-920c-4cda-abb5-27a9ef391901)
 
-```
-make -C BaseTools
-```
 ```   
 export EDK_TOOLS_PATH=$HOME/src/edk2/BaseTools
 ```
+**export:** 
+
+This command is used to set an environment variable in the shell.
+
+**EDK_TOOLS_PATH:**
+
+This is the name of the environment variable being set. It represents the path to the BaseTools directory in the EDK II framework.
+
+**$HOME/src/edk2/BaseTools:**
+
+This is the value assigned to the EDK_TOOLS_PATH variable. $HOME is a shell variable that represents the user's home directory. So, this command sets EDK_TOOLS_PATH to the absolute path of the BaseTools directory within the user's home directory.
+
 ![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/7432f6ea-0933-44c2-abbd-c83892938f17)
 
 ```   
 echo $EDK_TOOLS_PATH
 ```
+**echo:** This command is used to print the value of a variable or a specified string to the terminal.
+
+**$EDK_TOOLS_PATH:**
+
+This is a reference to the EDK_TOOLS_PATH environment variable. The $ sign is used to indicate that the following text is the name of a variable, and the shell should substitute it with its current value.
+
 ![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/ccff8c29-9a5b-4eca-9774-43ec0eb679bd)
 
 ```   
 . edksetup.sh BaseTools
 ```
+**. (dot):**
+
+This is a shell built-in command used to execute commands from a script within the current shell environment. It is also known as the "source" command. When you run a script using . or source, it runs the commands in the current shell instead of creating a new shell.
+
+**edksetup.sh:**
+
+This is a shell script provided by the EDK II framework. It is typically used to set up the environment variables and configurations required for building UEFI firmware with the EDK II tools.
+
+**BaseTools:**
+
+This argument is passed to the edksetup.sh script, and it likely specifies a subcomponent or submodule of the EDK II framework, such as the "BaseTools" submodule. It indicates which specific components need to be configured.
+
 ![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/aa819c39-06f0-46fd-8955-7f948a34f116)
 
 ```   
 cp Conf/target.txt Conf/target.org
 ```
+**cp:**
+
+This is the command for copying files or directories.
+
+**Conf/target.txt:**
+
+This is the source file. It specifies the file named target.txt in the Conf directory.
+
+**Conf/target.org:**
+
+This is the destination file. It specifies the file named target.org in the Conf directory.
 ![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/d8566788-6f60-49d3-834d-288887ade855)
 
 ```   
 nano Conf/target.txt
 ```
+**nano:**
+
+This is the name of the text editor. Nano is a simple, command-line-based text editor that is easy to use for basic text editing tasks.
+
+**Conf/target.txt:**
+
+This specifies the file to be edited. It indicates the file named target.txt located in the Conf directory.
+
+
 ```   
 diff Conf/target.txt Conf/target.org
 ```
+**diff:** 
+
+This is the command for performing file comparisons.
+
+**Conf/target.txt:** 
+
+This is the first file for comparison. It specifies the file named target.txt in the Conf directory.
+
+**Conf/target.org:**
+
+This is the second file for comparison. It specifies the file named target.org in the Conf directory.
+
 ![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/dca618b7-2463-4785-9445-a69bebe0527a)
 
 ```   
 ls MdeModulePkg/Application/HelloWorld/
 ```
+**ls:**
+
+This is the command for listing files and directories.
+
+**MdeModulePkg/Application/HelloWorld/:**
+
+This is the directory path for which you want to list the contents. It specifies the "HelloWorld" directory within the "Application" directory inside the "MdeModulePkg" directory.
+
 ![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/a2168eb2-ea1d-4103-83e9-b498690fb89e)
 
 ```   
