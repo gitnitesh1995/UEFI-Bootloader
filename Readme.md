@@ -1,19 +1,24 @@
+**If you're using Virture machine. Follow below steps while creating Virtual Machine.**
+
 ![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/93526919-7155-41f6-8948-028ee6df8fb3)
+
+**Tick option Customize Configuration before install.**
 
 ![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/75db9771-c1c5-421f-818b-e4c555f40c67)
 
 ![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/1f35d9e0-3300-4e64-aec4-ffcd39c3345b)
 
+**Select UEFI firmware.**
+
 ![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/5444cae2-f9f7-4d4b-b1ca-2af592926e1d)
 
-Enable Boot Menu
+**Enable Boot Menu.**
 
 ![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/e537e972-911a-4737-86c8-b3b9e6e13a82)
 
-Disable Secure Boot from Boot Manager
+**Disable Secure Boot from Boot Manager.**
 
 ![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/fcb470d5-2609-47e8-b76c-e12da7fb8208)
-
 
 ```
 sudo apt install tree
