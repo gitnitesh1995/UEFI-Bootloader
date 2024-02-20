@@ -1,3 +1,11 @@
+![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/93526919-7155-41f6-8948-028ee6df8fb3)
+
+![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/75db9771-c1c5-421f-818b-e4c555f40c67)
+
+![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/1f35d9e0-3300-4e64-aec4-ffcd39c3345b)
+
+![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/5444cae2-f9f7-4d4b-b1ca-2af592926e1d)
+
 Enable Boot Menu
 
 ![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/e537e972-911a-4737-86c8-b3b9e6e13a82)
@@ -419,11 +427,11 @@ This is the name of the text editor. Nano is a simple, command-line-based text e
 
 **HelloWorld.c:**
 
-This is the file you want to edit. It specifies the file named HelloWorld.c in the current directory or the specified path.
-
+This is the file you want to edit. Paste the below code in the HelloWorld.c file to get desire output.
+```
 /** @file
   This sample application bases on HelloWorld PCD setting
-  to print "UEFI Hello World!" to the UEFI Console.
+  to print "Custom text" to the UEFI Console.
 
   Copyright (c) 2006 - 2018, Intel Corporation. All rights reserved.<BR>
   SPDX-License-Identifier: BSD-2-Clause-Patent
@@ -484,42 +492,82 @@ UefiMain (
 
 ```
 ![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/6364dfc9-925b-42b8-95fc-e698c2fed01e)
+
 ```   
 cd ~/src/edk2/
 ```
+**cd ~/src/edk2/:**
+Change directory to ~/src/edk2/
 
 ![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/a6902140-4369-4b5f-94ec-817cc5940948)
 
 ```   
 build
 ```
+The build command is used to initiate the build process for the UEFI project. The *.dsc file specifies the project configuration, dependencies, and build settings.
+
 ![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/d63af7f7-e6d8-40aa-9c1d-ca5ed4e81c99)
 
 ```
 ls Build/MdeModule/DEBUG_GCC5/X64/HelloWorld.*
 ```
+List all the files and diectories in the Build/MdeModule/DEBUG_GCC5/X64/HelloWorld.*path whose name is HelloWorld.
+
 ![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/f3441473-a8ea-4555-9bca-977bcacc34f9)
 ```
 mkdir /boot/efi/EFI/nitesh_booting
 ```
+Create a directory named nitesh_booting in /boot/efi/EFI/
 
 ![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/5b2ebccf-589e-4e4c-8f22-0fbfa9e4fc3b)
 ```
 cp Build/MdeModule/DEBUG_GCC5/X64/HelloWorld.efi /boot/efi/EFI/nitesh_booting
 ```
+Copy the HelloWorld.efi file from  Build/MdeModule/DEBUG_GCC5/X64/HelloWorld.efi into /boot/efi/EFI/nitesh_booting.
+
 ![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/a3e7cd58-2137-420e-a46a-72883bbc55ea)
 ```
 tree /boot/efi/
 ```
+Showing directory and files it contains in /boot/efi/ path.
+
 ![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/b57f99f8-9721-4bc6-9c3f-04c2146e05b9)
    
-sudo efibootmgr -c -d /dev/vda1 -p 1 -L HelloWorldLoader -l \\EFI\\helloloader\\HelloWorld.efi
 ```
 efibootmgr -c -d /dev/vda1 -p 1 -L HelloWorldLoader -l \\EFI\\nitesh_booting\\HelloWorld.efi
 ```
+**efibootmgr:**
+
+This is the command-line tool for interacting with the UEFI boot manager.
+
+**-c:**
+
+This option is used to create a new boot entry.
+
+**-d /dev/vda1:**
+
+This specifies the device (disk) where the EFI System Partition (ESP) is located. In this case, it's set to /dev/vda1.
+
+**-p 1:**
+
+This specifies the partition number of the EFI System Partition (ESP) on the specified disk. In this case, it's set to partition 1.
+
+**-L HelloWorldLoader:**
+
+This sets the label or description for the new boot entry. In this case, it's set to "HelloWorldLoader."
+
+**-l \\EFI\\nitesh_booting\\HelloWorld.efi:** 
+
+This specifies the file path of the EFI application that should be loaded as the bootloader for the new entry. The double backslashes (\\) are used to escape the backslashes in the file path. 
+
 ![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/6288ddd7-e150-4a9b-ae2d-9c203a37fc58)
 
-`exit`
+reboot system and go to boot manager
 
-![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/84b88ed9-516e-4826-a265-b713d7858b86)
+![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/e744ec1e-50f6-4b56-8723-9ce2ff441125)
 
+Select HelloLodaer
+
+![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/4a5d2a55-fe38-4cea-8a02-544009325b9d)
+
+![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/ab3eed6c-ba42-489f-a5f0-7fb787b082d0)
