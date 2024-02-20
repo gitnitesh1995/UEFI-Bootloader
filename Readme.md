@@ -382,6 +382,14 @@ This is the directory path for which you want to list the contents. It specifies
 ```   
  cd MdeModulePkg/Application/HelloWorld/
 ```
+**cd:** 
+
+This is the command for changing the current working directory.
+
+**MdeModulePkg/Application/HelloWorld/:**
+
+This is the directory path to which you want to change the current working directory. It specifies the "HelloWorld" directory within the "Application" directory inside the "MdeModulePkg" directory.
+
 ![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/ba3706a7-1e9b-4369-bff2-21757df11c47)
 ```
 ls
