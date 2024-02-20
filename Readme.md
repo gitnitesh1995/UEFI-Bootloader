@@ -406,10 +406,21 @@ cat HelloWorld.c
 
 This is the command for concatenating and displaying the content of files.
 
-**HelloWorld.c:** This is the file whose content you want to display. 
+**HelloWorld.c:** 
+
+This is the file whose content you want to display. 
+
 ```
 nano HelloWorld.c
 ```
+**nano:**
+
+This is the name of the text editor. Nano is a simple, command-line-based text editor that is easy to use for basic text editing tasks.
+
+**HelloWorld.c:**
+
+This is the file you want to edit. It specifies the file named HelloWorld.c in the current directory or the specified path.
+
 /** @file
   This sample application bases on HelloWorld PCD setting
   to print "UEFI Hello World!" to the UEFI Console.
