@@ -1,3 +1,13 @@
+# System Requiremtnts :
+
+**OS:-** Ubuntu 23.10
+
+**RAM:-** 2GB or more.
+
+**CPU:-** 2 or more.
+
+**Storage**:- 20GB or more.
+
 **If you're using Virtural machine. Follow below steps while creating Virtual Machine.**
 
 ![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/93526919-7155-41f6-8948-028ee6df8fb3)
@@ -14,9 +24,12 @@
 
 **Enable Boot Menu from Boot Option.**
 
-![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/e537e972-911a-4737-86c8-b3b9e6e13a82)
+![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/5b80e88f-0432-45ad-9ea6-8853d70f57a5)
+
+![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/df8f6096-4c65-4132-b5e2-cf436d7d5cf4)
 
 **Disable Secure Boot from Boot Manager by default its Enable.**
+
 
 ![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/fcb470d5-2609-47e8-b76c-e12da7fb8208)
 
