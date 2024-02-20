@@ -394,13 +394,21 @@ This is the directory path to which you want to change the current working direc
 ```
 ls
 ```
+**ls:**
+List the files within MdeModulePkg/Application/HelloWorld/ directory.
+
 ![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/d72a0cdd-4d0e-4e19-af7b-c0d29e41cb1c)
 
-   
+``` 
 cat HelloWorld.c
-```   
-nano HelloWorld.c
 ```
+**cat:**
+
+This is the command for concatenating and displaying the content of files.
+
+**HelloWorld.c:** This is the file whose content you want to display. 
+```
+nano HelloWorld.c
 ```
 /** @file
   This sample application bases on HelloWorld PCD setting
