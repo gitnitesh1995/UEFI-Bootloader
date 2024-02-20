@@ -224,22 +224,56 @@ git switch -c niteshboot
 ```   
 git branch
 ```
+**git branch:** It is used to list all the branches in the repository.
+
 ![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/8c8c7fde-b98f-4bbb-a1d6-112edc98bda3)
 
 
 ```   
 git submodule update --init
 ```
+**git submodule:**
+
+This is the main command for working with Git submodules.
+
+**update:** 
+
+This is a submodule subcommand that is used to update the submodules to the latest commit in their respective repositories.
+
+**--init:**
+
+This option is used to initialize any submodules that are not initialized yet. If a submodule has already been initialized, this option has no effect.
+
 ![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/8c68c54c-5abb-4898-beca-16acc115896d)
 
 ```   
 make -C BaseTools
 ```
+**make:**
+
+make is a build automation tool that is used to compile and build projects. It reads a file called Makefile to determine how to build a program or a set of programs.
+
+**-C:**
+
+This option is used to specify the directory where make should change to before looking for the Makefile. In this case, it specifies the "BaseTools" directory.
+
+**BaseTools:**
+
+This is the directory where make should change to before attempting to build. It's the target directory where the build process will take place.
+
 ![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/1ef1a0b4-afb8-443e-9c6e-c66417a40659)
 
 ```  
 . edksetup.sh
 ```
+**. (dot):** 
+
+This is a shell built-in command that is used to run commands from a script in the current shell environment. When you run a script using . or source, it executes the commands in the current shell rather than spawning a new subshell. In this case, it's used to execute the commands in the edksetup.sh script within the current shell.
+
+**edksetup.sh:**
+
+This is a shell script provided by the EDK II framework. It typically sets up the necessary environment variables and configurations required for building UEFI firmware with the EDK II tools.
+
 ![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/48e8fc4d-920c-4cda-abb5-27a9ef391901)
 
 ```
