@@ -1,4 +1,4 @@
-**If you're using Virture machine. Follow below steps while creating Virtual Machine.**
+**If you're using Virtural machine. Follow below steps while creating Virtual Machine.**
 
 ![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/93526919-7155-41f6-8948-028ee6df8fb3)
 
