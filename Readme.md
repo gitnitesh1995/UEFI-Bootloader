@@ -1,4 +1,4 @@
-# Boot Loader
+# Bootloader
 
 ## System Requirements :
 
@@ -9,6 +9,11 @@
 **CPU:-** 2 or more.
 
 **Storage**:- 20GB or more.
+
+### What is bootloader?
+
+A boot loader is a program that is responsible for loading and starting the operating system on a computer.
+
 
 **If you're using Virtural machine. Follow below steps while creating Virtual Machine.**
 
