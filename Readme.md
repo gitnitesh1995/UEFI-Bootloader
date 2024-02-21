@@ -116,7 +116,7 @@ This is the name of the package that you want to install. In this case, it refer
 
 ### Output
 
-root@boot-Standard-PC-Q35-ICH9-2009:~# apt install tree
+root@boot-Standard-PC-Q35-ICH9-2009:~ apt install tree
 Reading package lists... Done
 Building dependency tree       
 Reading state information... Done
