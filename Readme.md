@@ -59,23 +59,10 @@ In my machine, I gave 30GB storage
 
 ![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/7cde9af3-0273-4be7-9429-2df70531b483)
 
-#### Step-10:
-
 ![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/64bb376f-8ad4-41c7-a816-ddb1808a589c)
 
 **If you're using Virtural machine. Follow below steps while creating Virtual Machine.**
 
-![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/93526919-7155-41f6-8948-028ee6df8fb3)
-
-**Tick option Customize Configuration before install.**
-
-![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/75db9771-c1c5-421f-818b-e4c555f40c67)
-
-![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/1f35d9e0-3300-4e64-aec4-ffcd39c3345b)
-
-**Select UEFI firmware in overview.**
-
-![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/5444cae2-f9f7-4d4b-b1ca-2af592926e1d)
 
 **Enable Boot Menu from Boot Option.**
 
