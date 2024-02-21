@@ -75,15 +75,13 @@ sudo su
 ### Output
 
 boot@boot-Standard-PC-Q35-ICH9-2009:~$ sudo su
-root@boot-Standard-PC-Q35-ICH9-2009:/home/boot# 
+root@boot-Standard-PC-Q35-ICH9-2009:/home/boot# cd
+root@boot-Standard-PC-Q35-ICH9-2009:~# 
 
+### Command
 ```
-sudo apt install tree
+apt install tree
 ```
-**sudo :**
-
-It stands for "superuser do" and permits user to execute a command as the superuser
-
 **apt:**
 
 This is the package management tool used on Debian-based Linux distributions, including Ubuntu. It is used to handle the installation, removal, and management of software packages.
@@ -96,8 +94,28 @@ This is the APT command used to install software packages.
 
 This is the name of the package that you want to install. In this case, it refers to a command-line utility called "tree" that displays the contents of a directory in a tree-like structure.
 
-![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/aade4cc9-f6c1-4e0e-b86a-597cea7f5815)
+### Output
 
+root@boot-Standard-PC-Q35-ICH9-2009:~# apt install tree
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following NEW packages will be installed:
+  tree
+0 upgraded, 1 newly installed, 0 to remove and 0 not upgraded.
+Need to get 43.0 kB of archives.
+After this operation, 115 kB of additional disk space will be used.
+Get:1 http://in.archive.ubuntu.com/ubuntu focal/universe amd64 tree amd64 1.8.0-1 [43.0 kB]
+Fetched 43.0 kB in 1s (33.2 kB/s)
+Selecting previously unselected package tree.
+(Reading database ... 157479 files and directories currently installed.)
+Preparing to unpack .../tree_1.8.0-1_amd64.deb ...
+Unpacking tree (1.8.0-1) ...
+Setting up tree (1.8.0-1) ...
+Processing triggers for man-db (2.9.1-1) ...
+root@boot-Standard-PC-Q35-ICH9-2009:~# 
+
+### Command
 ```
 mount | grep efi
 ```
@@ -117,7 +135,14 @@ This command is used to search for patterns within text. It filters lines that m
 
 This is the pattern being searched for. The grep command will only display lines that contain the term "efi."
 
-![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/7e9b4ab5-e8d7-44c2-af8a-c4daf7ba2604)
+### Output
+
+root@boot-Standard-PC-Q35-ICH9-2009:~# mount | grep efi
+efivarfs on /sys/firmware/efi/efivars type efivarfs (rw,nosuid,nodev,noexec,relatime)
+/dev/vda1 on /boot/efi type vfat (rw,relatime,fmask=0077,dmask=0077,codepage=437,iocharset=iso8859-1,shortname=mixed,errors=remount-ro)
+root@boot-Standard-PC-Q35-ICH9-2009:~# 
+
+### Command
 
 ```  
 tree /boot/efi/
@@ -130,7 +155,26 @@ This is the command-line utility used to display the directory structure in a tr
 
 This is the path to the directory for which you want to display the tree structure. In this case, it refers to the EFI (Extensible Firmware Interface) partition's "/boot/efi/" directory. On many Linux systems, this directory is used for storing boot-related files, especially on systems that use UEFI (Unified Extensible Firmware Interface) for booting.
 
-![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/3c883ecc-f97a-4169-8567-d0b0930c4b05)
+### Output
+
+root@boot-Standard-PC-Q35-ICH9-2009:~# tree /boot/efi/
+/boot/efi/
+└── EFI
+    ├── BOOT
+    │   ├── BOOTX64.EFI
+    │   ├── fbx64.efi
+    │   └── mmx64.efi
+    └── ubuntu
+        ├── BOOTX64.CSV
+        ├── grub.cfg
+        ├── grubx64.efi
+        ├── mmx64.efi
+        └── shimx64.efi
+
+3 directories, 8 files
+root@boot-Standard-PC-Q35-ICH9-2009:~# 
+
+### Command
 
 ```
 apt install build-essential uuid-dev iasl git  nasm  python-is-python3
@@ -167,7 +211,7 @@ This is the Netwide Assembler, an assembler and disassembler for the x86 archite
 
 On some systems, there is a distinction between the default Python 2 and Python 3 versions. This package is likely used to ensure that references to the python command point to Python 3, as Python 2 is deprecated.
 
-![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/cca64869-cbed-4d90-bec4-8b2135952252)
+### Output
 
 ```
 cd /home/boot/Downloads/
