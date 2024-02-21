@@ -53,22 +53,24 @@ In my machine, I gave 30GB storage
 
 ![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/23c0a6a9-3ed6-49dd-b108-c3f7a04931a7)
 
-#### Step-9: Within Overview option, change your firmwere from BIOS to UEFI and apply and begin installation
+#### Step-9: Within Overview option, change your firmwere from BIOS to UEFI 
 
 ![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/6f107189-68e4-449a-a588-524a3451d1ba)
 
 ![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/7cde9af3-0273-4be7-9429-2df70531b483)
 
-![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/64bb376f-8ad4-41c7-a816-ddb1808a589c)
-
-
-**Enable Boot Menu from Boot Option.**
+#### Step-10: Enable Boot Menu from Boot Option.
 
 ![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/886e2361-d684-49e8-9619-61197f161a66)
 
 #### Click on apply to commit changes
 
 ![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/9995d794-a940-4e65-af54-3710325b6f4c)
+
+
+![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/64bb376f-8ad4-41c7-a816-ddb1808a589c)
+
+
 
 **Disable Secure Boot from Boot Manager by default its Enable.**
 
