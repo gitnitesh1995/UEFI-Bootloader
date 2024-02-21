@@ -34,12 +34,20 @@ Select the option of Local install media (ISO image or CD-ROM)
 #### Step-4: Go to the directory where your ISO image is downloaded and select it.
 ![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/1a077f63-d01d-49c5-88d2-9fd349247039)
 
+#### Step-5: Click on forward
 ![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/535ec566-da31-4f92-9c4f-cb31f562970c)
 
-#### Step-5: 
+#### Step-6: Choose memory and Numbers of CPU for your machine
+
+In my machine, I choose 2GB RAM and 2 CPU
+
 ![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/c7ff07a7-d1e8-41df-a17c-03bd477e60dd)
 
+#### Step-7: Then give storage to your machine
+In my machine, I gave 30GB storage
 ![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/7c7aa254-8bdc-4b5b-b0aa-008f7bfe741b)
+
+#### Step-8:
 
 ![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/5a3fd6ad-b061-4c3b-b240-dbce44e0f27e)
 
