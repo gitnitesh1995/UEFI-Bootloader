@@ -1459,7 +1459,7 @@ root@boot-Standard-PC-Q35-ICH9-2009:~/src/edk2# diff Conf/target.txt Conf/target
 ---
 > ACTIVE_PLATFORM       = EmulatorPkg/EmulatorPkg.dsc
 > 
-44,45c44
+44,45c44 
 < #TARGET_ARCH           = IA32
 < TARGET_ARCH           = X64
 ---
@@ -1485,7 +1485,7 @@ This is the command for listing files and directories.
 
 This is the directory path for which you want to list the contents. It specifies the "HelloWorld" directory within the "Application" directory inside the "MdeModulePkg" directory.
 
-### Ouput
+### Output
 
 root@boot-Standard-PC-Q35-ICH9-2009:~/src/edk2# ls MdeModulePkg/Application/HelloWorld/
 HelloWorld.c  HelloWorldExtra.uni  HelloWorld.inf  HelloWorldStr.uni  HelloWorld.uni
