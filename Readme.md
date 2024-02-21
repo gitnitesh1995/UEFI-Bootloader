@@ -1273,6 +1273,7 @@ make[1]: Leaving directory '/root/src/edk2/BaseTools/Tests'
 make: Leaving directory '/root/src/edk2/BaseTools'
 root@boot-Standard-PC-Q35-ICH9-2009:~/src/edk2# 
 
+### Command
 
 ```  
 . edksetup.sh
@@ -1285,7 +1286,22 @@ This is a shell built-in command that is used to run commands from a script in t
 
 This is a shell script provided by the EDK II framework. It typically sets up the necessary environment variables and configurations required for building UEFI firmware with the EDK II tools.
 
-![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/48e8fc4d-920c-4cda-abb5-27a9ef391901)
+### Output
+
+root@boot-Standard-PC-Q35-ICH9-2009:~/src/edk2# . edksetup.sh
+Using EDK2 in-source Basetools
+WORKSPACE: /root/src/edk2
+EDK_TOOLS_PATH: /root/src/edk2/BaseTools
+CONF_PATH: /root/src/edk2/Conf
+Copying $EDK_TOOLS_PATH/Conf/build_rule.template
+     to /root/src/edk2/Conf/build_rule.txt
+Copying $EDK_TOOLS_PATH/Conf/tools_def.template
+     to /root/src/edk2/Conf/tools_def.txt
+Copying $EDK_TOOLS_PATH/Conf/target.template
+     to /root/src/edk2/Conf/target.txt
+root@boot-Standard-PC-Q35-ICH9-2009:~/src/edk2# 
+
+### Command
 
 ```   
 export EDK_TOOLS_PATH=$HOME/src/edk2/BaseTools
@@ -1302,7 +1318,12 @@ This is the name of the environment variable being set. It represents the path t
 
 This is the value assigned to the EDK_TOOLS_PATH variable. $HOME is a shell variable that represents the user's home directory. So, this command sets EDK_TOOLS_PATH to the absolute path of the BaseTools directory within the user's home directory.
 
-![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/7432f6ea-0933-44c2-abbd-c83892938f17)
+### Output
+
+root@boot-Standard-PC-Q35-ICH9-2009:~/src/edk2# export EDK_TOOLS_PATH=$HOME/src/edk2/BaseTools
+root@boot-Standard-PC-Q35-ICH9-2009:~/src/edk2# 
+
+### Command
 
 ```   
 echo $EDK_TOOLS_PATH
@@ -1313,7 +1334,13 @@ echo $EDK_TOOLS_PATH
 
 This is a reference to the EDK_TOOLS_PATH environment variable. The $ sign is used to indicate that the following text is the name of a variable, and the shell should substitute it with its current value.
 
-![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/ccff8c29-9a5b-4eca-9774-43ec0eb679bd)
+### Output
+
+root@boot-Standard-PC-Q35-ICH9-2009:~/src/edk2# echo $EDK_TOOLS_PATH
+/root/src/edk2/BaseTools
+root@boot-Standard-PC-Q35-ICH9-2009:~/src/edk2# 
+
+### Command
 
 ```   
 . edksetup.sh BaseTools
@@ -1330,7 +1357,17 @@ This is a shell script provided by the EDK II framework. It is typically used to
 
 This argument is passed to the edksetup.sh script, and it likely specifies a subcomponent or submodule of the EDK II framework, such as the "BaseTools" submodule. It indicates which specific components need to be configured.
 
-![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/aa819c39-06f0-46fd-8955-7f948a34f116)
+### Output
+
+root@boot-Standard-PC-Q35-ICH9-2009:~/src/edk2# . edksetup.sh BaseTools
+Loading previous configuration from /root/src/edk2/Conf/BuildEnv.sh
+Using EDK2 in-source Basetools
+WORKSPACE: /root/src/edk2
+EDK_TOOLS_PATH: /root/src/edk2/BaseTools
+CONF_PATH: /root/src/edk2/Conf
+root@boot-Standard-PC-Q35-ICH9-2009:~/src/edk2# 
+
+### Command
 
 ```   
 cp Conf/target.txt Conf/target.org
@@ -1346,7 +1383,13 @@ This is the source file. It specifies the file named target.txt in the Conf dire
 **Conf/target.org:**
 
 This is the destination file. It specifies the file named target.org in the Conf directory.
-![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/d8566788-6f60-49d3-834d-288887ade855)
+
+#### Output
+
+root@boot-Standard-PC-Q35-ICH9-2009:~/src/edk2# cp Conf/target.txt Conf/target.org
+root@boot-Standard-PC-Q35-ICH9-2009:~/src/edk2# 
+
+### Command
 
 ```   
 nano Conf/target.txt
@@ -1359,6 +1402,7 @@ This is the name of the text editor. Nano is a simple, command-line-based text e
 
 This specifies the file to be edited. It indicates the file named target.txt located in the Conf directory.
 
+### Command
 
 ```   
 diff Conf/target.txt Conf/target.org
@@ -1375,7 +1419,29 @@ This is the first file for comparison. It specifies the file named target.txt in
 
 This is the second file for comparison. It specifies the file named target.org in the Conf directory.
 
-![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/dca618b7-2463-4785-9445-a69bebe0527a)
+### Ouptut
+
+root@boot-Standard-PC-Q35-ICH9-2009:~/src/edk2# diff Conf/target.txt Conf/target.org
+20,21c20,21
+< #ACTIVE_PLATFORM       = EmulatorPkg/EmulatorPkg.dsc
+< ACTIVE_PLATFORM       = MdeModulePkg/MdeModulePkg.dsc
+---
+> ACTIVE_PLATFORM       = EmulatorPkg/EmulatorPkg.dsc
+> 
+44,45c44
+< #TARGET_ARCH           = IA32
+< TARGET_ARCH           = X64
+---
+> TARGET_ARCH           = IA32
+55,56c54,55
+< #TOOL_CHAIN_TAG        = VS2015x86
+< TOOL_CHAIN_TAG        = GCC5
+---
+> TOOL_CHAIN_TAG        = VS2015x86
+> 
+root@boot-Standard-PC-Q35-ICH9-2009:~/src/edk2#
+
+### Command
 
 ```   
 ls MdeModulePkg/Application/HelloWorld/
@@ -1388,27 +1454,39 @@ This is the command for listing files and directories.
 
 This is the directory path for which you want to list the contents. It specifies the "HelloWorld" directory within the "Application" directory inside the "MdeModulePkg" directory.
 
-![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/a2168eb2-ea1d-4103-83e9-b498690fb89e)
+### Ouput
+
+root@boot-Standard-PC-Q35-ICH9-2009:~/src/edk2# ls MdeModulePkg/Application/HelloWorld/
+HelloWorld.c  HelloWorldExtra.uni  HelloWorld.inf  HelloWorldStr.uni  HelloWorld.uni
+root@boot-Standard-PC-Q35-ICH9-2009:~/src/edk2#
+
+### Command
 
 ```   
  cd MdeModulePkg/Application/HelloWorld/
 ```
-**cd:** 
+ Change directory to MdeModulePkg/Application/HelloWorld/
 
-This is the command for changing the current working directory.
+### Output
 
-**MdeModulePkg/Application/HelloWorld/:**
+root@boot-Standard-PC-Q35-ICH9-2009:~/src/edk2#  cd MdeModulePkg/Application/HelloWorld/
+root@boot-Standard-PC-Q35-ICH9-2009:~/src/edk2/MdeModulePkg/Application/HelloWorld# 
 
-This is the directory path to which you want to change the current working directory. It specifies the "HelloWorld" directory within the "Application" directory inside the "MdeModulePkg" directory.
+### Command
 
-![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/ba3706a7-1e9b-4369-bff2-21757df11c47)
 ```
 ls
 ```
 **ls:**
 List the files within MdeModulePkg/Application/HelloWorld/ directory.
 
-![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/d72a0cdd-4d0e-4e19-af7b-c0d29e41cb1c)
+### Output
+
+root@boot-Standard-PC-Q35-ICH9-2009:~/src/edk2/MdeModulePkg/Application/HelloWorld# ls
+HelloWorld.c  HelloWorldExtra.uni  HelloWorld.inf  HelloWorldStr.uni  HelloWorld.uni
+root@boot-Standard-PC-Q35-ICH9-2009:~/src/edk2/MdeModulePkg/Application/HelloWorld#
+
+### Command
 
 ``` 
 cat HelloWorld.c
@@ -1421,6 +1499,73 @@ This is the command for concatenating and displaying the content of files.
 
 This is the file whose content you want to display. 
 
+### Output
+
+root@boot-Standard-PC-Q35-ICH9-2009:~/src/edk2/MdeModulePkg/Application/HelloWorld# cat HelloWorld.c
+/** @file
+  This sample application bases on HelloWorld PCD setting
+  to print "UEFI Hello World!" to the UEFI Console.
+
+  Copyright (c) 2006 - 2018, Intel Corporation. All rights reserved.<BR>
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+
+**/
+
+#include <Uefi.h>
+#include <Library/PcdLib.h>
+#include <Library/UefiLib.h>
+#include <Library/UefiApplicationEntryPoint.h>
+
+//
+// String token ID of help message text.
+// Shell supports to find help message in the resource section of an application image if
+// .MAN file is not found. This global variable is added to make build tool recognizes
+// that the help string is consumed by user and then build tool will add the string into
+// the resource section. Thus the application can use '-?' option to show help message in
+// Shell.
+//
+GLOBAL_REMOVE_IF_UNREFERENCED EFI_STRING_ID  mStringHelpTokenId = STRING_TOKEN (STR_HELLO_WORLD_HELP_INFORMATION);
+
+/**
+  The user Entry Point for Application. The user code starts with this function
+  as the real entry point for the application.
+
+  @param[in] ImageHandle    The firmware allocated handle for the EFI image.
+  @param[in] SystemTable    A pointer to the EFI System Table.
+
+  @retval EFI_SUCCESS       The entry point is executed successfully.
+  @retval other             Some error occurs when executing this entry point.
+
+**/
+EFI_STATUS
+EFIAPI
+UefiMain (
+  IN EFI_HANDLE        ImageHandle,
+  IN EFI_SYSTEM_TABLE  *SystemTable
+  )
+{
+  UINT32  Index;
+
+  Index = 0;
+
+  //
+  // Three PCD type (FeatureFlag, UINT32 and String) are used as the sample.
+  //
+  if (FeaturePcdGet (PcdHelloWorldPrintEnable)) {
+    for (Index = 0; Index < PcdGet32 (PcdHelloWorldPrintTimes); Index++) {
+      //
+      // Use UefiLib Print API to print string to UEFI console
+      //
+      Print ((CHAR16 *)PcdGetPtr (PcdHelloWorldPrintString));
+    }
+  }
+
+  return EFI_SUCCESS;
+}
+root@boot-Standard-PC-Q35-ICH9-2009:~/src/edk2/MdeModulePkg/Application/HelloWorld# 
+
+### Command
+
 ```
 nano HelloWorld.c
 ```
@@ -1431,7 +1576,9 @@ This is the name of the text editor. Nano is a simple, command-line-based text e
 **HelloWorld.c:**
 
 This is the file you want to edit. Paste the below code in the HelloWorld.c file to get desire output.
-```
+
+### Output
+
 /** @file
   This sample application bases on HelloWorld PCD setting
   to print "Custom text" to the UEFI Console.
@@ -1483,7 +1630,7 @@ UefiMain (
 
       // The following lines were added to set text color and print a string
       SystemTable->ConOut->SetAttribute(SystemTable->ConOut, EFI_YELLOW);
-      Print(L"my name is Nitesh");
+      Print(L"My name is Nitesh.This is my first bootloader.");
 
       // Stall for a while (15 seconds) to see the output on the console
       SystemTable->BootServices->Stall(15 * 1000000);  // 15 seconds in microseconds
@@ -1491,26 +1638,28 @@ UefiMain (
   }
 
   return EFI_SUCCESS;
-}
 
-```
-![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/6364dfc9-925b-42b8-95fc-e698c2fed01e)
+### Command
 
 ```   
 cd ~/src/edk2/
 ```
 **cd ~/src/edk2/:**
-Change directory to ~/src/edk2/
 
-![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/a6902140-4369-4b5f-94ec-817cc5940948)
+Change directory to ~/src/edk2/
 
 ```   
 build
 ```
 The build command is used to initiate the build process for the UEFI project. The *.dsc file specifies the project configuration, dependencies, and build settings.
 
-![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/d63af7f7-e6d8-40aa-9c1d-ca5ed4e81c99)
+### Output
 
+- Done -
+Build end time: 15:32:45, Feb.21 2024
+Build total time: 00:03:11
+
+root@boot-Standard-PC-Q35-ICH9-2009:~/src/edk2#
 ```
 ls Build/MdeModule/DEBUG_GCC5/X64/HelloWorld.*
 ```
