@@ -14,6 +14,33 @@
 
 A boot loader is a program that is responsible for loading and starting the operating system on a computer.
 
+![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/d3749e15-d6d0-4db6-97f6-6772c0356fc3)
+
+![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/b9d56b8b-34c3-4fe5-8b17-9f0873445028)
+
+![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/ca7f5381-8d6f-4338-898d-659542be45c6)
+
+![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/1a077f63-d01d-49c5-88d2-9fd349247039)
+
+![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/5cac209f-e818-482a-906a-cfa02033ef6f)
+
+![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/c7ff07a7-d1e8-41df-a17c-03bd477e60dd)
+
+![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/7c7aa254-8bdc-4b5b-b0aa-008f7bfe741b)
+
+![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/5a3fd6ad-b061-4c3b-b240-dbce44e0f27e)
+
+![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/23c0a6a9-3ed6-49dd-b108-c3f7a04931a7)
+
+![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/6f107189-68e4-449a-a588-524a3451d1ba)
+
+![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/7cde9af3-0273-4be7-9429-2df70531b483)
+
+![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/886e2361-d684-49e8-9619-61197f161a66)
+
+![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/9995d794-a940-4e65-af54-3710325b6f4c)
+
+![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/64bb376f-8ad4-41c7-a816-ddb1808a589c)
 
 **If you're using Virtural machine. Follow below steps while creating Virtual Machine.**
 
@@ -39,6 +66,16 @@ A boot loader is a program that is responsible for loading and starting the oper
 
 
 ![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/fcb470d5-2609-47e8-b76c-e12da7fb8208)
+
+### Command
+
+```
+sudo su
+```
+### Output
+
+boot@boot-Standard-PC-Q35-ICH9-2009:~$ sudo su
+root@boot-Standard-PC-Q35-ICH9-2009:/home/boot# 
 
 ```
 sudo apt install tree
