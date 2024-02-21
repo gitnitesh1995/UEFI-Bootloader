@@ -1660,31 +1660,71 @@ Build end time: 15:32:45, Feb.21 2024
 Build total time: 00:03:11
 
 root@boot-Standard-PC-Q35-ICH9-2009:~/src/edk2#
+
+### Command 
+
 ```
 ls Build/MdeModule/DEBUG_GCC5/X64/HelloWorld.*
 ```
 List all the files and diectories in the Build/MdeModule/DEBUG_GCC5/X64/HelloWorld.*path whose name is HelloWorld.
 
-![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/f3441473-a8ea-4555-9bca-977bcacc34f9)
+###Output
+
+root@boot-Standard-PC-Q35-ICH9-2009:~/src/edk2# ls Build/MdeModule/DEBUG_GCC5/X64/HelloWorld.*
+Build/MdeModule/DEBUG_GCC5/X64/HelloWorld.debug  Build/MdeModule/DEBUG_GCC5/X64/HelloWorld.efi
+root@boot-Standard-PC-Q35-ICH9-2009:~/src/edk2# 
+
+### Command
+
 ```
 mkdir /boot/efi/EFI/nitesh_booting
 ```
 Create a directory named nitesh_booting in /boot/efi/EFI/
 
-![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/5b2ebccf-589e-4e4c-8f22-0fbfa9e4fc3b)
+### Output
+
+root@boot-Standard-PC-Q35-ICH9-2009:~/src/edk2# mkdir /boot/efi/EFI/nitesh_booting
+root@boot-Standard-PC-Q35-ICH9-2009:~/src/edk2# 
+
 ```
 cp Build/MdeModule/DEBUG_GCC5/X64/HelloWorld.efi /boot/efi/EFI/nitesh_booting
 ```
 Copy the HelloWorld.efi file from  Build/MdeModule/DEBUG_GCC5/X64/HelloWorld.efi into /boot/efi/EFI/nitesh_booting.
 
-![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/a3e7cd58-2137-420e-a46a-72883bbc55ea)
+### Output
+
+root@boot-Standard-PC-Q35-ICH9-2009:~/src/edk2# cp Build/MdeModule/DEBUG_GCC5/X64/HelloWorld.efi /boot/efi/EFI/nitesh_booting
+root@boot-Standard-PC-Q35-ICH9-2009:~/src/edk2# 
+
+### Command
+
 ```
 tree /boot/efi/
 ```
 Showing directory and files it contains in /boot/efi/ path.
 
-![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/b57f99f8-9721-4bc6-9c3f-04c2146e05b9)
-   
+### Output
+
+root@boot-Standard-PC-Q35-ICH9-2009:~/src/edk2# tree /boot/efi/
+/boot/efi/
+└── EFI
+    ├── BOOT
+    │   ├── BOOTX64.EFI
+    │   ├── fbx64.efi
+    │   └── mmx64.efi
+    ├── nitesh_booting
+    │   └── HelloWorld.efi
+    └── ubuntu
+        ├── BOOTX64.CSV
+        ├── grub.cfg
+        ├── grubx64.efi
+        ├── mmx64.efi
+        └── shimx64.efi
+
+4 directories, 9 files
+
+### Command
+
 ```
 efibootmgr -c -d /dev/vda1 -p 1 -L HelloWorldLoader -l \\EFI\\nitesh_booting\\HelloWorld.efi
 ```
@@ -1712,7 +1752,18 @@ This sets the label or description for the new boot entry. In this case, it's se
 
 This specifies the file path of the EFI application that should be loaded as the bootloader for the new entry. The double backslashes (\\) are used to escape the backslashes in the file path. 
 
-![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/6288ddd7-e150-4a9b-ae2d-9c203a37fc58)
+### Output
+
+root@boot-Standard-PC-Q35-ICH9-2009:~/src/edk2# efibootmgr -c -d /dev/vda1 -p 1 -L HelloWorldLoader -l \\EFI\\nitesh_booting\\HelloWorld.efi
+BootCurrent: 0004
+Timeout: 3 seconds
+BootOrder: 0001,0004,0003,0000,0002
+Boot0000* UiApp
+Boot0002* EFI Internal Shell
+Boot0003* UEFI Misc Device
+Boot0004* ubuntu
+Boot0001* HelloWorldLoader
+root@boot-Standard-PC-Q35-ICH9-2009:~/src/edk2# 
 
 reboot system and go to boot manager
 
