@@ -668,15 +668,27 @@ git switch -c niteshboot
 
 **niteshboot:** This is the name of the new branch that will be created. In this case, the branch will be named "niteshboot."
 
-![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/9e878014-bbe3-4457-b200-143f1ea58082)
+### Output
+
+root@boot-Standard-PC-Q35-ICH9-2009:~/src/edk2# git switch -c niteshboot
+Switched to a new branch 'niteshboot'
+root@boot-Standard-PC-Q35-ICH9-2009:~/src/edk2# 
+
+### Command
 
 ```   
 git branch
 ```
 **git branch:** It is used to list all the branches in the repository.
 
-![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/8c8c7fde-b98f-4bbb-a1d6-112edc98bda3)
+### Output
 
+root@boot-Standard-PC-Q35-ICH9-2009:~/src/edk2# git branch
+  master
+* niteshboot
+root@boot-Standard-PC-Q35-ICH9-2009:~/src/edk2# 
+
+### Command
 
 ```   
 git submodule update --init
@@ -693,7 +705,33 @@ This is a submodule subcommand that is used to update the submodules to the late
 
 This option is used to initialize any submodules that are not initialized yet. If a submodule has already been initialized, this option has no effect.
 
-![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/8c68c54c-5abb-4898-beca-16acc115896d)
+### Output
+
+root@boot-Standard-PC-Q35-ICH9-2009:~/src/edk2# git submodule update --init
+Submodule 'SoftFloat' (https://github.com/ucb-bar/berkeley-softfloat-3.git) registered for path 'ArmPkg/Library/ArmSoftFloatLib/berkeley-softfloat-3'
+Submodule 'BaseTools/Source/C/BrotliCompress/brotli' (https://github.com/google/brotli) registered for path 'BaseTools/Source/C/BrotliCompress/brotli'
+Submodule 'CryptoPkg/Library/OpensslLib/openssl' (https://github.com/openssl/openssl) registered for path 'CryptoPkg/Library/OpensslLib/openssl'
+Submodule 'MdeModulePkg/Library/BrotliCustomDecompressLib/brotli' (https://github.com/google/brotli) registered for path 'MdeModulePkg/Library/BrotliCustomDecompressLib/brotli'
+Submodule 'MdeModulePkg/Universal/RegularExpressionDxe/oniguruma' (https://github.com/kkos/oniguruma) registered for path 'MdeModulePkg/Universal/RegularExpressionDxe/oniguruma'
+Submodule 'RedfishPkg/Library/JsonLib/jansson' (https://github.com/akheron/jansson) registered for path 'RedfishPkg/Library/JsonLib/jansson'
+Submodule 'UnitTestFrameworkPkg/Library/CmockaLib/cmocka' (https://github.com/tianocore/edk2-cmocka.git) registered for path 'UnitTestFrameworkPkg/Library/CmockaLib/cmocka'
+Cloning into '/root/src/edk2/ArmPkg/Library/ArmSoftFloatLib/berkeley-softfloat-3'...
+Cloning into '/root/src/edk2/BaseTools/Source/C/BrotliCompress/brotli'...
+Cloning into '/root/src/edk2/CryptoPkg/Library/OpensslLib/openssl'...
+Cloning into '/root/src/edk2/MdeModulePkg/Library/BrotliCustomDecompressLib/brotli'...
+Cloning into '/root/src/edk2/MdeModulePkg/Universal/RegularExpressionDxe/oniguruma'...
+Cloning into '/root/src/edk2/RedfishPkg/Library/JsonLib/jansson'...
+Cloning into '/root/src/edk2/UnitTestFrameworkPkg/Library/CmockaLib/cmocka'...
+Submodule path 'ArmPkg/Library/ArmSoftFloatLib/berkeley-softfloat-3': checked out 'b64af41c3276f97f0e181920400ee056b9c88037'
+Submodule path 'BaseTools/Source/C/BrotliCompress/brotli': checked out 'f4153a09f87cbb9c826d8fc12c74642bb2d879ea'
+Submodule path 'CryptoPkg/Library/OpensslLib/openssl': checked out 'd82e959e621a3d597f1e0d50ff8c2d8b96915fd7'
+Submodule path 'MdeModulePkg/Library/BrotliCustomDecompressLib/brotli': checked out 'f4153a09f87cbb9c826d8fc12c74642bb2d879ea'
+Submodule path 'MdeModulePkg/Universal/RegularExpressionDxe/oniguruma': checked out 'abfc8ff81df4067f309032467785e06975678f0d'
+Submodule path 'RedfishPkg/Library/JsonLib/jansson': checked out 'e9ebfa7e77a6bee77df44e096b100e7131044059'
+Submodule path 'UnitTestFrameworkPkg/Library/CmockaLib/cmocka': checked out '1cc9cde3448cdd2e000886a26acf1caac2db7cf1'
+root@boot-Standard-PC-Q35-ICH9-2009:~/src/edk2# 
+
+### Command
 
 ```   
 make -C BaseTools
@@ -710,7 +748,531 @@ This option is used to specify the directory where make should change to before 
 
 This is the directory where make should change to before attempting to build. It's the target directory where the build process will take place.
 
-![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/1ef1a0b4-afb8-443e-9c6e-c66417a40659)
+### Output
+
+root@boot-Standard-PC-Q35-ICH9-2009:~/src/edk2# make -C BaseTools
+make: Entering directory '/root/src/edk2/BaseTools'
+make -C Source/C
+make[1]: Entering directory '/root/src/edk2/BaseTools/Source/C'
+Attempting to detect HOST_ARCH from 'uname -m': x86_64
+Detected HOST_ARCH of X64 using uname.
+mkdir -p .
+mkdir ./libs
+make -C Common
+make[2]: Entering directory '/root/src/edk2/BaseTools/Source/C/Common'
+gcc  -c  -I .. -I ../Include/Common -I ../Include/ -I ../Include/IndustryStandard -I ../Common/ -I .. -I . -I ../Include/X64/ -MD -fshort-wchar -fno-strict-aliasing -fwrapv -fno-delete-null-pointer-checks -Wall -Werror -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-restrict -Wno-unused-result -nostdlib -g -O2  BasePeCoff.c -o BasePeCoff.o
+gcc  -c  -I .. -I ../Include/Common -I ../Include/ -I ../Include/IndustryStandard -I ../Common/ -I .. -I . -I ../Include/X64/ -MD -fshort-wchar -fno-strict-aliasing -fwrapv -fno-delete-null-pointer-checks -Wall -Werror -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-restrict -Wno-unused-result -nostdlib -g -O2  BinderFuncs.c -o BinderFuncs.o
+gcc  -c  -I .. -I ../Include/Common -I ../Include/ -I ../Include/IndustryStandard -I ../Common/ -I .. -I . -I ../Include/X64/ -MD -fshort-wchar -fno-strict-aliasing -fwrapv -fno-delete-null-pointer-checks -Wall -Werror -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-restrict -Wno-unused-result -nostdlib -g -O2  CommonLib.c -o CommonLib.o
+gcc  -c  -I .. -I ../Include/Common -I ../Include/ -I ../Include/IndustryStandard -I ../Common/ -I .. -I . -I ../Include/X64/ -MD -fshort-wchar -fno-strict-aliasing -fwrapv -fno-delete-null-pointer-checks -Wall -Werror -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-restrict -Wno-unused-result -nostdlib -g -O2  Crc32.c -o Crc32.o
+gcc  -c  -I .. -I ../Include/Common -I ../Include/ -I ../Include/IndustryStandard -I ../Common/ -I .. -I . -I ../Include/X64/ -MD -fshort-wchar -fno-strict-aliasing -fwrapv -fno-delete-null-pointer-checks -Wall -Werror -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-restrict -Wno-unused-result -nostdlib -g -O2  Decompress.c -o Decompress.o
+gcc  -c  -I .. -I ../Include/Common -I ../Include/ -I ../Include/IndustryStandard -I ../Common/ -I .. -I . -I ../Include/X64/ -MD -fshort-wchar -fno-strict-aliasing -fwrapv -fno-delete-null-pointer-checks -Wall -Werror -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-restrict -Wno-unused-result -nostdlib -g -O2  EfiCompress.c -o EfiCompress.o
+gcc  -c  -I .. -I ../Include/Common -I ../Include/ -I ../Include/IndustryStandard -I ../Common/ -I .. -I . -I ../Include/X64/ -MD -fshort-wchar -fno-strict-aliasing -fwrapv -fno-delete-null-pointer-checks -Wall -Werror -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-restrict -Wno-unused-result -nostdlib -g -O2  EfiUtilityMsgs.c -o EfiUtilityMsgs.o
+gcc  -c  -I .. -I ../Include/Common -I ../Include/ -I ../Include/IndustryStandard -I ../Common/ -I .. -I . -I ../Include/X64/ -MD -fshort-wchar -fno-strict-aliasing -fwrapv -fno-delete-null-pointer-checks -Wall -Werror -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-restrict -Wno-unused-result -nostdlib -g -O2  FirmwareVolumeBuffer.c -o FirmwareVolumeBuffer.o
+gcc  -c  -I .. -I ../Include/Common -I ../Include/ -I ../Include/IndustryStandard -I ../Common/ -I .. -I . -I ../Include/X64/ -MD -fshort-wchar -fno-strict-aliasing -fwrapv -fno-delete-null-pointer-checks -Wall -Werror -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-restrict -Wno-unused-result -nostdlib -g -O2  FvLib.c -o FvLib.o
+gcc  -c  -I .. -I ../Include/Common -I ../Include/ -I ../Include/IndustryStandard -I ../Common/ -I .. -I . -I ../Include/X64/ -MD -fshort-wchar -fno-strict-aliasing -fwrapv -fno-delete-null-pointer-checks -Wall -Werror -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-restrict -Wno-unused-result -nostdlib -g -O2  MemoryFile.c -o MemoryFile.o
+gcc  -c  -I .. -I ../Include/Common -I ../Include/ -I ../Include/IndustryStandard -I ../Common/ -I .. -I . -I ../Include/X64/ -MD -fshort-wchar -fno-strict-aliasing -fwrapv -fno-delete-null-pointer-checks -Wall -Werror -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-restrict -Wno-unused-result -nostdlib -g -O2  MyAlloc.c -o MyAlloc.o
+gcc  -c  -I .. -I ../Include/Common -I ../Include/ -I ../Include/IndustryStandard -I ../Common/ -I .. -I . -I ../Include/X64/ -MD -fshort-wchar -fno-strict-aliasing -fwrapv -fno-delete-null-pointer-checks -Wall -Werror -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-restrict -Wno-unused-result -nostdlib -g -O2  OsPath.c -o OsPath.o
+gcc  -c  -I .. -I ../Include/Common -I ../Include/ -I ../Include/IndustryStandard -I ../Common/ -I .. -I . -I ../Include/X64/ -MD -fshort-wchar -fno-strict-aliasing -fwrapv -fno-delete-null-pointer-checks -Wall -Werror -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-restrict -Wno-unused-result -nostdlib -g -O2  ParseGuidedSectionTools.c -o ParseGuidedSectionTools.o
+gcc  -c  -I .. -I ../Include/Common -I ../Include/ -I ../Include/IndustryStandard -I ../Common/ -I .. -I . -I ../Include/X64/ -MD -fshort-wchar -fno-strict-aliasing -fwrapv -fno-delete-null-pointer-checks -Wall -Werror -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-restrict -Wno-unused-result -nostdlib -g -O2  ParseInf.c -o ParseInf.o
+gcc  -c  -I .. -I ../Include/Common -I ../Include/ -I ../Include/IndustryStandard -I ../Common/ -I .. -I . -I ../Include/X64/ -MD -fshort-wchar -fno-strict-aliasing -fwrapv -fno-delete-null-pointer-checks -Wall -Werror -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-restrict -Wno-unused-result -nostdlib -g -O2  PeCoffLoaderEx.c -o PeCoffLoaderEx.o
+gcc  -c  -I .. -I ../Include/Common -I ../Include/ -I ../Include/IndustryStandard -I ../Common/ -I .. -I . -I ../Include/X64/ -MD -fshort-wchar -fno-strict-aliasing -fwrapv -fno-delete-null-pointer-checks -Wall -Werror -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-restrict -Wno-unused-result -nostdlib -g -O2  SimpleFileParsing.c -o SimpleFileParsing.o
+gcc  -c  -I .. -I ../Include/Common -I ../Include/ -I ../Include/IndustryStandard -I ../Common/ -I .. -I . -I ../Include/X64/ -MD -fshort-wchar -fno-strict-aliasing -fwrapv -fno-delete-null-pointer-checks -Wall -Werror -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-restrict -Wno-unused-result -nostdlib -g -O2  StringFuncs.c -o StringFuncs.o
+gcc  -c  -I .. -I ../Include/Common -I ../Include/ -I ../Include/IndustryStandard -I ../Common/ -I .. -I . -I ../Include/X64/ -MD -fshort-wchar -fno-strict-aliasing -fwrapv -fno-delete-null-pointer-checks -Wall -Werror -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-restrict -Wno-unused-result -nostdlib -g -O2  TianoCompress.c -o TianoCompress.o
+ar crs ../libs/libCommon.a BasePeCoff.o BinderFuncs.o CommonLib.o Crc32.o Decompress.o EfiCompress.o EfiUtilityMsgs.o FirmwareVolumeBuffer.o FvLib.o MemoryFile.o MyAlloc.o OsPath.o ParseGuidedSectionTools.o ParseInf.o PeCoffLoaderEx.o SimpleFileParsing.o StringFuncs.o TianoCompress.o
+make[2]: Leaving directory '/root/src/edk2/BaseTools/Source/C/Common'
+mkdir ./bin
+make -C VfrCompile VfrLexer.h
+make[2]: Entering directory '/root/src/edk2/BaseTools/Source/C/VfrCompile'
+BIN_DIR='.' make -C Pccts/dlg
+make[3]: Entering directory '/root/src/edk2/BaseTools/Source/C/VfrCompile/Pccts/dlg'
+cc -O -I. -I../support/set -I../h -DUSER_ZZSYN -DZZLEXBUFSIZE=65536 -c dlg_p.c
+cc -O -I. -I../support/set -I../h -DUSER_ZZSYN -DZZLEXBUFSIZE=65536 -c dlg_a.c
+cc -O -I. -I../support/set -I../h -DUSER_ZZSYN -DZZLEXBUFSIZE=65536 -c main.c
+cc -c -O -I. -I../support/set -I../h -DUSER_ZZSYN -DZZLEXBUFSIZE=65536  err.c -o err.o
+cc -c -O -I. -I../support/set -I../h -DUSER_ZZSYN -DZZLEXBUFSIZE=65536 ../support/set/set.c
+cc -c -O -I. -I../support/set -I../h -DUSER_ZZSYN -DZZLEXBUFSIZE=65536  support.c -o support.o
+cc -c -O -I. -I../support/set -I../h -DUSER_ZZSYN -DZZLEXBUFSIZE=65536  output.c -o output.o
+cc -c -O -I. -I../support/set -I../h -DUSER_ZZSYN -DZZLEXBUFSIZE=65536  relabel.c -o relabel.o
+cc -c -O -I. -I../support/set -I../h -DUSER_ZZSYN -DZZLEXBUFSIZE=65536  automata.c -o automata.o
+cc -O -I. -I../support/set -I../h -DUSER_ZZSYN -DZZLEXBUFSIZE=65536 -o ./dlg dlg_p.o dlg_a.o main.o err.o set.o support.o output.o relabel.o automata.o
+make[3]: Leaving directory '/root/src/edk2/BaseTools/Source/C/VfrCompile/Pccts/dlg'
+BIN_DIR='.' make -C Pccts/antlr
+make[3]: Entering directory '/root/src/edk2/BaseTools/Source/C/VfrCompile/Pccts/antlr'
+gcc -c -O -I. -I../support/set -I../h -DUSER_ZZSYN  -DZZLEXBUFSIZE=65536  antlr.c -o antlr.o
+gcc -c -O -I. -I../support/set -I../h -DUSER_ZZSYN  -DZZLEXBUFSIZE=65536  scan.c -o scan.o
+gcc -c -O -I. -I../support/set -I../h -DUSER_ZZSYN  -DZZLEXBUFSIZE=65536  err.c -o err.o
+gcc -c -O -I. -I../support/set -I../h -DUSER_ZZSYN  -DZZLEXBUFSIZE=65536  bits.c -o bits.o
+gcc -c -O -I. -I../support/set -I../h -DUSER_ZZSYN  -DZZLEXBUFSIZE=65536  build.c -o build.o
+gcc -c -O -I. -I../support/set -I../h -DUSER_ZZSYN  -DZZLEXBUFSIZE=65536  fset2.c -o fset2.o
+gcc -c -O -I. -I../support/set -I../h -DUSER_ZZSYN  -DZZLEXBUFSIZE=65536  fset.c -o fset.o
+gcc -c -O -I. -I../support/set -I../h -DUSER_ZZSYN  -DZZLEXBUFSIZE=65536  gen.c -o gen.o
+gcc -c -O -I. -I../support/set -I../h -DUSER_ZZSYN  -DZZLEXBUFSIZE=65536  globals.c -o globals.o
+gcc -c -O -I. -I../support/set -I../h -DUSER_ZZSYN  -DZZLEXBUFSIZE=65536  hash.c -o hash.o
+gcc -c -O -I. -I../support/set -I../h -DUSER_ZZSYN  -DZZLEXBUFSIZE=65536  lex.c -o lex.o
+gcc -c -O -I. -I../support/set -I../h -DUSER_ZZSYN  -DZZLEXBUFSIZE=65536  main.c -o main.o
+gcc -c -O -I. -I../support/set -I../h -DUSER_ZZSYN  -DZZLEXBUFSIZE=65536  misc.c -o misc.o
+gcc -O -I. -I../support/set -I../h -DUSER_ZZSYN  -DZZLEXBUFSIZE=65536 -c -o set.o ../support/set/set.c
+gcc -c -O -I. -I../support/set -I../h -DUSER_ZZSYN  -DZZLEXBUFSIZE=65536  pred.c -o pred.o
+gcc -c -O -I. -I../support/set -I../h -DUSER_ZZSYN  -DZZLEXBUFSIZE=65536  egman.c -o egman.o
+gcc -c -O -I. -I../support/set -I../h -DUSER_ZZSYN  -DZZLEXBUFSIZE=65536  mrhoist.c -o mrhoist.o
+mrhoist.c: In function ‘MR_ruleNamePlusOffset’:
+mrhoist.c:2220:37: warning: ‘__builtin___sprintf_chk’ may write a terminating nul past the end of the destination [-Wformat-overflow=]
+ 2220 |       sprintf(ruleNameStatic2,"%s/%d",ruleNameStatic1,offset+1);
+      |                                     ^
+In file included from /usr/include/stdio.h:867,
+                 from mrhoist.c:28:
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:36:10: note: ‘__builtin___sprintf_chk’ output between 3 and 61 bytes into a destination of size 60
+   36 |   return __builtin___sprintf_chk (__s, __USE_FORTIFY_LEVEL - 1,
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   37 |       __bos (__s), __fmt, __va_arg_pack ());
+      |       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+gcc -c -O -I. -I../support/set -I../h -DUSER_ZZSYN  -DZZLEXBUFSIZE=65536  fcache.c -o fcache.o
+gcc -O -I. -I../support/set -I../h -DUSER_ZZSYN  -DZZLEXBUFSIZE=65536 -o ./antlr antlr.o scan.o err.o bits.o build.o fset2.o fset.o gen.o globals.o hash.o lex.o main.o misc.o set.o pred.o egman.o mrhoist.o fcache.o
+make[3]: Leaving directory '/root/src/edk2/BaseTools/Source/C/VfrCompile/Pccts/antlr'
+Pccts/antlr/antlr -CC -e3 -ck 3 -k 2 -fl VfrParser.dlg -ft VfrTokens.h -o . VfrSyntax.g
+Antlr parser generator   Version 1.33MR33   1989-2001
+VfrSyntax.g, line 3529: warning: alts 1 and 2 of {..} ambiguous upon ( ";" RefreshGuid GuidOp Locked Image EndIf InconsistentIf DisableIf SuppressIf Default GrayOutIf )
+VfrSyntax.g, line 3538: warning: alts 1 and 2 of {..} ambiguous upon ( ";" RefreshGuid GuidOp Locked Image EndIf InconsistentIf DisableIf SuppressIf Default GrayOutIf )
+VfrSyntax.g, line 3547: warning: alts 1 and 2 of {..} ambiguous upon ( ";" RefreshGuid GuidOp Locked Image EndIf InconsistentIf DisableIf SuppressIf Default GrayOutIf )
+VfrSyntax.g, line 3557: warning: alts 1 and 2 of {..} ambiguous upon ( ";" RefreshGuid GuidOp Locked Image EndIf InconsistentIf DisableIf SuppressIf Default GrayOutIf )
+VfrSyntax.g, line 3587: warning: alts 1 and 2 of {..} ambiguous upon ( ";" RefreshGuid GuidOp Locked Image EndIf InconsistentIf DisableIf SuppressIf Default GrayOutIf )
+VfrSyntax.g, line 3596: warning: alts 1 and 2 of {..} ambiguous upon ( ";" RefreshGuid GuidOp Locked Image EndIf InconsistentIf DisableIf SuppressIf Default GrayOutIf )
+Pccts/dlg/dlg -C2 -i -CC -cl VfrLexer -o . VfrParser.dlg
+dlg  Version 1.33MR33   1989-2001
+
+make[2]: Leaving directory '/root/src/edk2/BaseTools/Source/C/VfrCompile'
+make -C BrotliCompress
+make[2]: Entering directory '/root/src/edk2/BaseTools/Source/C/BrotliCompress'
+gcc  -c -I ./brotli/c/include -I .. -I ../Include/Common -I ../Include/ -I ../Include/IndustryStandard -I ../Common/ -I .. -I . -I ../Include/X64/ -MD -fshort-wchar -fno-strict-aliasing -fwrapv -fno-delete-null-pointer-checks -Wall -Werror -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-restrict -Wno-unused-result -nostdlib -g -O2  BrotliCompress.c -o BrotliCompress.o
+gcc  -c -I ./brotli/c/include -I .. -I ../Include/Common -I ../Include/ -I ../Include/IndustryStandard -I ../Common/ -I .. -I . -I ../Include/X64/ -MD -fshort-wchar -fno-strict-aliasing -fwrapv -fno-delete-null-pointer-checks -Wall -Werror -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-restrict -Wno-unused-result -nostdlib -g -O2  brotli/c/common/platform.c -o brotli/c/common/platform.o
+gcc  -c -I ./brotli/c/include -I .. -I ../Include/Common -I ../Include/ -I ../Include/IndustryStandard -I ../Common/ -I .. -I . -I ../Include/X64/ -MD -fshort-wchar -fno-strict-aliasing -fwrapv -fno-delete-null-pointer-checks -Wall -Werror -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-restrict -Wno-unused-result -nostdlib -g -O2  brotli/c/common/shared_dictionary.c -o brotli/c/common/shared_dictionary.o
+gcc  -c -I ./brotli/c/include -I .. -I ../Include/Common -I ../Include/ -I ../Include/IndustryStandard -I ../Common/ -I .. -I . -I ../Include/X64/ -MD -fshort-wchar -fno-strict-aliasing -fwrapv -fno-delete-null-pointer-checks -Wall -Werror -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-restrict -Wno-unused-result -nostdlib -g -O2  brotli/c/common/constants.c -o brotli/c/common/constants.o
+gcc  -c -I ./brotli/c/include -I .. -I ../Include/Common -I ../Include/ -I ../Include/IndustryStandard -I ../Common/ -I .. -I . -I ../Include/X64/ -MD -fshort-wchar -fno-strict-aliasing -fwrapv -fno-delete-null-pointer-checks -Wall -Werror -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-restrict -Wno-unused-result -nostdlib -g -O2  brotli/c/common/context.c -o brotli/c/common/context.o
+gcc  -c -I ./brotli/c/include -I .. -I ../Include/Common -I ../Include/ -I ../Include/IndustryStandard -I ../Common/ -I .. -I . -I ../Include/X64/ -MD -fshort-wchar -fno-strict-aliasing -fwrapv -fno-delete-null-pointer-checks -Wall -Werror -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-restrict -Wno-unused-result -nostdlib -g -O2  brotli/c/enc/command.c -o brotli/c/enc/command.o
+gcc  -c -I ./brotli/c/include -I .. -I ../Include/Common -I ../Include/ -I ../Include/IndustryStandard -I ../Common/ -I .. -I . -I ../Include/X64/ -MD -fshort-wchar -fno-strict-aliasing -fwrapv -fno-delete-null-pointer-checks -Wall -Werror -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-restrict -Wno-unused-result -nostdlib -g -O2  brotli/c/enc/compound_dictionary.c -o brotli/c/enc/compound_dictionary.o
+gcc  -c -I ./brotli/c/include -I .. -I ../Include/Common -I ../Include/ -I ../Include/IndustryStandard -I ../Common/ -I .. -I . -I ../Include/X64/ -MD -fshort-wchar -fno-strict-aliasing -fwrapv -fno-delete-null-pointer-checks -Wall -Werror -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-restrict -Wno-unused-result -nostdlib -g -O2  brotli/c/enc/fast_log.c -o brotli/c/enc/fast_log.o
+gcc  -c -I ./brotli/c/include -I .. -I ../Include/Common -I ../Include/ -I ../Include/IndustryStandard -I ../Common/ -I .. -I . -I ../Include/X64/ -MD -fshort-wchar -fno-strict-aliasing -fwrapv -fno-delete-null-pointer-checks -Wall -Werror -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-restrict -Wno-unused-result -nostdlib -g -O2  brotli/c/common/dictionary.c -o brotli/c/common/dictionary.o
+gcc  -c -I ./brotli/c/include -I .. -I ../Include/Common -I ../Include/ -I ../Include/IndustryStandard -I ../Common/ -I .. -I . -I ../Include/X64/ -MD -fshort-wchar -fno-strict-aliasing -fwrapv -fno-delete-null-pointer-checks -Wall -Werror -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-restrict -Wno-unused-result -nostdlib -g -O2  brotli/c/common/transform.c -o brotli/c/common/transform.o
+gcc  -c -I ./brotli/c/include -I .. -I ../Include/Common -I ../Include/ -I ../Include/IndustryStandard -I ../Common/ -I .. -I . -I ../Include/X64/ -MD -fshort-wchar -fno-strict-aliasing -fwrapv -fno-delete-null-pointer-checks -Wall -Werror -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-restrict -Wno-unused-result -nostdlib -g -O2  brotli/c/dec/bit_reader.c -o brotli/c/dec/bit_reader.o
+gcc  -c -I ./brotli/c/include -I .. -I ../Include/Common -I ../Include/ -I ../Include/IndustryStandard -I ../Common/ -I .. -I . -I ../Include/X64/ -MD -fshort-wchar -fno-strict-aliasing -fwrapv -fno-delete-null-pointer-checks -Wall -Werror -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-restrict -Wno-unused-result -nostdlib -g -O2  brotli/c/dec/decode.c -o brotli/c/dec/decode.o
+gcc  -c -I ./brotli/c/include -I .. -I ../Include/Common -I ../Include/ -I ../Include/IndustryStandard -I ../Common/ -I .. -I . -I ../Include/X64/ -MD -fshort-wchar -fno-strict-aliasing -fwrapv -fno-delete-null-pointer-checks -Wall -Werror -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-restrict -Wno-unused-result -nostdlib -g -O2  brotli/c/dec/huffman.c -o brotli/c/dec/huffman.o
+gcc  -c -I ./brotli/c/include -I .. -I ../Include/Common -I ../Include/ -I ../Include/IndustryStandard -I ../Common/ -I .. -I . -I ../Include/X64/ -MD -fshort-wchar -fno-strict-aliasing -fwrapv -fno-delete-null-pointer-checks -Wall -Werror -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-restrict -Wno-unused-result -nostdlib -g -O2  brotli/c/dec/state.c -o brotli/c/dec/state.o
+gcc  -c -I ./brotli/c/include -I .. -I ../Include/Common -I ../Include/ -I ../Include/IndustryStandard -I ../Common/ -I .. -I . -I ../Include/X64/ -MD -fshort-wchar -fno-strict-aliasing -fwrapv -fno-delete-null-pointer-checks -Wall -Werror -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-restrict -Wno-unused-result -nostdlib -g -O2  brotli/c/enc/backward_references.c -o brotli/c/enc/backward_references.o
+gcc  -c -I ./brotli/c/include -I .. -I ../Include/Common -I ../Include/ -I ../Include/IndustryStandard -I ../Common/ -I .. -I . -I ../Include/X64/ -MD -fshort-wchar -fno-strict-aliasing -fwrapv -fno-delete-null-pointer-checks -Wall -Werror -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-restrict -Wno-unused-result -nostdlib -g -O2  brotli/c/enc/backward_references_hq.c -o brotli/c/enc/backward_references_hq.o
+gcc  -c -I ./brotli/c/include -I .. -I ../Include/Common -I ../Include/ -I ../Include/IndustryStandard -I ../Common/ -I .. -I . -I ../Include/X64/ -MD -fshort-wchar -fno-strict-aliasing -fwrapv -fno-delete-null-pointer-checks -Wall -Werror -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-restrict -Wno-unused-result -nostdlib -g -O2  brotli/c/enc/bit_cost.c -o brotli/c/enc/bit_cost.o
+gcc  -c -I ./brotli/c/include -I .. -I ../Include/Common -I ../Include/ -I ../Include/IndustryStandard -I ../Common/ -I .. -I . -I ../Include/X64/ -MD -fshort-wchar -fno-strict-aliasing -fwrapv -fno-delete-null-pointer-checks -Wall -Werror -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-restrict -Wno-unused-result -nostdlib -g -O2  brotli/c/enc/block_splitter.c -o brotli/c/enc/block_splitter.o
+gcc  -c -I ./brotli/c/include -I .. -I ../Include/Common -I ../Include/ -I ../Include/IndustryStandard -I ../Common/ -I .. -I . -I ../Include/X64/ -MD -fshort-wchar -fno-strict-aliasing -fwrapv -fno-delete-null-pointer-checks -Wall -Werror -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-restrict -Wno-unused-result -nostdlib -g -O2  brotli/c/enc/brotli_bit_stream.c -o brotli/c/enc/brotli_bit_stream.o
+gcc  -c -I ./brotli/c/include -I .. -I ../Include/Common -I ../Include/ -I ../Include/IndustryStandard -I ../Common/ -I .. -I . -I ../Include/X64/ -MD -fshort-wchar -fno-strict-aliasing -fwrapv -fno-delete-null-pointer-checks -Wall -Werror -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-restrict -Wno-unused-result -nostdlib -g -O2  brotli/c/enc/cluster.c -o brotli/c/enc/cluster.o
+gcc  -c -I ./brotli/c/include -I .. -I ../Include/Common -I ../Include/ -I ../Include/IndustryStandard -I ../Common/ -I .. -I . -I ../Include/X64/ -MD -fshort-wchar -fno-strict-aliasing -fwrapv -fno-delete-null-pointer-checks -Wall -Werror -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-restrict -Wno-unused-result -nostdlib -g -O2  brotli/c/enc/compress_fragment.c -o brotli/c/enc/compress_fragment.o
+gcc  -c -I ./brotli/c/include -I .. -I ../Include/Common -I ../Include/ -I ../Include/IndustryStandard -I ../Common/ -I .. -I . -I ../Include/X64/ -MD -fshort-wchar -fno-strict-aliasing -fwrapv -fno-delete-null-pointer-checks -Wall -Werror -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-restrict -Wno-unused-result -nostdlib -g -O2  brotli/c/enc/compress_fragment_two_pass.c -o brotli/c/enc/compress_fragment_two_pass.o
+gcc  -c -I ./brotli/c/include -I .. -I ../Include/Common -I ../Include/ -I ../Include/IndustryStandard -I ../Common/ -I .. -I . -I ../Include/X64/ -MD -fshort-wchar -fno-strict-aliasing -fwrapv -fno-delete-null-pointer-checks -Wall -Werror -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-restrict -Wno-unused-result -nostdlib -g -O2  brotli/c/enc/dictionary_hash.c -o brotli/c/enc/dictionary_hash.o
+gcc  -c -I ./brotli/c/include -I .. -I ../Include/Common -I ../Include/ -I ../Include/IndustryStandard -I ../Common/ -I .. -I . -I ../Include/X64/ -MD -fshort-wchar -fno-strict-aliasing -fwrapv -fno-delete-null-pointer-checks -Wall -Werror -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-restrict -Wno-unused-result -nostdlib -g -O2  brotli/c/enc/encode.c -o brotli/c/enc/encode.o
+gcc  -c -I ./brotli/c/include -I .. -I ../Include/Common -I ../Include/ -I ../Include/IndustryStandard -I ../Common/ -I .. -I . -I ../Include/X64/ -MD -fshort-wchar -fno-strict-aliasing -fwrapv -fno-delete-null-pointer-checks -Wall -Werror -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-restrict -Wno-unused-result -nostdlib -g -O2  brotli/c/enc/encoder_dict.c -o brotli/c/enc/encoder_dict.o
+gcc  -c -I ./brotli/c/include -I .. -I ../Include/Common -I ../Include/ -I ../Include/IndustryStandard -I ../Common/ -I .. -I . -I ../Include/X64/ -MD -fshort-wchar -fno-strict-aliasing -fwrapv -fno-delete-null-pointer-checks -Wall -Werror -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-restrict -Wno-unused-result -nostdlib -g -O2  brotli/c/enc/entropy_encode.c -o brotli/c/enc/entropy_encode.o
+gcc  -c -I ./brotli/c/include -I .. -I ../Include/Common -I ../Include/ -I ../Include/IndustryStandard -I ../Common/ -I .. -I . -I ../Include/X64/ -MD -fshort-wchar -fno-strict-aliasing -fwrapv -fno-delete-null-pointer-checks -Wall -Werror -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-restrict -Wno-unused-result -nostdlib -g -O2  brotli/c/enc/histogram.c -o brotli/c/enc/histogram.o
+gcc  -c -I ./brotli/c/include -I .. -I ../Include/Common -I ../Include/ -I ../Include/IndustryStandard -I ../Common/ -I .. -I . -I ../Include/X64/ -MD -fshort-wchar -fno-strict-aliasing -fwrapv -fno-delete-null-pointer-checks -Wall -Werror -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-restrict -Wno-unused-result -nostdlib -g -O2  brotli/c/enc/literal_cost.c -o brotli/c/enc/literal_cost.o
+gcc  -c -I ./brotli/c/include -I .. -I ../Include/Common -I ../Include/ -I ../Include/IndustryStandard -I ../Common/ -I .. -I . -I ../Include/X64/ -MD -fshort-wchar -fno-strict-aliasing -fwrapv -fno-delete-null-pointer-checks -Wall -Werror -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-restrict -Wno-unused-result -nostdlib -g -O2  brotli/c/enc/memory.c -o brotli/c/enc/memory.o
+gcc  -c -I ./brotli/c/include -I .. -I ../Include/Common -I ../Include/ -I ../Include/IndustryStandard -I ../Common/ -I .. -I . -I ../Include/X64/ -MD -fshort-wchar -fno-strict-aliasing -fwrapv -fno-delete-null-pointer-checks -Wall -Werror -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-restrict -Wno-unused-result -nostdlib -g -O2  brotli/c/enc/metablock.c -o brotli/c/enc/metablock.o
+gcc  -c -I ./brotli/c/include -I .. -I ../Include/Common -I ../Include/ -I ../Include/IndustryStandard -I ../Common/ -I .. -I . -I ../Include/X64/ -MD -fshort-wchar -fno-strict-aliasing -fwrapv -fno-delete-null-pointer-checks -Wall -Werror -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-restrict -Wno-unused-result -nostdlib -g -O2  brotli/c/enc/static_dict.c -o brotli/c/enc/static_dict.o
+gcc  -c -I ./brotli/c/include -I .. -I ../Include/Common -I ../Include/ -I ../Include/IndustryStandard -I ../Common/ -I .. -I . -I ../Include/X64/ -MD -fshort-wchar -fno-strict-aliasing -fwrapv -fno-delete-null-pointer-checks -Wall -Werror -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-restrict -Wno-unused-result -nostdlib -g -O2  brotli/c/enc/utf8_util.c -o brotli/c/enc/utf8_util.o
+gcc -o ../bin/BrotliCompress   BrotliCompress.o brotli/c/common/platform.o brotli/c/common/shared_dictionary.o brotli/c/common/constants.o brotli/c/common/context.o brotli/c/enc/command.o brotli/c/enc/compound_dictionary.o brotli/c/enc/fast_log.o brotli/c/common/dictionary.o brotli/c/common/transform.o brotli/c/dec/bit_reader.o brotli/c/dec/decode.o brotli/c/dec/huffman.o brotli/c/dec/state.o brotli/c/enc/backward_references.o brotli/c/enc/backward_references_hq.o brotli/c/enc/bit_cost.o brotli/c/enc/block_splitter.o brotli/c/enc/brotli_bit_stream.o brotli/c/enc/cluster.o brotli/c/enc/compress_fragment.o brotli/c/enc/compress_fragment_two_pass.o brotli/c/enc/dictionary_hash.o brotli/c/enc/encode.o brotli/c/enc/encoder_dict.o brotli/c/enc/entropy_encode.o brotli/c/enc/histogram.o brotli/c/enc/literal_cost.o brotli/c/enc/memory.o brotli/c/enc/metablock.o brotli/c/enc/static_dict.o brotli/c/enc/utf8_util.o -L../libs -lm
+make[2]: Leaving directory '/root/src/edk2/BaseTools/Source/C/BrotliCompress'
+make -C VfrCompile
+make[2]: Entering directory '/root/src/edk2/BaseTools/Source/C/VfrCompile'
+g++ -c -DPCCTS_USE_NAMESPACE_STD -I Pccts/h -I .. -I ../Include/Common -I ../Include/ -I ../Include/IndustryStandard -I ../Common/ -I .. -I . -I ../Include/X64/  -O2  Pccts/h/AParser.cpp -o AParser.o
+g++ -c -DPCCTS_USE_NAMESPACE_STD -I Pccts/h -I .. -I ../Include/Common -I ../Include/ -I ../Include/IndustryStandard -I ../Common/ -I .. -I . -I ../Include/X64/  -O2  Pccts/h/DLexerBase.cpp -o DLexerBase.o
+g++ -c -DPCCTS_USE_NAMESPACE_STD -I Pccts/h -I .. -I ../Include/Common -I ../Include/ -I ../Include/IndustryStandard -I ../Common/ -I .. -I . -I ../Include/X64/  -O2  Pccts/h/ATokenBuffer.cpp -o ATokenBuffer.o
+g++ -c -I Pccts/h -I .. -I ../Include/Common -I ../Include/ -I ../Include/IndustryStandard -I ../Common/ -I .. -I . -I ../Include/X64/ -Wno-unused-result -O2  EfiVfrParser.cpp -o EfiVfrParser.o
+g++ -c -I Pccts/h -I .. -I ../Include/Common -I ../Include/ -I ../Include/IndustryStandard -I ../Common/ -I .. -I . -I ../Include/X64/ -Wno-unused-result -O2  VfrLexer.cpp -o VfrLexer.o
+g++ -c -DPCCTS_USE_NAMESPACE_STD -I Pccts/h -I .. -I ../Include/Common -I ../Include/ -I ../Include/IndustryStandard -I ../Common/ -I .. -I . -I ../Include/X64/  -O2  VfrSyntax.cpp -o VfrSyntax.o
+g++ -c -I Pccts/h -I .. -I ../Include/Common -I ../Include/ -I ../Include/IndustryStandard -I ../Common/ -I .. -I . -I ../Include/X64/ -Wno-unused-result -O2  VfrFormPkg.cpp -o VfrFormPkg.o
+g++ -c -I Pccts/h -I .. -I ../Include/Common -I ../Include/ -I ../Include/IndustryStandard -I ../Common/ -I .. -I . -I ../Include/X64/ -Wno-unused-result -O2  VfrError.cpp -o VfrError.o
+g++ -c -I Pccts/h -I .. -I ../Include/Common -I ../Include/ -I ../Include/IndustryStandard -I ../Common/ -I .. -I . -I ../Include/X64/ -Wno-unused-result -O2  VfrUtilityLib.cpp -o VfrUtilityLib.o
+g++ -c -I Pccts/h -I .. -I ../Include/Common -I ../Include/ -I ../Include/IndustryStandard -I ../Common/ -I .. -I . -I ../Include/X64/ -Wno-unused-result -O2  VfrCompiler.cpp -o VfrCompiler.o
+g++ -o ../bin/VfrCompile  AParser.o DLexerBase.o ATokenBuffer.o EfiVfrParser.o VfrLexer.o VfrSyntax.o VfrFormPkg.o VfrError.o VfrUtilityLib.o VfrCompiler.o -L../libs -lCommon
+make[2]: Leaving directory '/root/src/edk2/BaseTools/Source/C/VfrCompile'
+make -C EfiRom
+make[2]: Entering directory '/root/src/edk2/BaseTools/Source/C/EfiRom'
+gcc  -c  -I .. -I ../Include/Common -I ../Include/ -I ../Include/IndustryStandard -I ../Common/ -I .. -I . -I ../Include/X64/ -MD -fshort-wchar -fno-strict-aliasing -fwrapv -fno-delete-null-pointer-checks -Wall -Werror -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-restrict -Wno-unused-result -nostdlib -g -O2  EfiRom.c -o EfiRom.o
+gcc -o ../bin/EfiRom   EfiRom.o -L../libs -lCommon
+make[2]: Leaving directory '/root/src/edk2/BaseTools/Source/C/EfiRom'
+make -C GenFfs
+make[2]: Entering directory '/root/src/edk2/BaseTools/Source/C/GenFfs'
+gcc  -c  -I .. -I ../Include/Common -I ../Include/ -I ../Include/IndustryStandard -I ../Common/ -I .. -I . -I ../Include/X64/ -MD -fshort-wchar -fno-strict-aliasing -fwrapv -fno-delete-null-pointer-checks -Wall -Werror -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-restrict -Wno-unused-result -nostdlib -g -O2  GenFfs.c -o GenFfs.o
+gcc -o ../bin/GenFfs   GenFfs.o -L../libs -lCommon
+make[2]: Leaving directory '/root/src/edk2/BaseTools/Source/C/GenFfs'
+make -C GenFv
+make[2]: Entering directory '/root/src/edk2/BaseTools/Source/C/GenFv'
+gcc  -c  -I .. -I ../Include/Common -I ../Include/ -I ../Include/IndustryStandard -I ../Common/ -I .. -I . -I ../Include/X64/ -MD -fshort-wchar -fno-strict-aliasing -fwrapv -fno-delete-null-pointer-checks -Wall -Werror -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-restrict -Wno-unused-result -nostdlib -g -O2  GenFv.c -o GenFv.o
+gcc  -c  -I .. -I ../Include/Common -I ../Include/ -I ../Include/IndustryStandard -I ../Common/ -I .. -I . -I ../Include/X64/ -MD -fshort-wchar -fno-strict-aliasing -fwrapv -fno-delete-null-pointer-checks -Wall -Werror -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-restrict -Wno-unused-result -nostdlib -g -O2  GenFvInternalLib.c -o GenFvInternalLib.o
+gcc -o ../bin/GenFv   GenFv.o GenFvInternalLib.o -L../libs -lCommon -luuid
+make[2]: Leaving directory '/root/src/edk2/BaseTools/Source/C/GenFv'
+make -C GenFw
+make[2]: Entering directory '/root/src/edk2/BaseTools/Source/C/GenFw'
+gcc  -c  -I .. -I ../Include/Common -I ../Include/ -I ../Include/IndustryStandard -I ../Common/ -I .. -I . -I ../Include/X64/ -MD -fshort-wchar -fno-strict-aliasing -fwrapv -fno-delete-null-pointer-checks -Wall -Werror -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-restrict -Wno-unused-result -nostdlib -g -O2  GenFw.c -o GenFw.o
+gcc  -c  -I .. -I ../Include/Common -I ../Include/ -I ../Include/IndustryStandard -I ../Common/ -I .. -I . -I ../Include/X64/ -MD -fshort-wchar -fno-strict-aliasing -fwrapv -fno-delete-null-pointer-checks -Wall -Werror -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-restrict -Wno-unused-result -nostdlib -g -O2  ElfConvert.c -o ElfConvert.o
+gcc  -c  -I .. -I ../Include/Common -I ../Include/ -I ../Include/IndustryStandard -I ../Common/ -I .. -I . -I ../Include/X64/ -MD -fshort-wchar -fno-strict-aliasing -fwrapv -fno-delete-null-pointer-checks -Wall -Werror -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-restrict -Wno-unused-result -nostdlib -g -O2  Elf32Convert.c -o Elf32Convert.o
+gcc  -c  -I .. -I ../Include/Common -I ../Include/ -I ../Include/IndustryStandard -I ../Common/ -I .. -I . -I ../Include/X64/ -MD -fshort-wchar -fno-strict-aliasing -fwrapv -fno-delete-null-pointer-checks -Wall -Werror -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-restrict -Wno-unused-result -nostdlib -g -O2  Elf64Convert.c -o Elf64Convert.o
+gcc -o ../bin/GenFw   GenFw.o ElfConvert.o Elf32Convert.o Elf64Convert.o -L../libs -lCommon -luuid
+make[2]: Leaving directory '/root/src/edk2/BaseTools/Source/C/GenFw'
+make -C GenSec
+make[2]: Entering directory '/root/src/edk2/BaseTools/Source/C/GenSec'
+gcc  -c  -I .. -I ../Include/Common -I ../Include/ -I ../Include/IndustryStandard -I ../Common/ -I .. -I . -I ../Include/X64/ -MD -fshort-wchar -fno-strict-aliasing -fwrapv -fno-delete-null-pointer-checks -Wall -Werror -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-restrict -Wno-unused-result -nostdlib -g -O2  GenSec.c -o GenSec.o
+gcc -o ../bin/GenSec   GenSec.o -L../libs -lCommon -luuid
+make[2]: Leaving directory '/root/src/edk2/BaseTools/Source/C/GenSec'
+make -C GenCrc32
+make[2]: Entering directory '/root/src/edk2/BaseTools/Source/C/GenCrc32'
+gcc  -c  -I .. -I ../Include/Common -I ../Include/ -I ../Include/IndustryStandard -I ../Common/ -I .. -I . -I ../Include/X64/ -MD -fshort-wchar -fno-strict-aliasing -fwrapv -fno-delete-null-pointer-checks -Wall -Werror -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-restrict -Wno-unused-result -nostdlib -g -O2  GenCrc32.c -o GenCrc32.o
+gcc -o ../bin/GenCrc32   GenCrc32.o -L../libs -lCommon
+make[2]: Leaving directory '/root/src/edk2/BaseTools/Source/C/GenCrc32'
+make -C LzmaCompress
+make[2]: Entering directory '/root/src/edk2/BaseTools/Source/C/LzmaCompress'
+gcc  -c  -I .. -I ../Include/Common -I ../Include/ -I ../Include/IndustryStandard -I ../Common/ -I .. -I . -I ../Include/X64/ -MD -fshort-wchar -fno-strict-aliasing -fwrapv -fno-delete-null-pointer-checks -Wall -Werror -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-restrict -Wno-unused-result -nostdlib -g -O2  -D_7ZIP_ST LzmaCompress.c -o LzmaCompress.o
+gcc  -c  -I .. -I ../Include/Common -I ../Include/ -I ../Include/IndustryStandard -I ../Common/ -I .. -I . -I ../Include/X64/ -MD -fshort-wchar -fno-strict-aliasing -fwrapv -fno-delete-null-pointer-checks -Wall -Werror -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-restrict -Wno-unused-result -nostdlib -g -O2  -D_7ZIP_ST Sdk/C/Alloc.c -o Sdk/C/Alloc.o
+gcc  -c  -I .. -I ../Include/Common -I ../Include/ -I ../Include/IndustryStandard -I ../Common/ -I .. -I . -I ../Include/X64/ -MD -fshort-wchar -fno-strict-aliasing -fwrapv -fno-delete-null-pointer-checks -Wall -Werror -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-restrict -Wno-unused-result -nostdlib -g -O2  -D_7ZIP_ST Sdk/C/LzFind.c -o Sdk/C/LzFind.o
+gcc  -c  -I .. -I ../Include/Common -I ../Include/ -I ../Include/IndustryStandard -I ../Common/ -I .. -I . -I ../Include/X64/ -MD -fshort-wchar -fno-strict-aliasing -fwrapv -fno-delete-null-pointer-checks -Wall -Werror -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-restrict -Wno-unused-result -nostdlib -g -O2  -D_7ZIP_ST Sdk/C/LzmaDec.c -o Sdk/C/LzmaDec.o
+gcc  -c  -I .. -I ../Include/Common -I ../Include/ -I ../Include/IndustryStandard -I ../Common/ -I .. -I . -I ../Include/X64/ -MD -fshort-wchar -fno-strict-aliasing -fwrapv -fno-delete-null-pointer-checks -Wall -Werror -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-restrict -Wno-unused-result -nostdlib -g -O2  -D_7ZIP_ST Sdk/C/LzmaEnc.c -o Sdk/C/LzmaEnc.o
+gcc  -c  -I .. -I ../Include/Common -I ../Include/ -I ../Include/IndustryStandard -I ../Common/ -I .. -I . -I ../Include/X64/ -MD -fshort-wchar -fno-strict-aliasing -fwrapv -fno-delete-null-pointer-checks -Wall -Werror -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-restrict -Wno-unused-result -nostdlib -g -O2  -D_7ZIP_ST Sdk/C/7zFile.c -o Sdk/C/7zFile.o
+gcc  -c  -I .. -I ../Include/Common -I ../Include/ -I ../Include/IndustryStandard -I ../Common/ -I .. -I . -I ../Include/X64/ -MD -fshort-wchar -fno-strict-aliasing -fwrapv -fno-delete-null-pointer-checks -Wall -Werror -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-restrict -Wno-unused-result -nostdlib -g -O2  -D_7ZIP_ST Sdk/C/7zStream.c -o Sdk/C/7zStream.o
+gcc  -c  -I .. -I ../Include/Common -I ../Include/ -I ../Include/IndustryStandard -I ../Common/ -I .. -I . -I ../Include/X64/ -MD -fshort-wchar -fno-strict-aliasing -fwrapv -fno-delete-null-pointer-checks -Wall -Werror -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-restrict -Wno-unused-result -nostdlib -g -O2  -D_7ZIP_ST Sdk/C/Bra86.c -o Sdk/C/Bra86.o
+gcc -o ../bin/LzmaCompress   LzmaCompress.o Sdk/C/Alloc.o Sdk/C/LzFind.o Sdk/C/LzmaDec.o Sdk/C/LzmaEnc.o Sdk/C/7zFile.o Sdk/C/7zStream.o Sdk/C/Bra86.o -L../libs -lCommon
+make[2]: Leaving directory '/root/src/edk2/BaseTools/Source/C/LzmaCompress'
+make -C TianoCompress
+make[2]: Entering directory '/root/src/edk2/BaseTools/Source/C/TianoCompress'
+gcc  -c  -I .. -I ../Include/Common -I ../Include/ -I ../Include/IndustryStandard -I ../Common/ -I .. -I . -I ../Include/X64/ -MD -fshort-wchar -fno-strict-aliasing -fwrapv -fno-delete-null-pointer-checks -Wall -Werror -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-restrict -Wno-unused-result -nostdlib -g -O2  TianoCompress.c -o TianoCompress.o
+gcc -o ../bin/TianoCompress   TianoCompress.o -L../libs -lCommon
+make[2]: Leaving directory '/root/src/edk2/BaseTools/Source/C/TianoCompress'
+make -C VolInfo
+make[2]: Entering directory '/root/src/edk2/BaseTools/Source/C/VolInfo'
+gcc  -c  -I .. -I ../Include/Common -I ../Include/ -I ../Include/IndustryStandard -I ../Common/ -I .. -I . -I ../Include/X64/ -MD -fshort-wchar -fno-strict-aliasing -fwrapv -fno-delete-null-pointer-checks -Wall -Werror -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-restrict -Wno-unused-result -nostdlib -g -O2  VolInfo.c -o VolInfo.o
+gcc -o ../bin/VolInfo   VolInfo.o -L../libs -lCommon
+make[2]: Leaving directory '/root/src/edk2/BaseTools/Source/C/VolInfo'
+make -C DevicePath
+make[2]: Entering directory '/root/src/edk2/BaseTools/Source/C/DevicePath'
+gcc  -c  -I .. -I ../Include/Common -I ../Include/ -I ../Include/IndustryStandard -I ../Common/ -I .. -I . -I ../Include/X64/ -MD -fshort-wchar -fno-strict-aliasing -fwrapv -fno-delete-null-pointer-checks -Wall -Werror -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-restrict -Wno-unused-result -nostdlib -g -O2  -Wno-error=stringop-overflow DevicePath.c -o DevicePath.o
+gcc  -c  -I .. -I ../Include/Common -I ../Include/ -I ../Include/IndustryStandard -I ../Common/ -I .. -I . -I ../Include/X64/ -MD -fshort-wchar -fno-strict-aliasing -fwrapv -fno-delete-null-pointer-checks -Wall -Werror -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-restrict -Wno-unused-result -nostdlib -g -O2  -Wno-error=stringop-overflow UefiDevicePathLib.c -o UefiDevicePathLib.o
+gcc  -c  -I .. -I ../Include/Common -I ../Include/ -I ../Include/IndustryStandard -I ../Common/ -I .. -I . -I ../Include/X64/ -MD -fshort-wchar -fno-strict-aliasing -fwrapv -fno-delete-null-pointer-checks -Wall -Werror -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-restrict -Wno-unused-result -nostdlib -g -O2  -Wno-error=stringop-overflow DevicePathFromText.c -o DevicePathFromText.o
+gcc  -c  -I .. -I ../Include/Common -I ../Include/ -I ../Include/IndustryStandard -I ../Common/ -I .. -I . -I ../Include/X64/ -MD -fshort-wchar -fno-strict-aliasing -fwrapv -fno-delete-null-pointer-checks -Wall -Werror -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-restrict -Wno-unused-result -nostdlib -g -O2  -Wno-error=stringop-overflow DevicePathUtilities.c -o DevicePathUtilities.o
+gcc -o ../bin/DevicePath   DevicePath.o UefiDevicePathLib.o DevicePathFromText.o  DevicePathUtilities.o -L../libs -lCommon -luuid
+make[2]: Leaving directory '/root/src/edk2/BaseTools/Source/C/DevicePath'
+Finished building BaseTools C Tools with HOST_ARCH=X64
+make[1]: Leaving directory '/root/src/edk2/BaseTools/Source/C'
+make -C Source/Python
+make[1]: Entering directory '/root/src/edk2/BaseTools/Source/Python'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/root/src/edk2/BaseTools/Source/Python'
+make -C Tests
+make[1]: Entering directory '/root/src/edk2/BaseTools/Tests'
+testHelp (TianoCompress.Tests) ... ok
+testRandomDataCycles (TianoCompress.Tests) ... ok
+test_AmlToC_AmlToC (CheckPythonSyntax.Tests) ... ok
+test_AutoGen_AutoGen (CheckPythonSyntax.Tests) ... ok
+test_AutoGen_AutoGenWorker (CheckPythonSyntax.Tests) ... ok
+test_AutoGen_BuildEngine (CheckPythonSyntax.Tests) ... ok
+test_AutoGen_DataPipe (CheckPythonSyntax.Tests) ... ok
+test_AutoGen_GenC (CheckPythonSyntax.Tests) ... ok
+test_AutoGen_GenDepex (CheckPythonSyntax.Tests) ... ok
+test_AutoGen_GenMake (CheckPythonSyntax.Tests) ... ok
+test_AutoGen_GenPcdDb (CheckPythonSyntax.Tests) ... ok
+test_AutoGen_GenVar (CheckPythonSyntax.Tests) ... ok
+test_AutoGen_IdfClassObject (CheckPythonSyntax.Tests) ... ok
+test_AutoGen_IncludesAutoGen (CheckPythonSyntax.Tests) ... ok
+test_AutoGen_InfSectionParser (CheckPythonSyntax.Tests) ... ok
+test_AutoGen_ModuleAutoGen (CheckPythonSyntax.Tests) ... ok
+test_AutoGen_ModuleAutoGenHelper (CheckPythonSyntax.Tests) ... ok
+test_AutoGen_PlatformAutoGen (CheckPythonSyntax.Tests) ... ok
+test_AutoGen_StrGather (CheckPythonSyntax.Tests) ... ok
+test_AutoGen_UniClassObject (CheckPythonSyntax.Tests) ... ok
+test_AutoGen_ValidCheckingInfoObject (CheckPythonSyntax.Tests) ... ok
+test_AutoGen_WorkspaceAutoGen (CheckPythonSyntax.Tests) ... ok
+test_AutoGen___init__ (CheckPythonSyntax.Tests) ... ok
+test_BPDG_BPDG (CheckPythonSyntax.Tests) ... ok
+test_BPDG_GenVpd (CheckPythonSyntax.Tests) ... ok
+test_BPDG_StringTable (CheckPythonSyntax.Tests) ... ok
+test_BPDG___init__ (CheckPythonSyntax.Tests) ... ok
+test_Capsule_GenerateCapsule (CheckPythonSyntax.Tests) ... ok
+test_Capsule_GenerateWindowsDriver (CheckPythonSyntax.Tests) ... ok
+test_Capsule_WindowsCapsuleSupportHelper (CheckPythonSyntax.Tests) ... ok
+test_CommonDataClass_CommonClass (CheckPythonSyntax.Tests) ... ok
+test_CommonDataClass_DataClass (CheckPythonSyntax.Tests) ... ok
+test_CommonDataClass_Exceptions (CheckPythonSyntax.Tests) ... ok
+test_CommonDataClass_FdfClass (CheckPythonSyntax.Tests) ... ok
+test_CommonDataClass___init__ (CheckPythonSyntax.Tests) ... ok
+test_Common_BuildToolError (CheckPythonSyntax.Tests) ... ok
+test_Common_BuildVersion (CheckPythonSyntax.Tests) ... ok
+test_Common_DataType (CheckPythonSyntax.Tests) ... ok
+test_Common_Edk2_Capsule_FmpPayloadHeader (CheckPythonSyntax.Tests) ... ok
+test_Common_Edk2_Capsule___init__ (CheckPythonSyntax.Tests) ... ok
+test_Common_Edk2___init__ (CheckPythonSyntax.Tests) ... ok
+test_Common_EdkLogger (CheckPythonSyntax.Tests) ... ok
+test_Common_Expression (CheckPythonSyntax.Tests) ... ok
+test_Common_GlobalData (CheckPythonSyntax.Tests) ... ok
+test_Common_LongFilePathOs (CheckPythonSyntax.Tests) ... ok
+test_Common_LongFilePathOsPath (CheckPythonSyntax.Tests) ... ok
+test_Common_LongFilePathSupport (CheckPythonSyntax.Tests) ... ok
+test_Common_Misc (CheckPythonSyntax.Tests) ... ok
+test_Common_MultipleWorkspace (CheckPythonSyntax.Tests) ... ok
+test_Common_Parsing (CheckPythonSyntax.Tests) ... ok
+test_Common_RangeExpression (CheckPythonSyntax.Tests) ... ok
+test_Common_StringUtils (CheckPythonSyntax.Tests) ... ok
+test_Common_TargetTxtClassObject (CheckPythonSyntax.Tests) ... ok
+test_Common_ToolDefClassObject (CheckPythonSyntax.Tests) ... ok
+test_Common_Uefi_Capsule_CapsuleDependency (CheckPythonSyntax.Tests) ... ok
+test_Common_Uefi_Capsule_FmpAuthHeader (CheckPythonSyntax.Tests) ... ok
+test_Common_Uefi_Capsule_FmpCapsuleHeader (CheckPythonSyntax.Tests) ... ok
+test_Common_Uefi_Capsule_UefiCapsuleHeader (CheckPythonSyntax.Tests) ... ok
+test_Common_Uefi_Capsule___init__ (CheckPythonSyntax.Tests) ... ok
+test_Common_Uefi___init__ (CheckPythonSyntax.Tests) ... ok
+test_Common_VariableAttributes (CheckPythonSyntax.Tests) ... ok
+test_Common_VpdInfoFile (CheckPythonSyntax.Tests) ... ok
+test_Common___init__ (CheckPythonSyntax.Tests) ... ok
+test_Common_caching (CheckPythonSyntax.Tests) ... ok
+test_Ecc_CParser3_CLexer (CheckPythonSyntax.Tests) ... ok
+test_Ecc_CParser3_CParser (CheckPythonSyntax.Tests) ... ok
+test_Ecc_CParser3___init__ (CheckPythonSyntax.Tests) ... ok
+test_Ecc_CParser4_CLexer (CheckPythonSyntax.Tests) ... ok
+test_Ecc_CParser4_CListener (CheckPythonSyntax.Tests) ... ok
+test_Ecc_CParser4_CParser (CheckPythonSyntax.Tests) ... ok
+test_Ecc_CParser4___init__ (CheckPythonSyntax.Tests) ... ok
+test_Ecc_Check (CheckPythonSyntax.Tests) ... ok
+test_Ecc_CodeFragment (CheckPythonSyntax.Tests) ... ok
+test_Ecc_CodeFragmentCollector (CheckPythonSyntax.Tests) ... ok
+test_Ecc_Configuration (CheckPythonSyntax.Tests) ... ok
+test_Ecc_Database (CheckPythonSyntax.Tests) ... ok
+test_Ecc_EccGlobalData (CheckPythonSyntax.Tests) ... ok
+test_Ecc_EccMain (CheckPythonSyntax.Tests) ... ok
+test_Ecc_EccToolError (CheckPythonSyntax.Tests) ... ok
+test_Ecc_Exception (CheckPythonSyntax.Tests) ... ok
+test_Ecc_FileProfile (CheckPythonSyntax.Tests) ... ok
+test_Ecc_MetaDataParser (CheckPythonSyntax.Tests) ... ok
+test_Ecc_MetaFileWorkspace_MetaDataTable (CheckPythonSyntax.Tests) ... ok
+test_Ecc_MetaFileWorkspace_MetaFileParser (CheckPythonSyntax.Tests) ... ok
+test_Ecc_MetaFileWorkspace_MetaFileTable (CheckPythonSyntax.Tests) ... ok
+test_Ecc_MetaFileWorkspace___init__ (CheckPythonSyntax.Tests) ... ok
+test_Ecc_ParserWarning (CheckPythonSyntax.Tests) ... ok
+test_Ecc_Xml_XmlRoutines (CheckPythonSyntax.Tests) ... ok
+test_Ecc_Xml___init__ (CheckPythonSyntax.Tests) ... ok
+test_Ecc___init__ (CheckPythonSyntax.Tests) ... ok
+test_Ecc_c (CheckPythonSyntax.Tests) ... ok
+test_Eot_CParser3_CLexer (CheckPythonSyntax.Tests) ... ok
+test_Eot_CParser3_CParser (CheckPythonSyntax.Tests) ... ok
+test_Eot_CParser3___init__ (CheckPythonSyntax.Tests) ... ok
+test_Eot_CParser4_CLexer (CheckPythonSyntax.Tests) ... ok
+test_Eot_CParser4_CListener (CheckPythonSyntax.Tests) ... ok
+test_Eot_CParser4_CParser (CheckPythonSyntax.Tests) ... ok
+test_Eot_CParser4___init__ (CheckPythonSyntax.Tests) ... ok
+test_Eot_CodeFragment (CheckPythonSyntax.Tests) ... ok
+test_Eot_CodeFragmentCollector (CheckPythonSyntax.Tests) ... ok
+test_Eot_Database (CheckPythonSyntax.Tests) ... ok
+test_Eot_EotGlobalData (CheckPythonSyntax.Tests) ... ok
+test_Eot_EotMain (CheckPythonSyntax.Tests) ... ok
+test_Eot_EotToolError (CheckPythonSyntax.Tests) ... ok
+test_Eot_FileProfile (CheckPythonSyntax.Tests) ... ok
+test_Eot_Identification (CheckPythonSyntax.Tests) ... ok
+test_Eot_InfParserLite (CheckPythonSyntax.Tests) ... ok
+test_Eot_Parser (CheckPythonSyntax.Tests) ... ok
+test_Eot_ParserWarning (CheckPythonSyntax.Tests) ... ok
+test_Eot_Report (CheckPythonSyntax.Tests) ... ok
+test_Eot___init__ (CheckPythonSyntax.Tests) ... ok
+test_Eot_c (CheckPythonSyntax.Tests) ... ok
+test_FMMT_FMMT (CheckPythonSyntax.Tests) ... ok
+test_FMMT___init__ (CheckPythonSyntax.Tests) ... ok
+test_FMMT_core_BinaryFactoryProduct (CheckPythonSyntax.Tests) ... ok
+test_FMMT_core_BiosTree (CheckPythonSyntax.Tests) ... ok
+test_FMMT_core_BiosTreeNode (CheckPythonSyntax.Tests) ... ok
+test_FMMT_core_FMMTOperation (CheckPythonSyntax.Tests) ... ok
+test_FMMT_core_FMMTParser (CheckPythonSyntax.Tests) ... ok
+test_FMMT_core_FvHandler (CheckPythonSyntax.Tests) ... ok
+test_FMMT_core_GuidTools (CheckPythonSyntax.Tests) ... ok
+test_FMMT_utils_FmmtLogger (CheckPythonSyntax.Tests) ... ok
+test_FMMT_utils_FvLayoutPrint (CheckPythonSyntax.Tests) ... ok
+test_FirmwareStorageFormat_Common (CheckPythonSyntax.Tests) ... ok
+test_FirmwareStorageFormat_FfsFileHeader (CheckPythonSyntax.Tests) ... ok
+test_FirmwareStorageFormat_FvHeader (CheckPythonSyntax.Tests) ... ok
+test_FirmwareStorageFormat_SectionHeader (CheckPythonSyntax.Tests) ... ok
+test_FirmwareStorageFormat___init__ (CheckPythonSyntax.Tests) ... ok
+test_GenFds_AprioriSection (CheckPythonSyntax.Tests) ... ok
+test_GenFds_Capsule (CheckPythonSyntax.Tests) ... ok
+test_GenFds_CapsuleData (CheckPythonSyntax.Tests) ... ok
+test_GenFds_CompressSection (CheckPythonSyntax.Tests) ... ok
+test_GenFds_DataSection (CheckPythonSyntax.Tests) ... ok
+test_GenFds_DepexSection (CheckPythonSyntax.Tests) ... ok
+test_GenFds_EfiSection (CheckPythonSyntax.Tests) ... ok
+test_GenFds_Fd (CheckPythonSyntax.Tests) ... ok
+test_GenFds_FdfParser (CheckPythonSyntax.Tests) ... ok
+test_GenFds_Ffs (CheckPythonSyntax.Tests) ... ok
+test_GenFds_FfsFileStatement (CheckPythonSyntax.Tests) ... ok
+test_GenFds_FfsInfStatement (CheckPythonSyntax.Tests) ... ok
+test_GenFds_Fv (CheckPythonSyntax.Tests) ... ok
+test_GenFds_FvImageSection (CheckPythonSyntax.Tests) ... ok
+test_GenFds_GenFds (CheckPythonSyntax.Tests) ... ok
+test_GenFds_GenFdsGlobalVariable (CheckPythonSyntax.Tests) ... ok
+test_GenFds_GuidSection (CheckPythonSyntax.Tests) ... ok
+test_GenFds_OptRomFileStatement (CheckPythonSyntax.Tests) ... ok
+test_GenFds_OptRomInfStatement (CheckPythonSyntax.Tests) ... ok
+test_GenFds_OptionRom (CheckPythonSyntax.Tests) ... ok
+test_GenFds_Region (CheckPythonSyntax.Tests) ... ok
+test_GenFds_Rule (CheckPythonSyntax.Tests) ... ok
+test_GenFds_RuleComplexFile (CheckPythonSyntax.Tests) ... ok
+test_GenFds_RuleSimpleFile (CheckPythonSyntax.Tests) ... ok
+test_GenFds_Section (CheckPythonSyntax.Tests) ... ok
+test_GenFds_UiSection (CheckPythonSyntax.Tests) ... ok
+test_GenFds_VerSection (CheckPythonSyntax.Tests) ... ok
+test_GenFds___init__ (CheckPythonSyntax.Tests) ... ok
+test_GenPatchPcdTable_GenPatchPcdTable (CheckPythonSyntax.Tests) ... ok
+test_GenPatchPcdTable___init__ (CheckPythonSyntax.Tests) ... ok
+test_PatchPcdValue_PatchPcdValue (CheckPythonSyntax.Tests) ... ok
+test_PatchPcdValue___init__ (CheckPythonSyntax.Tests) ... ok
+test_Pkcs7Sign_Pkcs7Sign (CheckPythonSyntax.Tests) ... ok
+test_Rsa2048Sha256Sign_Rsa2048Sha256GenerateKeys (CheckPythonSyntax.Tests) ... ok
+test_Rsa2048Sha256Sign_Rsa2048Sha256Sign (CheckPythonSyntax.Tests) ... ok
+test_Split_Split (CheckPythonSyntax.Tests) ... ok
+test_Split___init__ (CheckPythonSyntax.Tests) ... ok
+test_Table_Table (CheckPythonSyntax.Tests) ... ok
+test_Table_TableDataModel (CheckPythonSyntax.Tests) ... ok
+test_Table_TableDec (CheckPythonSyntax.Tests) ... ok
+test_Table_TableDsc (CheckPythonSyntax.Tests) ... ok
+test_Table_TableEotReport (CheckPythonSyntax.Tests) ... ok
+test_Table_TableFdf (CheckPythonSyntax.Tests) ... ok
+test_Table_TableFile (CheckPythonSyntax.Tests) ... ok
+test_Table_TableFunction (CheckPythonSyntax.Tests) ... ok
+test_Table_TableIdentifier (CheckPythonSyntax.Tests) ... ok
+test_Table_TableInf (CheckPythonSyntax.Tests) ... ok
+test_Table_TablePcd (CheckPythonSyntax.Tests) ... ok
+test_Table_TableQuery (CheckPythonSyntax.Tests) ... ok
+test_Table_TableReport (CheckPythonSyntax.Tests) ... ok
+test_Table___init__ (CheckPythonSyntax.Tests) ... ok
+test_TargetTool_TargetTool (CheckPythonSyntax.Tests) ... ok
+test_TargetTool___init__ (CheckPythonSyntax.Tests) ... ok
+test_Trim_Trim (CheckPythonSyntax.Tests) ... ok
+test_UPT_BuildVersion (CheckPythonSyntax.Tests) ... ok
+test_UPT_Core_DependencyRules (CheckPythonSyntax.Tests) ... ok
+test_UPT_Core_DistributionPackageClass (CheckPythonSyntax.Tests) ... ok
+test_UPT_Core_FileHook (CheckPythonSyntax.Tests) ... ok
+test_UPT_Core_IpiDb (CheckPythonSyntax.Tests) ... ok
+test_UPT_Core_PackageFile (CheckPythonSyntax.Tests) ... ok
+test_UPT_Core___init__ (CheckPythonSyntax.Tests) ... ok
+test_UPT_GenMetaFile_GenDecFile (CheckPythonSyntax.Tests) ... ok
+test_UPT_GenMetaFile_GenInfFile (CheckPythonSyntax.Tests) ... ok
+test_UPT_GenMetaFile_GenMetaFileMisc (CheckPythonSyntax.Tests) ... ok
+test_UPT_GenMetaFile_GenXmlFile (CheckPythonSyntax.Tests) ... ok
+test_UPT_GenMetaFile___init__ (CheckPythonSyntax.Tests) ... ok
+test_UPT_InstallPkg (CheckPythonSyntax.Tests) ... ok
+test_UPT_InventoryWs (CheckPythonSyntax.Tests) ... ok
+test_UPT_Library_CommentGenerating (CheckPythonSyntax.Tests) ... ok
+test_UPT_Library_CommentParsing (CheckPythonSyntax.Tests) ... ok
+test_UPT_Library_DataType (CheckPythonSyntax.Tests) ... ok
+test_UPT_Library_ExpressionValidate (CheckPythonSyntax.Tests) ... ok
+test_UPT_Library_GlobalData (CheckPythonSyntax.Tests) ... ok
+test_UPT_Library_Misc (CheckPythonSyntax.Tests) ... ok
+test_UPT_Library_ParserValidate (CheckPythonSyntax.Tests) ... ok
+test_UPT_Library_Parsing (CheckPythonSyntax.Tests) ... ok
+test_UPT_Library_StringUtils (CheckPythonSyntax.Tests) ... ok
+test_UPT_Library_UniClassObject (CheckPythonSyntax.Tests) ... ok
+test_UPT_Library_Xml_XmlRoutines (CheckPythonSyntax.Tests) ... ok
+test_UPT_Library_Xml___init__ (CheckPythonSyntax.Tests) ... ok
+test_UPT_Library___init__ (CheckPythonSyntax.Tests) ... ok
+test_UPT_Logger_Log (CheckPythonSyntax.Tests) ... ok
+test_UPT_Logger_StringTable (CheckPythonSyntax.Tests) ... ok
+test_UPT_Logger_ToolError (CheckPythonSyntax.Tests) ... ok
+test_UPT_Logger___init__ (CheckPythonSyntax.Tests) ... ok
+test_UPT_MkPkg (CheckPythonSyntax.Tests) ... ok
+test_UPT_Object_POM_CommonObject (CheckPythonSyntax.Tests) ... ok
+test_UPT_Object_POM_ModuleObject (CheckPythonSyntax.Tests) ... ok
+test_UPT_Object_POM_PackageObject (CheckPythonSyntax.Tests) ... ok
+test_UPT_Object_POM___init__ (CheckPythonSyntax.Tests) ... ok
+test_UPT_Object_Parser_DecObject (CheckPythonSyntax.Tests) ... ok
+test_UPT_Object_Parser_InfBinaryObject (CheckPythonSyntax.Tests) ... ok
+test_UPT_Object_Parser_InfBuildOptionObject (CheckPythonSyntax.Tests) ... ok
+test_UPT_Object_Parser_InfCommonObject (CheckPythonSyntax.Tests) ... ok
+test_UPT_Object_Parser_InfDefineCommonObject (CheckPythonSyntax.Tests) ... ok
+test_UPT_Object_Parser_InfDefineObject (CheckPythonSyntax.Tests) ... ok
+test_UPT_Object_Parser_InfDepexObject (CheckPythonSyntax.Tests) ... ok
+test_UPT_Object_Parser_InfGuidObject (CheckPythonSyntax.Tests) ... ok
+test_UPT_Object_Parser_InfHeaderObject (CheckPythonSyntax.Tests) ... ok
+test_UPT_Object_Parser_InfLibraryClassesObject (CheckPythonSyntax.Tests) ... ok
+test_UPT_Object_Parser_InfMisc (CheckPythonSyntax.Tests) ... ok
+test_UPT_Object_Parser_InfPackagesObject (CheckPythonSyntax.Tests) ... ok
+test_UPT_Object_Parser_InfPcdObject (CheckPythonSyntax.Tests) ... ok
+test_UPT_Object_Parser_InfPpiObject (CheckPythonSyntax.Tests) ... ok
+test_UPT_Object_Parser_InfProtocolObject (CheckPythonSyntax.Tests) ... ok
+test_UPT_Object_Parser_InfSoucesObject (CheckPythonSyntax.Tests) ... ok
+test_UPT_Object_Parser_InfUserExtensionObject (CheckPythonSyntax.Tests) ... ok
+test_UPT_Object_Parser___init__ (CheckPythonSyntax.Tests) ... ok
+test_UPT_Object___init__ (CheckPythonSyntax.Tests) ... ok
+test_UPT_Parser_DecParser (CheckPythonSyntax.Tests) ... ok
+test_UPT_Parser_DecParserMisc (CheckPythonSyntax.Tests) ... ok
+test_UPT_Parser_InfAsBuiltProcess (CheckPythonSyntax.Tests) ... ok
+test_UPT_Parser_InfBinarySectionParser (CheckPythonSyntax.Tests) ... ok
+test_UPT_Parser_InfBuildOptionSectionParser (CheckPythonSyntax.Tests) ... ok
+test_UPT_Parser_InfDefineSectionParser (CheckPythonSyntax.Tests) ... ok
+test_UPT_Parser_InfDepexSectionParser (CheckPythonSyntax.Tests) ... ok
+test_UPT_Parser_InfGuidPpiProtocolSectionParser (CheckPythonSyntax.Tests) ... ok
+test_UPT_Parser_InfLibrarySectionParser (CheckPythonSyntax.Tests) ... ok
+test_UPT_Parser_InfPackageSectionParser (CheckPythonSyntax.Tests) ... ok
+test_UPT_Parser_InfParser (CheckPythonSyntax.Tests) ... ok
+test_UPT_Parser_InfParserMisc (CheckPythonSyntax.Tests) ... ok
+test_UPT_Parser_InfPcdSectionParser (CheckPythonSyntax.Tests) ... ok
+test_UPT_Parser_InfSectionParser (CheckPythonSyntax.Tests) ... ok
+test_UPT_Parser_InfSourceSectionParser (CheckPythonSyntax.Tests) ... ok
+test_UPT_Parser___init__ (CheckPythonSyntax.Tests) ... ok
+test_UPT_PomAdapter_DecPomAlignment (CheckPythonSyntax.Tests) ... ok
+test_UPT_PomAdapter_InfPomAlignment (CheckPythonSyntax.Tests) ... ok
+test_UPT_PomAdapter_InfPomAlignmentMisc (CheckPythonSyntax.Tests) ... ok
+test_UPT_PomAdapter___init__ (CheckPythonSyntax.Tests) ... ok
+test_UPT_ReplacePkg (CheckPythonSyntax.Tests) ... ok
+test_UPT_RmPkg (CheckPythonSyntax.Tests) ... ok
+test_UPT_TestInstall (CheckPythonSyntax.Tests) ... ok
+test_UPT_UPT (CheckPythonSyntax.Tests) ... ok
+test_UPT_UnitTest_CommentGeneratingUnitTest (CheckPythonSyntax.Tests) ... ok
+test_UPT_UnitTest_CommentParsingUnitTest (CheckPythonSyntax.Tests) ... ok
+test_UPT_UnitTest_DecParserTest (CheckPythonSyntax.Tests) ... ok
+test_UPT_UnitTest_DecParserUnitTest (CheckPythonSyntax.Tests) ... ok
+test_UPT_UnitTest_InfBinarySectionTest (CheckPythonSyntax.Tests) ... ok
+test_UPT_Xml_CommonXml (CheckPythonSyntax.Tests) ... ok
+test_UPT_Xml_GuidProtocolPpiXml (CheckPythonSyntax.Tests) ... ok
+test_UPT_Xml_IniToXml (CheckPythonSyntax.Tests) ... ok
+test_UPT_Xml_ModuleSurfaceAreaXml (CheckPythonSyntax.Tests) ... ok
+test_UPT_Xml_PackageSurfaceAreaXml (CheckPythonSyntax.Tests) ... ok
+test_UPT_Xml_PcdXml (CheckPythonSyntax.Tests) ... ok
+test_UPT_Xml_XmlParser (CheckPythonSyntax.Tests) ... ok
+test_UPT_Xml_XmlParserMisc (CheckPythonSyntax.Tests) ... ok
+test_UPT_Xml___init__ (CheckPythonSyntax.Tests) ... ok
+test_Workspace_BuildClassObject (CheckPythonSyntax.Tests) ... ok
+test_Workspace_DecBuildData (CheckPythonSyntax.Tests) ... ok
+test_Workspace_DscBuildData (CheckPythonSyntax.Tests) ... ok
+test_Workspace_InfBuildData (CheckPythonSyntax.Tests) ... ok
+test_Workspace_MetaDataTable (CheckPythonSyntax.Tests) ... ok
+test_Workspace_MetaFileCommentParser (CheckPythonSyntax.Tests) ... ok
+test_Workspace_MetaFileParser (CheckPythonSyntax.Tests) ... ok
+test_Workspace_MetaFileTable (CheckPythonSyntax.Tests) ... ok
+test_Workspace_WorkspaceCommon (CheckPythonSyntax.Tests) ... ok
+test_Workspace_WorkspaceDatabase (CheckPythonSyntax.Tests) ... ok
+test_Workspace___init__ (CheckPythonSyntax.Tests) ... ok
+test_build_BuildReport (CheckPythonSyntax.Tests) ... ok
+test_build___init__ (CheckPythonSyntax.Tests) ... ok
+test_build_build (CheckPythonSyntax.Tests) ... ok
+test_build_buildoptions (CheckPythonSyntax.Tests) ... ok
+test_sitecustomize (CheckPythonSyntax.Tests) ... ok
+test_tests_Split_test_split (CheckPythonSyntax.Tests) ... ok
+test32bitUnicodeCharInUtf8Comment (CheckUnicodeSourceFiles.Tests) ... ok
+test32bitUnicodeCharInUtf8File (CheckUnicodeSourceFiles.Tests) ... ok
+testSupplementaryPlaneUnicodeCharInUtf16File (CheckUnicodeSourceFiles.Tests) ... ok
+testSurrogatePairUnicodeCharInUtf16File (CheckUnicodeSourceFiles.Tests) ... ok
+testSurrogatePairUnicodeCharInUtf8File (CheckUnicodeSourceFiles.Tests) ... ok
+testSurrogatePairUnicodeCharInUtf8FileWithBom (CheckUnicodeSourceFiles.Tests) ... ok
+testUtf16InUniFile (CheckUnicodeSourceFiles.Tests) ... ok
+testValidUtf8File (CheckUnicodeSourceFiles.Tests) ... ok
+testValidUtf8FileWithBom (CheckUnicodeSourceFiles.Tests) ... ok
+
+----------------------------------------------------------------------
+Ran 301 tests in 2.035s
+
+OK
+make[1]: Leaving directory '/root/src/edk2/BaseTools/Tests'
+make: Leaving directory '/root/src/edk2/BaseTools'
+root@boot-Standard-PC-Q35-ICH9-2009:~/src/edk2# 
+
 
 ```  
 . edksetup.sh
