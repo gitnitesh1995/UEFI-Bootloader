@@ -1668,7 +1668,7 @@ ls Build/MdeModule/DEBUG_GCC5/X64/HelloWorld.*
 ```
 List all the files and diectories in the Build/MdeModule/DEBUG_GCC5/X64/HelloWorld.*path whose name is HelloWorld.
 
-###Output
+### Output
 
 root@boot-Standard-PC-Q35-ICH9-2009:~/src/edk2# ls Build/MdeModule/DEBUG_GCC5/X64/HelloWorld.*
 Build/MdeModule/DEBUG_GCC5/X64/HelloWorld.debug  Build/MdeModule/DEBUG_GCC5/X64/HelloWorld.efi
@@ -1767,10 +1767,11 @@ root@boot-Standard-PC-Q35-ICH9-2009:~/src/edk2#
 
 reboot system and go to boot manager
 
-![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/e744ec1e-50f6-4b56-8723-9ce2ff441125)
+![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/3e343678-b3c2-4175-89b7-b514d167ec5a)
+
 
 Select HelloLodaer
 
 ![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/4a5d2a55-fe38-4cea-8a02-544009325b9d)
 
-![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/ab3eed6c-ba42-489f-a5f0-7fb787b082d0)
+![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/e4e22882-a19c-417f-a586-543a717a4f62)
