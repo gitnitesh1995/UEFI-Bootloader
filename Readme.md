@@ -233,7 +233,7 @@ On some systems, there is a distinction between the default Python 2 and Python 
 
 ### Output
 
-root@boot-Standard-PC-Q35-ICH9-2009:~# apt install build-essential uuid-dev iasl git  nasm  python-is-python3
+root@boot-Standard-PC-Q35-ICH9-2009:~ apt install build-essential uuid-dev iasl git  nasm  python-is-python3
 
 Reading package lists... Done
 Building dependency tree       
