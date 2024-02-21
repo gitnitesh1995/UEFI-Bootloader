@@ -22,7 +22,7 @@ A boot loader is a program that is responsible for loading and starting the oper
 
 ![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/1a077f63-d01d-49c5-88d2-9fd349247039)
 
-![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/5cac209f-e818-482a-906a-cfa02033ef6f)
+![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/535ec566-da31-4f92-9c4f-cb31f562970c)
 
 ![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/c7ff07a7-d1e8-41df-a17c-03bd477e60dd)
 
