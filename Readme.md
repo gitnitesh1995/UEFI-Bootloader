@@ -677,6 +677,7 @@ Or undo this operation with:
 Turn off this advice by setting config variable advice.detachedHead to false
 
 HEAD is now at ba0e0e4c6a BaseTools: Fix DevicePath GNUmakefile for macOS
+
 root@boot-Standard-PC-Q35-ICH9-2009:~/src/edk2# 
 
 ### Command
@@ -692,7 +693,9 @@ git switch -c niteshboot
 ### Output
 
 root@boot-Standard-PC-Q35-ICH9-2009:~/src/edk2# git switch -c niteshboot
+
 Switched to a new branch 'niteshboot'
+
 root@boot-Standard-PC-Q35-ICH9-2009:~/src/edk2# 
 
 ### Command
@@ -705,8 +708,11 @@ git branch
 ### Output
 
 root@boot-Standard-PC-Q35-ICH9-2009:~/src/edk2# git branch
+
   master
+  
 * niteshboot
+  
 root@boot-Standard-PC-Q35-ICH9-2009:~/src/edk2# 
 
 ### Command
@@ -728,7 +734,7 @@ This option is used to initialize any submodules that are not initialized yet. I
 
 ### Output
 
-root@boot-Standard-PC-Q35-ICH9-2009:~/src/edk2# git submodule update --init
+root@boot-Standard-PC-Q35-ICH9-2009:~/src/edk2 git submodule update --init
 Submodule 'SoftFloat' (https://github.com/ucb-bar/berkeley-softfloat-3.git) registered for path 'ArmPkg/Library/ArmSoftFloatLib/berkeley-softfloat-3'
 Submodule 'BaseTools/Source/C/BrotliCompress/brotli' (https://github.com/google/brotli) registered for path 'BaseTools/Source/C/BrotliCompress/brotli'
 Submodule 'CryptoPkg/Library/OpensslLib/openssl' (https://github.com/openssl/openssl) registered for path 'CryptoPkg/Library/OpensslLib/openssl'
