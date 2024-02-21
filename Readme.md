@@ -95,7 +95,9 @@ sudo su
 ### Output
 
 boot@boot-Standard-PC-Q35-ICH9-2009:~$ sudo su
+
 root@boot-Standard-PC-Q35-ICH9-2009:/home/boot# cd
+
 root@boot-Standard-PC-Q35-ICH9-2009:~# 
 
 ### Command
@@ -178,17 +180,29 @@ This is the path to the directory for which you want to display the tree structu
 ### Output
 
 root@boot-Standard-PC-Q35-ICH9-2009:~# tree /boot/efi/
+
 /boot/efi/
+
 └── EFI
+
     ├── BOOT
+    
     │   ├── BOOTX64.EFI
+    
     │   ├── fbx64.efi
+    
     │   └── mmx64.efi
+    
     └── ubuntu
+    
         ├── BOOTX64.CSV
+        
         ├── grub.cfg
+        
         ├── grubx64.efi
+        
         ├── mmx64.efi
+        
         └── shimx64.efi
 
 3 directories, 8 files
