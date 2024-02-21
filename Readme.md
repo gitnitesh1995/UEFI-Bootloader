@@ -1785,7 +1785,7 @@ This specifies the file path of the EFI application that should be loaded as the
 
 ### Output
 
-root@boot-Standard-PC-Q35-ICH9-2009:~/src/edk2# efibootmgr -c -d /dev/vda1 -p 1 -L HelloWorldLoader -l \\EFI\\nitesh_booting\\HelloWorld.efi
+root@boot-Standard-PC-Q35-ICH9-2009:~/src/edk2 efibootmgr -c -d /dev/vda1 -p 1 -L HelloWorldLoader -l \\EFI\\nitesh_booting\\HelloWorld.efi
 BootCurrent: 0004
 Timeout: 3 seconds
 BootOrder: 0001,0004,0003,0000,0002
@@ -1796,7 +1796,7 @@ Boot0004* ubuntu
 Boot0001* HelloWorldLoader
 root@boot-Standard-PC-Q35-ICH9-2009:~/src/edk2# 
 
-reboot system and go to boot manager
+#### Reboot system and go to boot manager
 
 ![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/3e343678-b3c2-4175-89b7-b514d167ec5a)
 
