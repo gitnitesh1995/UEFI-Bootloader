@@ -506,6 +506,29 @@ This is the APT command used to install software packages.
 **/home/boot/Downloads/nasm_2.15.05-1_amd64.deb:**
 
 This is the path to the Debian package file you want to install. In this case, it specifies the absolute path to the NASM (Netwide Assembler) package with version 2.15.05-1 for the AMD64 architecture.
+
+### Output
+
+root@boot-Standard-PC-Q35-ICH9-2009:/home/boot/Downloads# apt install /home/boot/Downloads/nasm_2.15.05-1_amd64.deb
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+Note, selecting 'nasm' instead of '/home/boot/Downloads/nasm_2.15.05-1_amd64.deb'
+The following packages will be upgraded:
+  nasm
+1 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+Need to get 0 B/375 kB of archives.
+After this operation, 28.7 kB disk space will be freed.
+Get:1 /home/boot/Downloads/nasm_2.15.05-1_amd64.deb nasm amd64 2.15.05-1 [375 kB]
+(Reading database ... 163890 files and directories currently installed.)
+Preparing to unpack .../nasm_2.15.05-1_amd64.deb ...
+Unpacking nasm (2.15.05-1) over (2.14.02-1) ...
+Setting up nasm (2.15.05-1) ...
+Processing triggers for man-db (2.9.1-1) ...
+root@boot-Standard-PC-Q35-ICH9-2009:/home/boot/Downloads# 
+
+### Command
+
 ```
 nasm --version
 ```
@@ -516,6 +539,15 @@ This is the command for the NASM assembler. NASM is a popular assembler used for
 **--version:**
 
 It is used to display version information. 
+
+### Output
+
+root@boot-Standard-PC-Q35-ICH9-2009:/home/boot/Downloads# nasm --version
+NASM version 2.15.05
+root@boot-Standard-PC-Q35-ICH9-2009:/home/boot/Downloads# 
+
+### Command
+
 ```
 mkdir ~/src
 ```
@@ -526,6 +558,13 @@ This stands for "make directory." It is a command in Unix-like operating systems
 **~/src:**
 
 This specifies the path where the new directory should be created. The tilde (~) is a shorthand notation for the user's home directory. So, ~/src refers to a directory named "src" within the user's home directory.   
+
+### Output
+
+root@boot-Standard-PC-Q35-ICH9-2009:/home/boot/Downloads# mkdir ~/src
+root@boot-Standard-PC-Q35-ICH9-2009:/home/boot/Downloads# 
+
+### Command
 ```   
 cd ~/src/
 ```
@@ -536,7 +575,15 @@ This stands for "change directory." It is a command used to change the current w
 **~/src:**
 
 This specifies the path where the new directory should be created. The tilde (~) is a shorthand notation for the user's home directory. So, ~/src refers to a directory named "src" within the user's home directory. 
-```   
+
+### Output
+
+root@boot-Standard-PC-Q35-ICH9-2009:/home/boot/Downloads# cd ~/src/
+root@boot-Standard-PC-Q35-ICH9-2009:~/src# 
+
+### Command
+
+```
 git clone https://github.com/tianocore/edk2
 ```
 **git:** 
@@ -551,18 +598,31 @@ This is a Git command used to create a copy or clone of a remote Git repository.
 
 This is the URL of the Git repository you want to clone. In this case, it's the EDK II (Extensible Firmware Interface Development Kit) repository hosted on GitHub. EDK II is an open-source project that provides a set of development tools and firmware libraries for UEFI (Unified Extensible Firmware Interface) development.
 
-![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/9334c207-a48e-4b2a-93a8-1357eaf69a13)
+### Output
+
+root@boot-Standard-PC-Q35-ICH9-2009:~/src# git clone https://github.com/tianocore/edk2
+Cloning into 'edk2'...
+remote: Enumerating objects: 387665, done.
+remote: Counting objects: 100% (295/295), done.
+remote: Compressing objects: 100% (154/154), done.
+remote: Total 387665 (delta 165), reused 224 (delta 136), pack-reused 387370
+Receiving objects: 100% (387665/387665), 312.56 MiB | 9.97 MiB/s, done.
+Resolving deltas: 100% (281517/281517), done.
+root@boot-Standard-PC-Q35-ICH9-2009:~/src# 
+
+### Command
 
  ``` 
 cd edk2/
  ```
-**cd:** 
+Change directory to edk2 directory.
 
-This stands for "change directory." It is a command used to change the current working directory in the command line.
+### Output
 
-**edk2/:** 
+root@boot-Standard-PC-Q35-ICH9-2009:~/src# cd edk2/
+root@boot-Standard-PC-Q35-ICH9-2009:~/src/edk2#
 
-This specifies the directory you want to change into. In this case, it's the "edk2" directory.
+### Command
 
 ```
 git checkout tags/edk2-stable202208
@@ -575,8 +635,30 @@ This is the command-line interface for the Git version control system. Git is us
 
 tags/edk2-stable202208: This specifies the tag you want to check out. Tags in Git are used to label specific points in the commit history, often denoting releases or important milestones.
 
-![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/de2e6d3f-501e-412f-ba76-2c607478e6ff)
+### Output
 
+root@boot-Standard-PC-Q35-ICH9-2009:~/src/edk2# git checkout tags/edk2-stable202208
+Note: switching to 'tags/edk2-stable202208'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at ba0e0e4c6a BaseTools: Fix DevicePath GNUmakefile for macOS
+root@boot-Standard-PC-Q35-ICH9-2009:~/src/edk2# 
+
+### Command
 ```
 git switch -c niteshboot
 ```
