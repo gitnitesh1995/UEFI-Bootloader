@@ -36,9 +36,7 @@ A boot loader is a program that is responsible for loading and starting the oper
 
 ![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/7cde9af3-0273-4be7-9429-2df70531b483)
 
-![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/886e2361-d684-49e8-9619-61197f161a66)
 
-![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/9995d794-a940-4e65-af54-3710325b6f4c)
 
 ![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/64bb376f-8ad4-41c7-a816-ddb1808a589c)
 
@@ -58,9 +56,10 @@ A boot loader is a program that is responsible for loading and starting the oper
 
 **Enable Boot Menu from Boot Option.**
 
-![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/5b80e88f-0432-45ad-9ea6-8853d70f57a5)
+![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/886e2361-d684-49e8-9619-61197f161a66)
 
-![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/df8f6096-4c65-4132-b5e2-cf436d7d5cf4)
+![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/9995d794-a940-4e65-af54-3710325b6f4c)
+
 
 **Disable Secure Boot from Boot Manager by default its Enable.**
 
