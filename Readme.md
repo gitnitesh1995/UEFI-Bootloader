@@ -184,25 +184,15 @@ root@boot-Standard-PC-Q35-ICH9-2009:~# tree /boot/efi/
 /boot/efi/
 
 └── EFI
-
-    ├── BOOT
-    
-    │   ├── BOOTX64.EFI
-    
-    │   ├── fbx64.efi
-    
-    │   └── mmx64.efi
-    
-    └── ubuntu
-    
-        ├── BOOTX64.CSV
-        
-        ├── grub.cfg
-        
-        ├── grubx64.efi
-        
-        ├── mmx64.efi
-        
+    ├── BOOT    
+    │   ├── BOOTX64.EFI    
+    │   ├── fbx64.efi    
+    │   └── mmx64.efi    
+    └── ubuntu    
+        ├── BOOTX64.CSV        
+        ├── grub.cfg        
+        ├── grubx64.efi        
+        ├── mmx64.efi        
         └── shimx64.efi
 
 3 directories, 8 files
