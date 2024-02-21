@@ -47,17 +47,19 @@ In my machine, I choose 2GB RAM and 2 CPU
 In my machine, I gave 30GB storage
 ![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/7c7aa254-8bdc-4b5b-b0aa-008f7bfe741b)
 
-#### Step-8:
+#### Step-8: Tick the option of customize configuaration before install
 
 ![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/5a3fd6ad-b061-4c3b-b240-dbce44e0f27e)
 
 ![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/23c0a6a9-3ed6-49dd-b108-c3f7a04931a7)
 
+#### Step-9: Within Overview option, change your firmwere from BIOS to UEFI and apply and begin installation
+
 ![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/6f107189-68e4-449a-a588-524a3451d1ba)
 
 ![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/7cde9af3-0273-4be7-9429-2df70531b483)
 
-
+#### Step-10:
 
 ![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/64bb376f-8ad4-41c7-a816-ddb1808a589c)
 
