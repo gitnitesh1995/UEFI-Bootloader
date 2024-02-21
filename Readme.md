@@ -1,8 +1,13 @@
 # Bootloader
 
+# Table of content:
+[What is bootloader](#What-is-bootloader)
+[Creating virtual machine](#Creating-virtual-machine)
+
+
 ## System Requirements :
 
-**OS:-** Ubuntu 23.10
+**OS:-** Ubuntu 22.10
 
 **RAM:-** 2GB or more.
 
@@ -14,16 +19,24 @@
 
 A boot loader is a program that is responsible for loading and starting the operating system on a computer.
 
+### Creating virtual machine
+#### Step 1: Open the  virt-manager
+Select the option of Local install media (ISO image or CD-ROM)
+
 ![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/d3749e15-d6d0-4db6-97f6-6772c0356fc3)
 
+#### Step-2: Click on browse button
 ![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/b9d56b8b-34c3-4fe5-8b17-9f0873445028)
 
+#### Step 3: Click on browse local
 ![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/ca7f5381-8d6f-4338-898d-659542be45c6)
 
+#### Step-4: Go to the directory where your ISO image is downloaded and select it.
 ![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/1a077f63-d01d-49c5-88d2-9fd349247039)
 
 ![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/535ec566-da31-4f92-9c4f-cb31f562970c)
 
+#### Step-5: 
 ![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/c7ff07a7-d1e8-41df-a17c-03bd477e60dd)
 
 ![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/7c7aa254-8bdc-4b5b-b0aa-008f7bfe741b)
