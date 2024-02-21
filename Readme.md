@@ -2,7 +2,7 @@
 
 # Table of content:
 
-[What is bootloader](#What-is-bootloader)
+[What is bootloader?](#What-is-bootloader?)
 
 [Creating virtual machine](#Creating-virtual-machine)
 
@@ -18,7 +18,7 @@
 
 **CPU:-** 2 or more.
 
-**Storage**:- 20GB or more.
+**Storage**:- 30GB or more.
 
 ### What is bootloader?
 
