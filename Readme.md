@@ -157,7 +157,7 @@ This is the pattern being searched for. The grep command will only display lines
 
 ### Output
 
-root@boot-Standard-PC-Q35-ICH9-2009:~# mount | grep efi
+root@boot-Standard-PC-Q35-ICH9-2009:~ mount | grep efi
 efivarfs on /sys/firmware/efi/efivars type efivarfs (rw,nosuid,nodev,noexec,relatime)
 /dev/vda1 on /boot/efi type vfat (rw,relatime,fmask=0077,dmask=0077,codepage=437,iocharset=iso8859-1,shortname=mixed,errors=remount-ro)
 root@boot-Standard-PC-Q35-ICH9-2009:~# 
