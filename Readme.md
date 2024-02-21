@@ -61,15 +61,14 @@ In my machine, I gave 30GB storage
 
 ![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/64bb376f-8ad4-41c7-a816-ddb1808a589c)
 
-**If you're using Virtural machine. Follow below steps while creating Virtual Machine.**
-
 
 **Enable Boot Menu from Boot Option.**
 
 ![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/886e2361-d684-49e8-9619-61197f161a66)
 
-![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/9995d794-a940-4e65-af54-3710325b6f4c)
+#### Click on apply to commit changes
 
+![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/9995d794-a940-4e65-af54-3710325b6f4c)
 
 **Disable Secure Boot from Boot Manager by default its Enable.**
 
