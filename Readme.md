@@ -63,7 +63,7 @@ In my machine, I gave 30GB storage
 
 ![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/886e2361-d684-49e8-9619-61197f161a66)
 
-#### Click on apply to commit changes
+#### Step-11: Click on apply to commit changes and begin installation from in top-left side
 
 ![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/9995d794-a940-4e65-af54-3710325b6f4c)
 
