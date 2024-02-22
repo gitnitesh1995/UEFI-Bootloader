@@ -1456,11 +1456,11 @@ This is the first file for comparison. It specifies the file named target.txt in
 This is the second file for comparison. It specifies the file named target.org in the Conf directory.
 
 ### Ouptut
-
 root@boot-Standard-PC-Q35-ICH9-2009:~/src/edk2# diff Conf/target.txt Conf/target.org
 20,21c20,21
 < #ACTIVE_PLATFORM       = EmulatorPkg/EmulatorPkg.dsc
 < ACTIVE_PLATFORM       = MdeModulePkg/MdeModulePkg.dsc
+
 ---
 > ACTIVE_PLATFORM       = EmulatorPkg/EmulatorPkg.dsc
 > 
