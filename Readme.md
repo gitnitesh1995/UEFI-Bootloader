@@ -2,13 +2,13 @@
 
 # Table of content:
 
-[What is bootloader?](#What-is-bootloader?)
+[What is bootloader](#What-is-bootloader)
 
 [Creating virtual machine](#Creating-virtual-machine)
 
-[Disable Secure Boot from Boot Manager by default its Enable.](#Disable-Secure-Boot-from-Boot-Manager-by-default-its-Enable.)
+[Disable Secure Boot from Boot Manager by default its Enable](#Disable-Secure-Boot-from-Boot-Manager-by-default-its-Enable)
 
-[Follow the sequence of commands to create bootloader.](#Follow-the-sequence-of-commands-to-create-bootloader.)
+[Follow the sequence of commands to create bootloader](#Follow-the-sequence-of-commands-to-create-bootloader)
 
 ## System Requirements :
 
@@ -20,7 +20,7 @@
 
 **Storage**:- 30GB or more.
 
-### What is bootloader?
+### What is bootloader
 
 A boot loader is a program that is responsible for loading and starting the operating system on a computer.
 
@@ -85,7 +85,7 @@ In my machine, I gave 30GB storage
 
 
 
-**Disable Secure Boot from Boot Manager by default its Enable.**
+**Disable Secure Boot from Boot Manager by default its Enable**
 
 
 ![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/fcb470d5-2609-47e8-b76c-e12da7fb8208)
