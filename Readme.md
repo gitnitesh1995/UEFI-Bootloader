@@ -6,7 +6,7 @@
 
 [Creating virtual machine](#Creating-virtual-machine)
 
-[Disable Secure Boot from Boot Manager by default its Enable](#Disable-Secure-Boot-from-Boot-Manager-by-default-its-Enable)
+[Disable Secure Boot from Boot Manager](#Disable-Secure-Boot-from-Boot-Manager)
 
 [Follow the sequence of commands to create bootloader](#Follow-the-sequence-of-commands-to-create-bootloader)
 
@@ -85,7 +85,8 @@ In my machine, I gave 30GB storage
 
 
 
-**Disable Secure Boot from Boot Manager by default its Enable**
+**Disable Secure Boot from Boot Manager**
+By default it is Enable
 
 
 ![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/fcb470d5-2609-47e8-b76c-e12da7fb8208)
