@@ -85,7 +85,7 @@ In my machine, I gave 30GB storage
 
 
 
-**Disable Secure Boot from Boot Manager**
+**Disable secure boot from boot manager**
 By default it is Enable
 
 
