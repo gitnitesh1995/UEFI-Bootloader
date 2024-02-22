@@ -6,7 +6,7 @@
 
 [Creating virtual machine](#Creating-virtual-machine)
 
-[Disable Secure Boot from Boot Manager](#Disable-Secure-Boot-from-Boot-Manager)
+[Disable secure boot from boot manager](#Disable-secure-boot-from-boot-manager)
 
 [Follow the sequence of commands to create bootloader](#Follow-the-sequence-of-commands-to-create-bootloader)
 
