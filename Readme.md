@@ -86,6 +86,7 @@ In my machine, I gave 30GB storage
 
 
 **Disable secure boot from boot manager**
+
 By default it is Enable
 
 
@@ -93,6 +94,8 @@ By default it is Enable
 
 **Follow the sequence of commands to create bootloader**
 
+ Follow these steps:
+ 
 ### Command
 
 ```
