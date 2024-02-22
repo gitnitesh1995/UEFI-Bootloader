@@ -630,7 +630,7 @@ This is the URL of the Git repository you want to clone. In this case, it's the 
 
 ### Output
 
-root@boot-Standard-PC-Q35-ICH9-2009:~/src# git clone https://github.com/tianocore/edk2
+root@boot-Standard-PC-Q35-ICH9-2009:~/src git clone https://github.com/tianocore/edk2
 Cloning into 'edk2'...
 remote: Enumerating objects: 387665, done.
 remote: Counting objects: 100% (295/295), done.
