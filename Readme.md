@@ -125,22 +125,39 @@ This is the name of the package that you want to install. In this case, it refer
 ### Output
 
 root@boot-Standard-PC-Q35-ICH9-2009:~ apt install tree
+
 Reading package lists... Done
+
 Building dependency tree       
+
 Reading state information... Done
+
 The following NEW packages will be installed:
+
   tree
+
 0 upgraded, 1 newly installed, 0 to remove and 0 not upgraded.
+
 Need to get 43.0 kB of archives.
+
 After this operation, 115 kB of additional disk space will be used.
+
 Get:1 http://in.archive.ubuntu.com/ubuntu focal/universe amd64 tree amd64 1.8.0-1 [43.0 kB]
+
 Fetched 43.0 kB in 1s (33.2 kB/s)
+
 Selecting previously unselected package tree.
+
 (Reading database ... 157479 files and directories currently installed.)
+
 Preparing to unpack .../tree_1.8.0-1_amd64.deb ...
+
 Unpacking tree (1.8.0-1) ...
+
 Setting up tree (1.8.0-1) ...
+
 Processing triggers for man-db (2.9.1-1) ...
+
 root@boot-Standard-PC-Q35-ICH9-2009:~# 
 
 ### Command
