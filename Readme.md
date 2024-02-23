@@ -2012,7 +2012,9 @@ List all the files and diectories in the Build/MdeModule/DEBUG_GCC5/X64/HelloWor
 ### Output
 
 root@boot-Standard-PC-Q35-ICH9-2009:~/src/edk2# ls Build/MdeModule/DEBUG_GCC5/X64/HelloWorld.*
+
 Build/MdeModule/DEBUG_GCC5/X64/HelloWorld.debug  Build/MdeModule/DEBUG_GCC5/X64/HelloWorld.efi
+
 root@boot-Standard-PC-Q35-ICH9-2009:~/src/edk2# 
 
 ### Command
@@ -2025,6 +2027,7 @@ Create a directory named nitesh_booting in /boot/efi/EFI/
 ### Output
 
 root@boot-Standard-PC-Q35-ICH9-2009:~/src/edk2# mkdir /boot/efi/EFI/nitesh_booting
+
 root@boot-Standard-PC-Q35-ICH9-2009:~/src/edk2# 
 
 ```
@@ -2035,6 +2038,7 @@ Copy the HelloWorld.efi file from  Build/MdeModule/DEBUG_GCC5/X64/HelloWorld.efi
 ### Output
 
 root@boot-Standard-PC-Q35-ICH9-2009:~/src/edk2# cp Build/MdeModule/DEBUG_GCC5/X64/HelloWorld.efi /boot/efi/EFI/nitesh_booting
+
 root@boot-Standard-PC-Q35-ICH9-2009:~/src/edk2# 
 
 ### Command
@@ -2096,14 +2100,23 @@ This specifies the file path of the EFI application that should be loaded as the
 ### Output
 
 root@boot-Standard-PC-Q35-ICH9-2009:~/src/edk2 efibootmgr -c -d /dev/vda1 -p 1 -L HelloWorldLoader -l \\EFI\\nitesh_booting\\HelloWorld.efi
+
 BootCurrent: 0004
+
 Timeout: 3 seconds
+
 BootOrder: 0001,0004,0003,0000,0002
+
 Boot0000* UiApp
+
 Boot0002* EFI Internal Shell
+
 Boot0003* UEFI Misc Device
+
 Boot0004* ubuntu
+
 Boot0001* HelloWorldLoader
+
 root@boot-Standard-PC-Q35-ICH9-2009:~/src/edk2# 
 
 #### Reboot system and go to boot manager
