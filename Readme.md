@@ -2,6 +2,8 @@
 
 # Table of content:
 
+[System Requirements](#System-Requirements)
+
 [What is bootloader](#What-is-bootloader)
 
 [Creating virtual machine](#Creating-virtual-machine)
@@ -10,7 +12,7 @@
 
 [Follow the sequence of commands to create bootloader](#Follow-the-sequence-of-commands-to-create-bootloader)
 
-## System Requirements :
+### System Requirements :
 
 **OS:-** Ubuntu 22.10
 
