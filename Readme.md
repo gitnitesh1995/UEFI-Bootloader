@@ -1824,7 +1824,7 @@ root@boot-Standard-PC-Q35-ICH9-2009:~/src/edk2#
 ![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/3e343678-b3c2-4175-89b7-b514d167ec5a)
 
 
-Select HelloLodaer
+#### Select HelloLoader
 
 ![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/4a5d2a55-fe38-4cea-8a02-544009325b9d)
 
