@@ -83,16 +83,13 @@ In my machine, I gave 30GB storage
 
 ![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/64bb376f-8ad4-41c7-a816-ddb1808a589c)
 
-
-
 ### Disable secure boot from boot manager
 
-By default it is Enable
-
+By default it is Enable.
 
 ![image](https://github.com/gitnitesh1995/UEFI-Bootloader/assets/61899084/fcb470d5-2609-47e8-b76c-e12da7fb8208)
 
-**Follow the sequence of commands to create bootloader**
+### Follow the sequence of commands to create bootloader.
 
  Follow these steps:
  
