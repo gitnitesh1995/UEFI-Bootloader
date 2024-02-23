@@ -10,8 +10,6 @@
 
 [Follow the sequence of commands to create bootloader](#Follow-the-sequence-of-commands-to-create-bootloader)
 
-
-
 ## System Requirements :
 
 **OS:-** Ubuntu 22.10
@@ -87,7 +85,7 @@ In my machine, I gave 30GB storage
 
 
 
-**Disable secure boot from boot manager**
+### Disable secure boot from boot manager
 
 By default it is Enable
 
