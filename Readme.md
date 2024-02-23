@@ -185,8 +185,11 @@ This is the pattern being searched for. The grep command will only display lines
 ### Output
 
 root@boot-Standard-PC-Q35-ICH9-2009:~ mount | grep efi
+
 efivarfs on /sys/firmware/efi/efivars type efivarfs (rw,nosuid,nodev,noexec,relatime)
+
 /dev/vda1 on /boot/efi type vfat (rw,relatime,fmask=0077,dmask=0077,codepage=437,iocharset=iso8859-1,shortname=mixed,errors=remount-ro)
+
 root@boot-Standard-PC-Q35-ICH9-2009:~# 
 
 ### Command
@@ -265,229 +268,451 @@ On some systems, there is a distinction between the default Python 2 and Python 
 root@boot-Standard-PC-Q35-ICH9-2009:~ apt install build-essential uuid-dev iasl git  nasm  python-is-python3
 
 Reading package lists... Done
-Building dependency tree       
+
+Building dependency tree    
+
 Reading state information... Done
+
 Note, selecting 'acpica-tools' instead of 'iasl'
+
 The following additional packages will be installed:
+
   binutils binutils-common binutils-x86-64-linux-gnu dpkg-dev fakeroot g++ g++-9 gcc gcc-9 git-man
+  
   libalgorithm-diff-perl libalgorithm-diff-xs-perl libalgorithm-merge-perl libasan5 libbinutils
+  
   libc-dev-bin libc6-dev libcrypt-dev libctf-nobfd0 libctf0 liberror-perl libfakeroot libgcc-9-dev
   libitm1 liblsan0 libquadmath0 libstdc++-9-dev libtsan0 libubsan1 linux-libc-dev make manpages-dev
+
 Suggested packages:
+
   binutils-doc debian-keyring g++-multilib g++-9-multilib gcc-9-doc gcc-multilib autoconf automake
+  
   libtool flex bison gcc-doc gcc-9-multilib gcc-9-locales git-daemon-run | git-daemon-sysvinit git-doc
+  
   git-el git-email git-gui gitk gitweb git-cvs git-mediawiki git-svn glibc-doc libstdc++-9-doc
+  
   make-doc
+
 The following NEW packages will be installed:
+
   acpica-tools binutils binutils-common binutils-x86-64-linux-gnu build-essential dpkg-dev fakeroot
+  
   g++ g++-9 gcc gcc-9 git git-man libalgorithm-diff-perl libalgorithm-diff-xs-perl
+  
   libalgorithm-merge-perl libasan5 libbinutils libc-dev-bin libc6-dev libcrypt-dev libctf-nobfd0
+  
   libctf0 liberror-perl libfakeroot libgcc-9-dev libitm1 liblsan0 libquadmath0 libstdc++-9-dev
   libtsan0 libubsan1 linux-libc-dev make manpages-dev nasm python-is-python3 uuid-dev
+
 0 upgraded, 38 newly installed, 0 to remove and 0 not upgraded.
+
 Need to get 43.6 MB of archives.
+
 After this operation, 216 MB of additional disk space will be used.
+
 Do you want to continue? [Y/n] y
+
 Get:1 http://in.archive.ubuntu.com/ubuntu focal/universe amd64 acpica-tools amd64 20190509-1 [868 kB]
+
 Get:2 http://in.archive.ubuntu.com/ubuntu focal-updates/main amd64 binutils-common amd64 2.34-6ubuntu1.8 [208 kB]
+
 Get:3 http://in.archive.ubuntu.com/ubuntu focal-updates/main amd64 libbinutils amd64 2.34-6ubuntu1.8 [475 kB]
+
 Get:4 http://in.archive.ubuntu.com/ubuntu focal-updates/main amd64 libctf-nobfd0 amd64 2.34-6ubuntu1.8 [48.1 kB]
+
 Get:5 http://in.archive.ubuntu.com/ubuntu focal-updates/main amd64 libctf0 amd64 2.34-6ubuntu1.8 [46.7 kB]
+
 Get:6 http://in.archive.ubuntu.com/ubuntu focal-updates/main amd64 binutils-x86-64-linux-gnu amd64 2.34-6ubuntu1.8 [1,614 kB]
+
 Get:7 http://in.archive.ubuntu.com/ubuntu focal-updates/main amd64 binutils amd64 2.34-6ubuntu1.8 [3,384 B]
+
 Get:8 http://in.archive.ubuntu.com/ubuntu focal-updates/main amd64 libc-dev-bin amd64 2.31-0ubuntu9.14 [71.8 kB]
+
 Get:9 http://in.archive.ubuntu.com/ubuntu focal-updates/main amd64 linux-libc-dev amd64 5.4.0-172.190 [1,131 kB]
+
 Get:10 http://in.archive.ubuntu.com/ubuntu focal/main amd64 libcrypt-dev amd64 1:4.4.10-10ubuntu4 [104 kB]
+
 Get:11 http://in.archive.ubuntu.com/ubuntu focal-updates/main amd64 libc6-dev amd64 2.31-0ubuntu9.14 [2,519 kB]
+
 Get:12 http://in.archive.ubuntu.com/ubuntu focal-updates/main amd64 libitm1 amd64 10.5.0-1ubuntu1~20.04 [26.2 kB]
+
 Get:13 http://in.archive.ubuntu.com/ubuntu focal-updates/main amd64 libasan5 amd64 9.4.0-1ubuntu1~20.04.2 [2,752 kB]
+
 Get:14 http://in.archive.ubuntu.com/ubuntu focal-updates/main amd64 liblsan0 amd64 10.5.0-1ubuntu1~20.04 [835 kB]
+
 Get:15 http://in.archive.ubuntu.com/ubuntu focal-updates/main amd64 libtsan0 amd64 10.5.0-1ubuntu1~20.04 [2,016 kB]
+
 Get:16 http://in.archive.ubuntu.com/ubuntu focal-updates/main amd64 libubsan1 amd64 10.5.0-1ubuntu1~20.04 [785 kB]
+
 Get:17 http://in.archive.ubuntu.com/ubuntu focal-updates/main amd64 libquadmath0 amd64 10.5.0-1ubuntu1~20.04 [146 kB]
+
 Get:18 http://in.archive.ubuntu.com/ubuntu focal-updates/main amd64 libgcc-9-dev amd64 9.4.0-1ubuntu1~20.04.2 [2,359 kB]
+
 Get:19 http://in.archive.ubuntu.com/ubuntu focal-updates/main amd64 gcc-9 amd64 9.4.0-1ubuntu1~20.04.2 [8,276 kB]
+
 Get:20 http://in.archive.ubuntu.com/ubuntu focal/main amd64 gcc amd64 4:9.3.0-1ubuntu2 [5,208 B]
+
 Get:21 http://in.archive.ubuntu.com/ubuntu focal-updates/main amd64 libstdc++-9-dev amd64 9.4.0-1ubuntu1~20.04.2 [1,722 kB]
+
 Get:22 http://in.archive.ubuntu.com/ubuntu focal-updates/main amd64 g++-9 amd64 9.4.0-1ubuntu1~20.04.2 [8,421 kB]
+
 Get:23 http://in.archive.ubuntu.com/ubuntu focal/main amd64 g++ amd64 4:9.3.0-1ubuntu2 [1,604 B]       
+
 Get:24 http://in.archive.ubuntu.com/ubuntu focal/main amd64 make amd64 4.2.1-1.2 [162 kB]              
+
 Get:25 http://in.archive.ubuntu.com/ubuntu focal-updates/main amd64 dpkg-dev all 1.19.7ubuntu3.2 [679 kB]
+
 Get:26 http://in.archive.ubuntu.com/ubuntu focal-updates/main amd64 build-essential amd64 12.8ubuntu1.1 [4,664 B]
+
 Get:27 http://in.archive.ubuntu.com/ubuntu focal/main amd64 libfakeroot amd64 1.24-1 [25.7 kB]         
+
 Get:28 http://in.archive.ubuntu.com/ubuntu focal/main amd64 fakeroot amd64 1.24-1 [62.6 kB]            
+
 Get:29 http://in.archive.ubuntu.com/ubuntu focal/main amd64 liberror-perl all 0.17029-1 [26.5 kB]      
+
 Get:30 http://in.archive.ubuntu.com/ubuntu focal-updates/main amd64 git-man all 1:2.25.1-1ubuntu3.11 [887 kB]
+
 Get:31 http://in.archive.ubuntu.com/ubuntu focal-updates/main amd64 git amd64 1:2.25.1-1ubuntu3.11 [4,605 kB]
+
 Get:32 http://in.archive.ubuntu.com/ubuntu focal/main amd64 libalgorithm-diff-perl all 1.19.03-2 [46.6 kB]
+
 Get:33 http://in.archive.ubuntu.com/ubuntu focal/main amd64 libalgorithm-diff-xs-perl amd64 0.04-6 [11.3 kB]
+
 Get:34 http://in.archive.ubuntu.com/ubuntu focal/main amd64 libalgorithm-merge-perl all 0.08-3 [12.0 kB]
+
 Get:35 http://in.archive.ubuntu.com/ubuntu focal/main amd64 manpages-dev all 5.05-1 [2,266 kB]         
+
 Get:36 http://in.archive.ubuntu.com/ubuntu focal/universe amd64 nasm amd64 2.14.02-1 [362 kB]          
+
 Get:37 http://in.archive.ubuntu.com/ubuntu focal/main amd64 python-is-python3 all 3.8.2-4 [2,364 B]    
+
 Get:38 http://in.archive.ubuntu.com/ubuntu focal-updates/main amd64 uuid-dev amd64 2.34-0.1ubuntu9.4 [33.6 kB]
+
 Fetched 43.6 MB in 10s (4,320 kB/s)                                                                    
+
 Extracting templates from packages: 100%
+
 Selecting previously unselected package acpica-tools.
+
 (Reading database ... 157486 files and directories currently installed.)
+
 Preparing to unpack .../00-acpica-tools_20190509-1_amd64.deb ...
+
 Unpacking acpica-tools (20190509-1) ...
+
 Selecting previously unselected package binutils-common:amd64.
+
 Preparing to unpack .../01-binutils-common_2.34-6ubuntu1.8_amd64.deb ...
+
 Unpacking binutils-common:amd64 (2.34-6ubuntu1.8) ...
+
 Selecting previously unselected package libbinutils:amd64.
+
 Preparing to unpack .../02-libbinutils_2.34-6ubuntu1.8_amd64.deb ...
+
 Unpacking libbinutils:amd64 (2.34-6ubuntu1.8) ...
+
 Selecting previously unselected package libctf-nobfd0:amd64.
+
 Preparing to unpack .../03-libctf-nobfd0_2.34-6ubuntu1.8_amd64.deb ...
+
 Unpacking libctf-nobfd0:amd64 (2.34-6ubuntu1.8) ...
+
 Selecting previously unselected package libctf0:amd64.
+
 Preparing to unpack .../04-libctf0_2.34-6ubuntu1.8_amd64.deb ...
+
 Unpacking libctf0:amd64 (2.34-6ubuntu1.8) ...
+
 Selecting previously unselected package binutils-x86-64-linux-gnu.
+
 Preparing to unpack .../05-binutils-x86-64-linux-gnu_2.34-6ubuntu1.8_amd64.deb ...
+
 Unpacking binutils-x86-64-linux-gnu (2.34-6ubuntu1.8) ...
+
 Selecting previously unselected package binutils.
+
 Preparing to unpack .../06-binutils_2.34-6ubuntu1.8_amd64.deb ...
+
 Unpacking binutils (2.34-6ubuntu1.8) ...
+
 Selecting previously unselected package libc-dev-bin.
+
 Preparing to unpack .../07-libc-dev-bin_2.31-0ubuntu9.14_amd64.deb ...
+
 Unpacking libc-dev-bin (2.31-0ubuntu9.14) ...
+
 Selecting previously unselected package linux-libc-dev:amd64.
+
 Preparing to unpack .../08-linux-libc-dev_5.4.0-172.190_amd64.deb ...
+
 Unpacking linux-libc-dev:amd64 (5.4.0-172.190) ...
+
 Selecting previously unselected package libcrypt-dev:amd64.
+
 Preparing to unpack .../09-libcrypt-dev_1%3a4.4.10-10ubuntu4_amd64.deb ...
+
 Unpacking libcrypt-dev:amd64 (1:4.4.10-10ubuntu4) ...
+
 Selecting previously unselected package libc6-dev:amd64.
+
 Preparing to unpack .../10-libc6-dev_2.31-0ubuntu9.14_amd64.deb ...
+
 Unpacking libc6-dev:amd64 (2.31-0ubuntu9.14) ...
+
 Selecting previously unselected package libitm1:amd64.
+
 Preparing to unpack .../11-libitm1_10.5.0-1ubuntu1~20.04_amd64.deb ...
+
 Unpacking libitm1:amd64 (10.5.0-1ubuntu1~20.04) ...
+
 Selecting previously unselected package libasan5:amd64.
+
 Preparing to unpack .../12-libasan5_9.4.0-1ubuntu1~20.04.2_amd64.deb ...
+
 Unpacking libasan5:amd64 (9.4.0-1ubuntu1~20.04.2) ...
+
 Selecting previously unselected package liblsan0:amd64.
+
 Preparing to unpack .../13-liblsan0_10.5.0-1ubuntu1~20.04_amd64.deb ...
+
 Unpacking liblsan0:amd64 (10.5.0-1ubuntu1~20.04) ...
+
 Selecting previously unselected package libtsan0:amd64.
+
 Preparing to unpack .../14-libtsan0_10.5.0-1ubuntu1~20.04_amd64.deb ...
+
 Unpacking libtsan0:amd64 (10.5.0-1ubuntu1~20.04) ...
+
 Selecting previously unselected package libubsan1:amd64.
+
 Preparing to unpack .../15-libubsan1_10.5.0-1ubuntu1~20.04_amd64.deb ...
+
 Unpacking libubsan1:amd64 (10.5.0-1ubuntu1~20.04) ...
+
 Selecting previously unselected package libquadmath0:amd64.
+
 Preparing to unpack .../16-libquadmath0_10.5.0-1ubuntu1~20.04_amd64.deb ...
+
 Unpacking libquadmath0:amd64 (10.5.0-1ubuntu1~20.04) ...
+
 Selecting previously unselected package libgcc-9-dev:amd64.
+
 Preparing to unpack .../17-libgcc-9-dev_9.4.0-1ubuntu1~20.04.2_amd64.deb ...
+
 Unpacking libgcc-9-dev:amd64 (9.4.0-1ubuntu1~20.04.2) ...
+
 Selecting previously unselected package gcc-9.
+
 Preparing to unpack .../18-gcc-9_9.4.0-1ubuntu1~20.04.2_amd64.deb ...
+
 Unpacking gcc-9 (9.4.0-1ubuntu1~20.04.2) ...
+
 Selecting previously unselected package gcc.
+
 Preparing to unpack .../19-gcc_4%3a9.3.0-1ubuntu2_amd64.deb ...
+
 Unpacking gcc (4:9.3.0-1ubuntu2) ...
+
 Selecting previously unselected package libstdc++-9-dev:amd64.
+
 Preparing to unpack .../20-libstdc++-9-dev_9.4.0-1ubuntu1~20.04.2_amd64.deb ...
+
 Unpacking libstdc++-9-dev:amd64 (9.4.0-1ubuntu1~20.04.2) ...
+
 Selecting previously unselected package g++-9.
+
 Preparing to unpack .../21-g++-9_9.4.0-1ubuntu1~20.04.2_amd64.deb ...
+
 Unpacking g++-9 (9.4.0-1ubuntu1~20.04.2) ...
+
 Selecting previously unselected package g++.
+
 Preparing to unpack .../22-g++_4%3a9.3.0-1ubuntu2_amd64.deb ...
+
 Unpacking g++ (4:9.3.0-1ubuntu2) ...
+
 Selecting previously unselected package make.
+
 Preparing to unpack .../23-make_4.2.1-1.2_amd64.deb ...
+
 Unpacking make (4.2.1-1.2) ...
+
 Selecting previously unselected package dpkg-dev.
+
 Preparing to unpack .../24-dpkg-dev_1.19.7ubuntu3.2_all.deb ...
+
 Unpacking dpkg-dev (1.19.7ubuntu3.2) ...
+
 Selecting previously unselected package build-essential.
+
 Preparing to unpack .../25-build-essential_12.8ubuntu1.1_amd64.deb ...
+
 Unpacking build-essential (12.8ubuntu1.1) ...
+
 Selecting previously unselected package libfakeroot:amd64.
+
 Preparing to unpack .../26-libfakeroot_1.24-1_amd64.deb ...
+
 Unpacking libfakeroot:amd64 (1.24-1) ...
+
 Selecting previously unselected package fakeroot.
+
 Preparing to unpack .../27-fakeroot_1.24-1_amd64.deb ...
+
 Unpacking fakeroot (1.24-1) ...
+
 Selecting previously unselected package liberror-perl.
+
 Preparing to unpack .../28-liberror-perl_0.17029-1_all.deb ...
+
 Unpacking liberror-perl (0.17029-1) ...
+
 Selecting previously unselected package git-man.
+
 Preparing to unpack .../29-git-man_1%3a2.25.1-1ubuntu3.11_all.deb ...
+
 Unpacking git-man (1:2.25.1-1ubuntu3.11) ...
+
 Selecting previously unselected package git.
+
 Preparing to unpack .../30-git_1%3a2.25.1-1ubuntu3.11_amd64.deb ...
+
 Unpacking git (1:2.25.1-1ubuntu3.11) ...
+
 Selecting previously unselected package libalgorithm-diff-perl.
+
 Preparing to unpack .../31-libalgorithm-diff-perl_1.19.03-2_all.deb ...
+
 Unpacking libalgorithm-diff-perl (1.19.03-2) ...
+
 Selecting previously unselected package libalgorithm-diff-xs-perl.
+
 Preparing to unpack .../32-libalgorithm-diff-xs-perl_0.04-6_amd64.deb ...
+
 Unpacking libalgorithm-diff-xs-perl (0.04-6) ...
+
 Selecting previously unselected package libalgorithm-merge-perl.
+
 Preparing to unpack .../33-libalgorithm-merge-perl_0.08-3_all.deb ...
+
 Unpacking libalgorithm-merge-perl (0.08-3) ...
+
 Selecting previously unselected package manpages-dev.
+
 Preparing to unpack .../34-manpages-dev_5.05-1_all.deb ...
+
 Unpacking manpages-dev (5.05-1) ...
+
 Selecting previously unselected package nasm.
+
 Preparing to unpack .../35-nasm_2.14.02-1_amd64.deb ...
+
 Unpacking nasm (2.14.02-1) ...
+
 Selecting previously unselected package python-is-python3.
+
 Preparing to unpack .../36-python-is-python3_3.8.2-4_all.deb ...
+
 Unpacking python-is-python3 (3.8.2-4) ...
+
 Selecting previously unselected package uuid-dev:amd64.
+
 Preparing to unpack .../37-uuid-dev_2.34-0.1ubuntu9.4_amd64.deb ...
+
 Unpacking uuid-dev:amd64 (2.34-0.1ubuntu9.4) ...
+
 Setting up manpages-dev (5.05-1) ...
+
 Setting up acpica-tools (20190509-1) ...
+
 update-alternatives: using /usr/bin/acpixtract-acpica to provide /usr/bin/acpixtract (acpixtract) in aut
+
 o mode
+
 update-alternatives: using /usr/bin/acpidump-acpica to provide /usr/bin/acpidump (acpidump) in auto mode
+
 Setting up libalgorithm-diff-perl (1.19.03-2) ...
+
 Setting up binutils-common:amd64 (2.34-6ubuntu1.8) ...
+
 Setting up linux-libc-dev:amd64 (5.4.0-172.190) ...
+
 Setting up libctf-nobfd0:amd64 (2.34-6ubuntu1.8) ...
+
 Setting up libfakeroot:amd64 (1.24-1) ...
+
 Setting up fakeroot (1.24-1) ...
+
 update-alternatives: using /usr/bin/fakeroot-sysv to provide /usr/bin/fakeroot (fakeroot) in auto mode
+
 Setting up liberror-perl (0.17029-1) ...
+
 Setting up libasan5:amd64 (9.4.0-1ubuntu1~20.04.2) ...
+
 Setting up make (4.2.1-1.2) ...
+
 Setting up libquadmath0:amd64 (10.5.0-1ubuntu1~20.04) ...
+
 Setting up nasm (2.14.02-1) ...
+
 Setting up libubsan1:amd64 (10.5.0-1ubuntu1~20.04) ...
+
 Setting up libcrypt-dev:amd64 (1:4.4.10-10ubuntu4) ...
+
 Setting up git-man (1:2.25.1-1ubuntu3.11) ...
+
 Setting up libbinutils:amd64 (2.34-6ubuntu1.8) ...
+
 Setting up libc-dev-bin (2.31-0ubuntu9.14) ...
+
 Setting up python-is-python3 (3.8.2-4) ...
+
 Setting up libalgorithm-diff-xs-perl (0.04-6) ...
+
 Setting up liblsan0:amd64 (10.5.0-1ubuntu1~20.04) ...
+
 Setting up libitm1:amd64 (10.5.0-1ubuntu1~20.04) ...
+
 Setting up libalgorithm-merge-perl (0.08-3) ...
+
 Setting up libtsan0:amd64 (10.5.0-1ubuntu1~20.04) ...
+
 Setting up libctf0:amd64 (2.34-6ubuntu1.8) ...
+
 Setting up libgcc-9-dev:amd64 (9.4.0-1ubuntu1~20.04.2) ...
+
 Setting up git (1:2.25.1-1ubuntu3.11) ...
+
 Setting up libc6-dev:amd64 (2.31-0ubuntu9.14) ...
+
 Setting up binutils-x86-64-linux-gnu (2.34-6ubuntu1.8) ...
+
 Setting up libstdc++-9-dev:amd64 (9.4.0-1ubuntu1~20.04.2) ...
+
 Setting up binutils (2.34-6ubuntu1.8) ...
+
 Setting up dpkg-dev (1.19.7ubuntu3.2) ...
+
 Setting up uuid-dev:amd64 (2.34-0.1ubuntu9.4) ...
+
 Setting up gcc-9 (9.4.0-1ubuntu1~20.04.2) ...
+
 Setting up gcc (4:9.3.0-1ubuntu2) ...
+
 Setting up g++-9 (9.4.0-1ubuntu1~20.04.2) ...
+
 Setting up g++ (4:9.3.0-1ubuntu2) ...
+
 update-alternatives: using /usr/bin/g++ to provide /usr/bin/c++ (c++) in auto mode
+
 Setting up build-essential (12.8ubuntu1.1) ...
+
 Processing triggers for man-db (2.9.1-1) ...
+
 Processing triggers for libc-bin (2.31-0ubuntu9.14) ...
+
 root@boot-Standard-PC-Q35-ICH9-2009:~# 
 
 ### Command
@@ -505,6 +730,7 @@ This is the path to the directory you want to change into. In this case, it spec
 ### Output
 
 root@boot-Standard-PC-Q35-ICH9-2009:~# cd /home/boot/Downloads/
+
 root@boot-Standard-PC-Q35-ICH9-2009:/home/boot/Downloads# 
 
 ### Command
@@ -527,11 +753,17 @@ This is the URL of the Debian package file you want to download. In this case, i
 ### Output
 
 root@boot-Standard-PC-Q35-ICH9-2009:/home/boot/Downloads# wget -c http://security.ubuntu.com/ubuntu/pool/universe/n/nasm/nasm_2.15.05-1_amd64.deb
+
 --2024-02-21 14:54:16--  http://security.ubuntu.com/ubuntu/pool/universe/n/nasm/nasm_2.15.05-1_amd64.deb
+
 Resolving security.ubuntu.com (security.ubuntu.com)... 185.125.190.36, 91.189.91.81, 185.125.190.39, ...
+
 Connecting to security.ubuntu.com (security.ubuntu.com)|185.125.190.36|:80... connected.
+
 HTTP request sent, awaiting response... 200 OK
+
 Length: 375168 (366K) [application/x-debian-package]
+
 Saving to: ‘nasm_2.15.05-1_amd64.deb’
 
 nasm_2.15.05-1_amd64.deb  100%[=====================================>] 366.38K   436KB/s    in 0.8s    
@@ -560,21 +792,36 @@ This is the path to the Debian package file you want to install. In this case, i
 ### Output
 
 root@boot-Standard-PC-Q35-ICH9-2009:/home/boot/Downloads# apt install /home/boot/Downloads/nasm_2.15.05-1_amd64.deb
+
 Reading package lists... Done
+
 Building dependency tree       
+
 Reading state information... Done
+
 Note, selecting 'nasm' instead of '/home/boot/Downloads/nasm_2.15.05-1_amd64.deb'
+
 The following packages will be upgraded:
+
   nasm
 1 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+
 Need to get 0 B/375 kB of archives.
+
 After this operation, 28.7 kB disk space will be freed.
+
 Get:1 /home/boot/Downloads/nasm_2.15.05-1_amd64.deb nasm amd64 2.15.05-1 [375 kB]
+
 (Reading database ... 163890 files and directories currently installed.)
+
 Preparing to unpack .../nasm_2.15.05-1_amd64.deb ...
+
 Unpacking nasm (2.15.05-1) over (2.14.02-1) ...
+
 Setting up nasm (2.15.05-1) ...
+
 Processing triggers for man-db (2.9.1-1) ...
+
 root@boot-Standard-PC-Q35-ICH9-2009:/home/boot/Downloads# 
 
 ### Command
@@ -593,7 +840,9 @@ It is used to display version information.
 ### Output
 
 root@boot-Standard-PC-Q35-ICH9-2009:/home/boot/Downloads# nasm --version
+
 NASM version 2.15.05
+
 root@boot-Standard-PC-Q35-ICH9-2009:/home/boot/Downloads# 
 
 ### Command
@@ -612,6 +861,7 @@ This specifies the path where the new directory should be created. The tilde (~)
 ### Output
 
 root@boot-Standard-PC-Q35-ICH9-2009:/home/boot/Downloads# mkdir ~/src
+
 root@boot-Standard-PC-Q35-ICH9-2009:/home/boot/Downloads# 
 
 ### Command
@@ -651,13 +901,21 @@ This is the URL of the Git repository you want to clone. In this case, it's the 
 ### Output
 
 root@boot-Standard-PC-Q35-ICH9-2009:~/src git clone https://github.com/tianocore/edk2
+
 Cloning into 'edk2'...
+
 remote: Enumerating objects: 387665, done.
+
 remote: Counting objects: 100% (295/295), done.
+
 remote: Compressing objects: 100% (154/154), done.
+
 remote: Total 387665 (delta 165), reused 224 (delta 136), pack-reused 387370
+
 Receiving objects: 100% (387665/387665), 312.56 MiB | 9.97 MiB/s, done.
+
 Resolving deltas: 100% (281517/281517), done.
+
 root@boot-Standard-PC-Q35-ICH9-2009:~/src# 
 
 ### Command
@@ -670,6 +928,7 @@ Change directory to edk2 directory.
 ### Output
 
 root@boot-Standard-PC-Q35-ICH9-2009:~/src# cd edk2/
+
 root@boot-Standard-PC-Q35-ICH9-2009:~/src/edk2#
 
 ### Command
@@ -688,13 +947,17 @@ tags/edk2-stable202208: This specifies the tag you want to check out. Tags in Gi
 ### Output
 
 root@boot-Standard-PC-Q35-ICH9-2009:~/src/edk2# git checkout tags/edk2-stable202208
+
 Note: switching to 'tags/edk2-stable202208'.
 
 You are in 'detached HEAD' state. You can look around, make experimental
+
 changes and commit them, and you can discard any commits you make in this
+
 state without impacting any branches by switching back to a branch.
 
 If you want to create a new branch to retain commits you create, you may
+
 do so (now or later) by using -c with the switch command. Example:
 
   git switch -c <new-branch-name>
@@ -764,27 +1027,49 @@ This option is used to initialize any submodules that are not initialized yet. I
 ### Output
 
 root@boot-Standard-PC-Q35-ICH9-2009:~/src/edk2 git submodule update --init
+
 Submodule 'SoftFloat' (https://github.com/ucb-bar/berkeley-softfloat-3.git) registered for path 'ArmPkg/Library/ArmSoftFloatLib/berkeley-softfloat-3'
+
 Submodule 'BaseTools/Source/C/BrotliCompress/brotli' (https://github.com/google/brotli) registered for path 'BaseTools/Source/C/BrotliCompress/brotli'
+
 Submodule 'CryptoPkg/Library/OpensslLib/openssl' (https://github.com/openssl/openssl) registered for path 'CryptoPkg/Library/OpensslLib/openssl'
+
 Submodule 'MdeModulePkg/Library/BrotliCustomDecompressLib/brotli' (https://github.com/google/brotli) registered for path 'MdeModulePkg/Library/BrotliCustomDecompressLib/brotli'
+
 Submodule 'MdeModulePkg/Universal/RegularExpressionDxe/oniguruma' (https://github.com/kkos/oniguruma) registered for path 'MdeModulePkg/Universal/RegularExpressionDxe/oniguruma'
+
 Submodule 'RedfishPkg/Library/JsonLib/jansson' (https://github.com/akheron/jansson) registered for path 'RedfishPkg/Library/JsonLib/jansson'
+
 Submodule 'UnitTestFrameworkPkg/Library/CmockaLib/cmocka' (https://github.com/tianocore/edk2-cmocka.git) registered for path 'UnitTestFrameworkPkg/Library/CmockaLib/cmocka'
+
 Cloning into '/root/src/edk2/ArmPkg/Library/ArmSoftFloatLib/berkeley-softfloat-3'...
+
 Cloning into '/root/src/edk2/BaseTools/Source/C/BrotliCompress/brotli'...
+
 Cloning into '/root/src/edk2/CryptoPkg/Library/OpensslLib/openssl'...
+
 Cloning into '/root/src/edk2/MdeModulePkg/Library/BrotliCustomDecompressLib/brotli'...
+
 Cloning into '/root/src/edk2/MdeModulePkg/Universal/RegularExpressionDxe/oniguruma'...
+
 Cloning into '/root/src/edk2/RedfishPkg/Library/JsonLib/jansson'...
+
 Cloning into '/root/src/edk2/UnitTestFrameworkPkg/Library/CmockaLib/cmocka'...
+
 Submodule path 'ArmPkg/Library/ArmSoftFloatLib/berkeley-softfloat-3': checked out 'b64af41c3276f97f0e181920400ee056b9c88037'
+
 Submodule path 'BaseTools/Source/C/BrotliCompress/brotli': checked out 'f4153a09f87cbb9c826d8fc12c74642bb2d879ea'
+
 Submodule path 'CryptoPkg/Library/OpensslLib/openssl': checked out 'd82e959e621a3d597f1e0d50ff8c2d8b96915fd7'
+
 Submodule path 'MdeModulePkg/Library/BrotliCustomDecompressLib/brotli': checked out 'f4153a09f87cbb9c826d8fc12c74642bb2d879ea'
+
 Submodule path 'MdeModulePkg/Universal/RegularExpressionDxe/oniguruma': checked out 'abfc8ff81df4067f309032467785e06975678f0d'
+
 Submodule path 'RedfishPkg/Library/JsonLib/jansson': checked out 'e9ebfa7e77a6bee77df44e096b100e7131044059'
+
 Submodule path 'UnitTestFrameworkPkg/Library/CmockaLib/cmocka': checked out '1cc9cde3448cdd2e000886a26acf1caac2db7cf1'
+
 root@boot-Standard-PC-Q35-ICH9-2009:~/src/edk2# 
 
 ### Command
