@@ -1630,18 +1630,27 @@ This is a shell script provided by the EDK II framework. It typically sets up th
 ### Output
 
 root@boot-Standard-PC-Q35-ICH9-2009:~/src/edk2# . edksetup.sh
-Using EDK2 in-source Basetools
-WORKSPACE: /root/src/edk2
-EDK_TOOLS_PATH: /root/src/edk2/BaseTools
-CONF_PATH: /root/src/edk2/Conf
-Copying $EDK_TOOLS_PATH/Conf/build_rule.template
-     to /root/src/edk2/Conf/build_rule.txt
-Copying $EDK_TOOLS_PATH/Conf/tools_def.template
-     to /root/src/edk2/Conf/tools_def.txt
-Copying $EDK_TOOLS_PATH/Conf/target.template
-     to /root/src/edk2/Conf/target.txt
-root@boot-Standard-PC-Q35-ICH9-2009:~/src/edk2# 
 
+Using EDK2 in-source Basetools
+
+WORKSPACE: /root/src/edk2
+
+EDK_TOOLS_PATH: /root/src/edk2/BaseTools
+
+CONF_PATH: /root/src/edk2/Conf
+
+Copying $EDK_TOOLS_PATH/Conf/build_rule.template
+
+     to /root/src/edk2/Conf/build_rule.txt
+     
+Copying $EDK_TOOLS_PATH/Conf/tools_def.template
+
+     to /root/src/edk2/Conf/tools_def.txt
+     
+Copying $EDK_TOOLS_PATH/Conf/target.template
+
+     to /root/src/edk2/Conf/target.txt
+     
 ### Command
 
 ```   
@@ -1662,7 +1671,6 @@ This is the value assigned to the EDK_TOOLS_PATH variable. $HOME is a shell vari
 ### Output
 
 root@boot-Standard-PC-Q35-ICH9-2009:~/src/edk2# export EDK_TOOLS_PATH=$HOME/src/edk2/BaseTools
-root@boot-Standard-PC-Q35-ICH9-2009:~/src/edk2# 
 
 ### Command
 
